@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="Shortcut Icon" href="images/fac.ico" />
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<title>会员登录</title>
+	</head>
+	<body>
+		<div id="main">
+			<form method="post" name="login" id="form1">
+				<div class="box">
+					<div class="loginbg">
+						<div class="logo">
+							<img src="images/logo.png">
+						</div>
+						<div class="loginbox">
+							<div class="loginboxtbl">
+								<ul>
+									<li>
+										<!--	<h5>用户名：</h5>-->
+										<label>
+                <input name="account" type="text" class="input" id="account" maxlength="20" value="" placeholder="用户名">
+              </label>
+									</li>
+									<li>
+										<!--<h5>密&nbsp;&nbsp;码：</h5>-->
+										<input name="password" type="password" class="input" id="password" maxlength="20" warning="请输入密码！" value="" placeholder="密码">
+									</li>
+									<li>
+										<!--<h5>验证码：</h5>-->
+										<input name="verify" type="text" onkeydown="keydown(event)" warning="请输入验证码！" class="inputCode" size="4" maxlength="4" value="" title="点击图片可刷新验证码" placeholder="验证码">
+										<img id="verifyImg" src="images/saved_resource.png" width="56" onclick="" border="0" alt="点击刷新验证码" style="cursor:pointer; width:92px;border-radius:4px;margin-right:10px; height: 54px;" align="absmiddle"></li>
+								</ul>
+							</div>
+							<input type="button" value="登录" class="btn_0">
+							<a class="forget">忘记密码</a>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="footer">
+				<span>银狐科技&nbsp;版权所有</span>
+			</div>
+	</body>
+
+</html>

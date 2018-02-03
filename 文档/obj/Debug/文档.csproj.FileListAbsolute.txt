@@ -1,0 +1,5 @@
+C:\Users\yny\Desktop\yny_004\文档\bin\Debug\文档.dll
+C:\Users\yny\Desktop\yny_004\文档\bin\Debug\文档.pdb
+C:\Users\yny\Desktop\yny_004\文档\obj\Debug\文档.csprojResolveAssemblyReference.cache
+C:\Users\yny\Desktop\yny_004\文档\obj\Debug\文档.dll
+C:\Users\yny\Desktop\yny_004\文档\obj\Debug\文档.pdb

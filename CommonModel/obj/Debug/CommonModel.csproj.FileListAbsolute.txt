@@ -1,0 +1,5 @@
+C:\Users\yny\Desktop\yny_004\CommonModel\bin\Debug\CommonModel.dll
+C:\Users\yny\Desktop\yny_004\CommonModel\bin\Debug\CommonModel.pdb
+C:\Users\yny\Desktop\yny_004\CommonModel\obj\Debug\CommonModel.csprojResolveAssemblyReference.cache
+C:\Users\yny\Desktop\yny_004\CommonModel\obj\Debug\CommonModel.dll
+C:\Users\yny\Desktop\yny_004\CommonModel\obj\Debug\CommonModel.pdb

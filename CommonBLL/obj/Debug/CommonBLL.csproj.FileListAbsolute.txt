@@ -1,0 +1,14 @@
+C:\Users\yny\Desktop\yny_004\CommonBLL\bin\Debug\CommonBLL.dll
+C:\Users\yny\Desktop\yny_004\CommonBLL\bin\Debug\CommonBLL.pdb
+C:\Users\yny\Desktop\yny_004\CommonBLL\bin\Debug\CommonDAL.dll
+C:\Users\yny\Desktop\yny_004\CommonBLL\bin\Debug\CommonModel.dll
+C:\Users\yny\Desktop\yny_004\CommonBLL\bin\Debug\DBUtility.dll
+C:\Users\yny\Desktop\yny_004\CommonBLL\bin\Debug\IBatisNet.DataMapper.dll
+C:\Users\yny\Desktop\yny_004\CommonBLL\bin\Debug\IBatisNet.Common.dll
+C:\Users\yny\Desktop\yny_004\CommonBLL\bin\Debug\MySql.Data.dll
+C:\Users\yny\Desktop\yny_004\CommonBLL\bin\Debug\CommonDAL.pdb
+C:\Users\yny\Desktop\yny_004\CommonBLL\bin\Debug\CommonModel.pdb
+C:\Users\yny\Desktop\yny_004\CommonBLL\bin\Debug\DBUtility.pdb
+C:\Users\yny\Desktop\yny_004\CommonBLL\obj\Debug\CommonBLL.csprojResolveAssemblyReference.cache
+C:\Users\yny\Desktop\yny_004\CommonBLL\obj\Debug\CommonBLL.dll
+C:\Users\yny\Desktop\yny_004\CommonBLL\obj\Debug\CommonBLL.pdb

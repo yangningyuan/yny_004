@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace yny_004.Web.Module.Investment
+{
+    public partial class InvestQuit : BasePage
+    {
+        protected override void SetPowerZone()
+        {
+            if (!TModel.Role.IsAdmin)
+            {
+                divOperator.Visible = false;
+            }
+        }
+    }
+}

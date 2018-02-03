@@ -1,0 +1,12 @@
+C:\Users\yny\Desktop\yny_004\Model\bin\Debug\yny_004.Model.dll
+C:\Users\yny\Desktop\yny_004\Model\bin\Debug\yny_004.Model.pdb
+C:\Users\yny\Desktop\yny_004\Model\bin\Debug\CommonModel.dll
+C:\Users\yny\Desktop\yny_004\Model\bin\Debug\DBUtility.dll
+C:\Users\yny\Desktop\yny_004\Model\bin\Debug\IBatisNet.DataMapper.dll
+C:\Users\yny\Desktop\yny_004\Model\bin\Debug\IBatisNet.Common.dll
+C:\Users\yny\Desktop\yny_004\Model\bin\Debug\MySql.Data.dll
+C:\Users\yny\Desktop\yny_004\Model\bin\Debug\CommonModel.pdb
+C:\Users\yny\Desktop\yny_004\Model\bin\Debug\DBUtility.pdb
+C:\Users\yny\Desktop\yny_004\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\yny\Desktop\yny_004\Model\obj\Debug\yny_004.Model.dll
+C:\Users\yny\Desktop\yny_004\Model\obj\Debug\yny_004.Model.pdb

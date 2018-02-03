@@ -1,0 +1,9 @@
+C:\Users\yny\Desktop\yny_004\DBUtility\bin\Debug\DBUtility.dll
+C:\Users\yny\Desktop\yny_004\DBUtility\bin\Debug\DBUtility.pdb
+C:\Users\yny\Desktop\yny_004\DBUtility\bin\Debug\IBatisNet.Common.dll
+C:\Users\yny\Desktop\yny_004\DBUtility\bin\Debug\IBatisNet.DataMapper.dll
+C:\Users\yny\Desktop\yny_004\DBUtility\bin\Debug\MySql.Data.dll
+C:\Users\yny\Desktop\yny_004\DBUtility\bin\Debug\ThoughtWorks.QRCode.dll
+C:\Users\yny\Desktop\yny_004\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+C:\Users\yny\Desktop\yny_004\DBUtility\obj\Debug\DBUtility.dll
+C:\Users\yny\Desktop\yny_004\DBUtility\obj\Debug\DBUtility.pdb

@@ -1,0 +1,6 @@
+C:\Users\yny\Desktop\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.exe.config
+C:\Users\yny\Desktop\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.exe
+C:\Users\yny\Desktop\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.pdb
+C:\Users\yny\Desktop\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.csprojResolveAssemblyReference.cache
+C:\Users\yny\Desktop\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.exe
+C:\Users\yny\Desktop\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.pdb

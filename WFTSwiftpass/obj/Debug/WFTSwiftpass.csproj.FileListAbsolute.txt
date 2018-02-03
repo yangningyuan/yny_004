@@ -1,0 +1,5 @@
+C:\Users\yny\Desktop\yny_004\WFTSwiftpass\bin\Release\WFTSwiftpass.dll
+C:\Users\yny\Desktop\yny_004\WFTSwiftpass\bin\Release\WFTSwiftpass.pdb
+C:\Users\yny\Desktop\yny_004\WFTSwiftpass\obj\Debug\WFTSwiftpass.csprojResolveAssemblyReference.cache
+C:\Users\yny\Desktop\yny_004\WFTSwiftpass\obj\Debug\WFTSwiftpass.dll
+C:\Users\yny\Desktop\yny_004\WFTSwiftpass\obj\Debug\WFTSwiftpass.pdb

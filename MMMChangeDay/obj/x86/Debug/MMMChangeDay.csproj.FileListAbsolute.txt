@@ -1,0 +1,6 @@
+C:\Users\yny\Desktop\yny_004\MMMChangeDay\bin\Debug\MMMChangeDay.exe.config
+C:\Users\yny\Desktop\yny_004\MMMChangeDay\bin\Debug\MMMChangeDay.exe
+C:\Users\yny\Desktop\yny_004\MMMChangeDay\bin\Debug\MMMChangeDay.pdb
+C:\Users\yny\Desktop\yny_004\MMMChangeDay\obj\x86\Debug\MMMChangeDay.csprojResolveAssemblyReference.cache
+C:\Users\yny\Desktop\yny_004\MMMChangeDay\obj\x86\Debug\MMMChangeDay.exe
+C:\Users\yny\Desktop\yny_004\MMMChangeDay\obj\x86\Debug\MMMChangeDay.pdb

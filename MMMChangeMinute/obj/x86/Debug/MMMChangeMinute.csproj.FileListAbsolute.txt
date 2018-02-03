@@ -1,0 +1,6 @@
+C:\Users\yny\Desktop\yny_004\MMMChangeMinute\bin\Debug\MMMChangeMinute.exe.config
+C:\Users\yny\Desktop\yny_004\MMMChangeMinute\bin\Debug\MMMChangeMinute.exe
+C:\Users\yny\Desktop\yny_004\MMMChangeMinute\bin\Debug\MMMChangeMinute.pdb
+C:\Users\yny\Desktop\yny_004\MMMChangeMinute\obj\x86\Debug\MMMChangeMinute.csprojResolveAssemblyReference.cache
+C:\Users\yny\Desktop\yny_004\MMMChangeMinute\obj\x86\Debug\MMMChangeMinute.exe
+C:\Users\yny\Desktop\yny_004\MMMChangeMinute\obj\x86\Debug\MMMChangeMinute.pdb

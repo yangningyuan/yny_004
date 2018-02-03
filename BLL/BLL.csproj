@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FFAD49BA-0F98-45FC-8FEF-C56B99BC4F29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>yny_004.BLL</RootNamespace>
+    <AssemblyName>yny_004.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agents.cs" />
+    <Compile Include="BaseData.cs" />
+    <Compile Include="BCenter.cs" />
+    <Compile Include="BMember.cs" />
+    <Compile Include="BonusGift.cs" />
+    <Compile Include="BonusList.cs" />
+    <Compile Include="ChangeMoney.cs" />
+    <Compile Include="CommonBase.cs" />
+    <Compile Include="ConfigDictionaryNew.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Contents.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="EP\EPConfig.cs" />
+    <Compile Include="EP\EPJX.cs" />
+    <Compile Include="EP\EPList.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IPClick.cs" />
+    <Compile Include="JoggleLogin.cs" />
+    <Compile Include="LotteryDraw.cs" />
+    <Compile Include="OperationRecordBLL.cs" />
+    <Compile Include="QuitRecord.cs" />
+    <Compile Include="Shop\GoodCategory.cs" />
+    <Compile Include="Shop\Goods.cs" />
+    <Compile Include="Shop\GoodsPic.cs" />
+    <Compile Include="LuckyMoney.cs" />
+    <Compile Include="Member.cs" />
+    <Compile Include="MemberBonus.cs" />
+    <Compile Include="Monitor.cs" />
+    <Compile Include="NewSHMoney.cs" />
+    <Compile Include="Notice.cs" />
+    <Compile Include="Shop\OrderDetail.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shop\ReceiveInfo.cs" />
+    <Compile Include="Reward.cs" />
+    <Compile Include="RolePowers.cs" />
+    <Compile Include="Roles.cs" />
+    <Compile Include="Shop\ShopCar.cs" />
+    <Compile Include="SMS.cs" />
+    <Compile Include="StockRight\StockRight.cs" />
+    <Compile Include="StockRight\StockRightConfig.cs" />
+    <Compile Include="StockRight\StockRightConfiguration.cs" />
+    <Compile Include="Sys_SecurityQuestion.cs" />
+    <Compile Include="Sys_SQ_Answer.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="BankModel.cs" />
+    <Compile Include="HKModel.cs" />
+    <Compile Include="TicketBonus.cs" />
+    <Compile Include="WebBase.cs" />
+    <Compile Include="WebSetInfo.cs" />
+    <Compile Include="Accounts.cs" />
+    <Compile Include="Shop\Order.cs" />
+    <Compile Include="ZFHTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonBLL\CommonBLL.csproj">
+      <Project>{2D8D68D5-15E9-4C4B-9048-420C5BB46ABA}</Project>
+      <Name>CommonBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModel\CommonModel.csproj">
+      <Project>{29AC6251-405B-420A-8307-1C407A96F81F}</Project>
+      <Name>CommonModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dal\DAL.csproj">
+      <Project>{F0B02A55-B663-4ADE-8D0B-BC5812D73B0A}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0988C62E-247F-471F-A183-DB509C7A3839}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{6FEE910B-7BE3-4BD9-973E-B07E65635F0D}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
