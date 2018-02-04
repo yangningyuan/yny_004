@@ -166,6 +166,32 @@
                                 value="11" require-msg="卡号" /><span>*</span>
                         </td>
                     </tr>
+
+                    <tr>
+                        <td width="15%" align="right">
+                            <span>设置交易密码：</span>
+                        </td>
+                        <td>
+                          <input id="txtSePwd" name="txtSePwd" runat="server" maxlength="20" type="text"  />
+                        </td>
+                    </tr>
+                  <tr>
+                        <td width="15%" align="right">
+                            <span>密保问题：</span>
+                        </td>
+                        <td>
+                           <select id="ddlQuestion" name="ddlQuestion" runat="server">
+                            </select>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td width="15%" align="right">
+                            <span>密保答案：</span>
+                        </td>
+                        <td>
+                          <input id="txtAnswer" name="txtAnswer" runat="server" type="text" />
+                        </td>
+                    </tr>
                     <%--<tr>
                     <td align="right">
                         身份证号:

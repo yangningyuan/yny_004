@@ -92,7 +92,7 @@
                                 require-msg="转换倍数" /><font color="red">*正整数</font>
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display:none;">
                         <td style="text-align: right; width: 20%;">日分红比例:
                         </td>
                         <td>
@@ -106,7 +106,7 @@
                                 require-msg="推荐奖比例" /><font color="red">*</font>
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display:none;">
                         <td style="text-align: right; width: 20%;">最小投资额:
                         </td>
                         <td>
@@ -120,7 +120,7 @@
                                 require-msg="最大投资额" /><font color="red">*正整数</font>
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display:none;">
                         <td style="text-align: right; width: 20%;">投资倍数:
                         </td>
                         <td>
@@ -156,7 +156,7 @@
                                 require-msg="体验金日分红比例" /><font color="red">*</font>
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display:none;">
                         <td style="text-align: right; width: 20%;">每日最大投资额:</td>
                         <td>
                             <input id="txtE_MaxTouZi" runat="server" class="normal_input" type="text" require-type="decimal"
@@ -169,7 +169,7 @@
                                 require-msg="手机注册单数" /><font color="red">*正整数</font>
                         </td>
                     </tr>
-                     <tr>
+                     <tr style="display:none;">
                         <td style="text-align: right; width: 20%;">退本推荐人烧伤期:</td>
                         <td>
                             <input id="txtB_TBTJDate" runat="server" class="normal_input" type="text" require-type="int"
@@ -198,8 +198,17 @@
                                     <asp:TextBox Width="100%" ID="txtMAgencyName" runat="server" Text='<%#Eval("MAgencyName") %>' />
                                 </ItemTemplate>
                             </asp:TemplateField>
-                         
-                            <asp:TemplateField HeaderText="团队业绩" HeaderStyle-Width="120px">
+                            <asp:TemplateField HeaderText="报单金额" HeaderStyle-Width="120px">
+                                <ItemTemplate>
+                                    <asp:TextBox Width="70%" ID="txtMoney" require-type="require" runat="server" Text='<%#Bind("Money") %>' />小数
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                             <asp:TemplateField HeaderText="提现比例" HeaderStyle-Width="120px">
+                                <ItemTemplate>
+                                    <asp:TextBox Width="70%" ID="txtTXFloat" require-type="require" runat="server" Text='<%#Bind("TXFloat") %>' />小数
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                           <%-- <asp:TemplateField HeaderText="团队业绩" HeaderStyle-Width="120px">
                                 <ItemTemplate>
                                     <asp:TextBox Width="70%" ID="txtYJMoney" require-type="require" runat="server" Text='<%#Bind("YJMoney") %>' />小数
                                 </ItemTemplate>
@@ -218,7 +227,7 @@
                                 <ItemTemplate>
                                     <asp:TextBox Width="70%" ID="txtSubCount" require-type="int" runat="server" Text='<%#Bind("SubCount") %>' />整数
                                 </ItemTemplate>
-                            </asp:TemplateField>
+                            </asp:TemplateField>--%>
                                <asp:TemplateField HeaderText="可看图谱层数" HeaderStyle-Width="120px">
                                 <ItemTemplate>
                                     <asp:TextBox Width="70%" ID="txtViewLevel" runat="server" Text='<%#Bind("ViewLevel") %>' />整数
@@ -260,7 +269,7 @@
                                     <asp:TextBox ID="txtEndLevel" runat="server" Text='<%#Eval("EndLevel") %>' />
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="奖励比例">
+                            <asp:TemplateField HeaderText="奖励金额">
                                 <ControlStyle Width="80%" />
                                 <ItemTemplate>
                                     <asp:TextBox ID="txtDValue" runat="server" Text='<%#Eval("DValue") %>' />

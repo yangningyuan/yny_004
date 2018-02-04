@@ -122,7 +122,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <div class="remember"> <input name="reuserpsw" id="reuserpsw" runat="server" type="checkbox" value="1" />&nbsp;<span>记住密码</span> </div>
+                            <div class="remember" style="display:none;"> <input name="reuserpsw" id="reuserpsw" runat="server" type="checkbox" value="1" />&nbsp;<span>记住密码</span> </div>
                         </div>
                         <div class="content-block">
                             <div class="row" style="margin: auto">

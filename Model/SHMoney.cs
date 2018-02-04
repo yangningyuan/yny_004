@@ -35,7 +35,7 @@ namespace yny_004.Model
         /// <summary>
         /// 审核费用
         /// </summary>
-        public int Money { get; set; }
+        public decimal Money { get; set; }
 
         /// <summary>
         /// 对碰比例

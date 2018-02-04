@@ -90,7 +90,7 @@ namespace yny_004.DAL
                         new SqlParameter("@MGP", SqlDbType.Decimal,9) ,            
                         new SqlParameter("@DTFHState", SqlDbType.Bit,1) ,            
                         new SqlParameter("@JTFHState", SqlDbType.Bit,1) ,            
-                        new SqlParameter("@SHMoney", SqlDbType.Int,4) ,            
+                        new SqlParameter("@SHMoney", SqlDbType.Decimal,9) ,            
                         new SqlParameter("@TotalDFHMoney", SqlDbType.Decimal,9) ,            
                         new SqlParameter("@TotalZFHMoney", SqlDbType.Decimal,9) ,            
                         new SqlParameter("@TotalYFHMoney", SqlDbType.Decimal,9) ,            
@@ -99,10 +99,10 @@ namespace yny_004.DAL
                         new SqlParameter("@TXStatus", SqlDbType.Bit,1) ,            
                         new SqlParameter("@YJCount", SqlDbType.Int,4) ,            
                         new SqlParameter("@ZZStatus", SqlDbType.Bit,1) ,            
-                        new SqlParameter("@YJMoney", SqlDbType.Int,4) ,            
+                        new SqlParameter("@YJMoney", SqlDbType.Decimal,9) ,            
                         new SqlParameter("@TJCount", SqlDbType.Int,4) ,            
-                        new SqlParameter("@TJMoney", SqlDbType.Int,4) ,            
-                        new SqlParameter("@UpSumMoney", SqlDbType.Int,4) ,            
+                        new SqlParameter("@TJMoney", SqlDbType.Decimal,9) ,            
+                        new SqlParameter("@UpSumMoney", SqlDbType.Decimal,9) ,            
                         new SqlParameter("@TotalMoney", SqlDbType.Decimal,9),
                         new SqlParameter("@RealMoney", SqlDbType.Decimal,9),
                         new SqlParameter("@EPTimeOutCount", SqlDbType.Int,4),
@@ -192,7 +192,7 @@ namespace yny_004.DAL
                         new SqlParameter("@MGP", SqlDbType.Decimal,9) ,            
                         new SqlParameter("@DTFHState", SqlDbType.Bit,1) ,            
                         new SqlParameter("@JTFHState", SqlDbType.Bit,1) ,            
-                        new SqlParameter("@SHMoney", SqlDbType.Int,4) ,            
+                        new SqlParameter("@SHMoney", SqlDbType.Decimal,9) ,            
                         new SqlParameter("@TotalDFHMoney", SqlDbType.Decimal,9) ,            
                         new SqlParameter("@TotalZFHMoney", SqlDbType.Decimal,9) ,            
                         new SqlParameter("@TotalYFHMoney", SqlDbType.Decimal,9) ,            
@@ -201,10 +201,10 @@ namespace yny_004.DAL
                         new SqlParameter("@TXStatus", SqlDbType.Bit,1) ,            
                         new SqlParameter("@YJCount", SqlDbType.Int,4) ,            
                         new SqlParameter("@ZZStatus", SqlDbType.Bit,1) ,            
-                        new SqlParameter("@YJMoney", SqlDbType.Int,4) ,            
+                        new SqlParameter("@YJMoney", SqlDbType.Decimal,9) ,            
                         new SqlParameter("@TJCount", SqlDbType.Int,4) ,            
-                        new SqlParameter("@TJMoney", SqlDbType.Int,4) ,            
-                        new SqlParameter("@UpSumMoney", SqlDbType.Int,4) ,            
+                        new SqlParameter("@TJMoney", SqlDbType.Decimal,9) ,            
+                        new SqlParameter("@UpSumMoney", SqlDbType.Decimal,9) ,            
                         new SqlParameter("@TotalMoney", SqlDbType.Decimal,9),
                         new SqlParameter("@RealMoney", SqlDbType.Decimal,9),
                         new SqlParameter("@EPTimeOutCount", SqlDbType.Int,4),
@@ -306,7 +306,7 @@ namespace yny_004.DAL
             }
             if (!string.IsNullOrEmpty(dr["SHMoney"].ToString()))
             {
-                model.SHMoney = int.Parse(dr["SHMoney"].ToString());
+                model.SHMoney = decimal.Parse(dr["SHMoney"].ToString());
             }
             if (!string.IsNullOrEmpty(dr["YJCount"].ToString()))
             {
@@ -314,7 +314,7 @@ namespace yny_004.DAL
             }
             if (!string.IsNullOrEmpty(dr["YJMoney"].ToString()))
             {
-                model.YJMoney = int.Parse(dr["YJMoney"].ToString());
+                model.YJMoney = decimal.Parse(dr["YJMoney"].ToString());
             }
             if (!string.IsNullOrEmpty(dr["TJCount"].ToString()))
             {
@@ -322,11 +322,11 @@ namespace yny_004.DAL
             }
             if (!string.IsNullOrEmpty(dr["TJMoney"].ToString()))
             {
-                model.TJMoney = int.Parse(dr["TJMoney"].ToString());
+                model.TJMoney = decimal.Parse(dr["TJMoney"].ToString());
             }
             if (!string.IsNullOrEmpty(dr["UpSumMoney"].ToString()))
             {
-                model.UpSumMoney = int.Parse(dr["UpSumMoney"].ToString());
+                model.UpSumMoney = decimal.Parse(dr["UpSumMoney"].ToString());
             }
             if (!string.IsNullOrEmpty(dr["TotalMoney"].ToString()))
             {

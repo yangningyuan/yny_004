@@ -21,6 +21,9 @@ namespace yny_004.Web.mobile.html
                 notice = listnotice[0];
                 noticecontent = GetKeyName(notice.NContent);
             }
+            MyLink.Value = GetPromoteLinkTel();
+            
+
         }
 
         

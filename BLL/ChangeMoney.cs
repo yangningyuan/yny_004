@@ -833,13 +833,13 @@ namespace yny_004.BLL
                 {
                     tempmodel = DAL.Member.tempMemberList[model.MBD];
                 }
-                int yjmoney = shmodel.SHMoney - shmodel.MConfig.SHMoney;
+                decimal yjmoney = shmodel.SHMoney - shmodel.MConfig.SHMoney;
                 if (shmodel.MConfig.SHMoney == 0)
                 {
                     tempmodel.MConfig.YJCount += 1;
                     DAL.MemberConfig.UpdateConfigTran(tempmodel.MID, "YJCount", "1", shmodel, false, SqlDbType.Int, MyHs);
                     tempmodel.MConfig.UpSumMoney += yjmoney;
-                    DAL.MemberConfig.UpdateConfigTran(tempmodel.MID, "UpSumMoney", yjmoney.ToString(), shmodel, false, SqlDbType.Int, MyHs);
+                    DAL.MemberConfig.UpdateConfigTran(tempmodel.MID, "UpSumMoney", yjmoney.ToString(), shmodel, false, SqlDbType.Decimal, MyHs);
                 }
                 if (!DAL.Member.tempMemberAdd(tempmodel))
                 {
@@ -918,33 +918,33 @@ namespace yny_004.BLL
         /// 业绩增加时判断等级
         /// </summary>
         /// <returns></returns>
-        public static Hashtable GetMemberLevel(Model.Member member, Hashtable MyHs)
-        {
-            //获取下级所有会员
-            var members = DAL.Member.GetModelList(string.Format(" MBD = '{0}' and MID <> '{0}'", member.MID));
-            if (members != null && members.Any())
-            {
-                int sumYJ = member.MConfig.YJMoney - member.MConfig.SHMoney;// 
-                //获取最大业绩会员
-                int maxYJ = members.Max(m => m.MConfig.YJMoney - m.MConfig.SHMoney);
-                //获取部门数
-                int count = members.Count;
-                //获取小业绩之和
-                int sumOtherYJ = members.Sum(m => m.MConfig.YJMoney - m.MConfig.SHMoney) - maxYJ;
-                //获取最小业绩
-                int minYJ = members.Min(m => m.MConfig.YJMoney - m.MConfig.SHMoney);
-                foreach (var nsh in DAL.NewSHMoney.GetNewSHMoneyList(null))
-                {
-                    if (sumYJ >= nsh.Value.NTotalYJ && count >= nsh.Value.NDCount && minYJ >= nsh.Value.NMinYJ && sumOtherYJ >= nsh.Value.NSmallSumYJ)
-                    {
-                        member.NewSHMoney = nsh.Value;
-                        member.NAgencyCode = nsh.Key;
-                    }
-                }
-                DAL.Member.UpdateMemberTran(member.MID, "NAgencyCode", member.NAgencyCode, null, true, SqlDbType.VarChar, MyHs);
-            }
-            return MyHs;
-        }
+        //public static Hashtable GetMemberLevel(Model.Member member, Hashtable MyHs)
+        //{
+        //    //获取下级所有会员
+        //    var members = DAL.Member.GetModelList(string.Format(" MBD = '{0}' and MID <> '{0}'", member.MID));
+        //    if (members != null && members.Any())
+        //    {
+        //        int sumYJ = member.MConfig.YJMoney - member.MConfig.SHMoney;// 
+        //        //获取最大业绩会员
+        //        int maxYJ = members.Max(m => m.MConfig.YJMoney - m.MConfig.SHMoney);
+        //        //获取部门数
+        //        int count = members.Count;
+        //        //获取小业绩之和
+        //        int sumOtherYJ = members.Sum(m => m.MConfig.YJMoney - m.MConfig.SHMoney) - maxYJ;
+        //        //获取最小业绩
+        //        int minYJ = members.Min(m => m.MConfig.YJMoney - m.MConfig.SHMoney);
+        //        foreach (var nsh in DAL.NewSHMoney.GetNewSHMoneyList(null))
+        //        {
+        //            if (sumYJ >= nsh.Value.NTotalYJ && count >= nsh.Value.NDCount && minYJ >= nsh.Value.NMinYJ && sumOtherYJ >= nsh.Value.NSmallSumYJ)
+        //            {
+        //                member.NewSHMoney = nsh.Value;
+        //                member.NAgencyCode = nsh.Key;
+        //            }
+        //        }
+        //        DAL.Member.UpdateMemberTran(member.MID, "NAgencyCode", member.NAgencyCode, null, true, SqlDbType.VarChar, MyHs);
+        //    }
+        //    return MyHs;
+        //}
 
         /// <summary>
         /// 推荐更新
@@ -958,13 +958,13 @@ namespace yny_004.BLL
             Model.Member tjmodel = GetMember_R(shmodel.MTJ);
             if (tjmodel != null)
             {
-                int tjmoney = shmodel.SHMoney - shmodel.MConfig.SHMoney;
+                decimal tjmoney = shmodel.SHMoney - shmodel.MConfig.SHMoney;
                 tjmodel.MConfig.TJMoney += tjmoney;
-                DAL.MemberConfig.UpdateConfigTran(tjmodel.MID, "TJMoney", tjmoney.ToString(), shmodel, false, SqlDbType.Int, MyHs);
+                DAL.MemberConfig.UpdateConfigTran(tjmodel.MID, "TJMoney", tjmoney.ToString(), shmodel, false, SqlDbType.Decimal, MyHs);
 
                 //团队股权
-                tjmodel.MConfig.HLGQCount += tjmoney;
-                DAL.MemberConfig.UpdateConfigTran(tjmodel.MID, "HLGQCount", tjmoney.ToString(), shmodel, false, SqlDbType.Int, MyHs);
+                //tjmodel.MConfig.HLGQCount += tjmoney;
+                //DAL.MemberConfig.UpdateConfigTran(tjmodel.MID, "HLGQCount", tjmoney.ToString(), shmodel, false, SqlDbType.Int, MyHs);
                 //R_SJ(tjmodel, MyHs);
                 if (shmodel.MConfig.SHMoney == 0)
                 {
@@ -1089,46 +1089,46 @@ namespace yny_004.BLL
         /// <param name="dpcount"></param>
         /// <param name="MyHs"></param>
         /// <returns></returns>
-        private static Hashtable DPMoneyChangeTran(Model.Member model, Model.Member shmodel, decimal dptopmoney, int dpcount, Hashtable MyHs)
-        {
-            Model.Member bdmodel = DAL.Member.GetModel(model.MBD);
-            if (bdmodel != null && bdmodel.MBD != bdmodel.MID)
-            {
-                if (!bdmodel.Role.Super)
-                {
-                    List<Model.Member> smodel = DAL.MemberCollection.GetMemberEntityList(string.Format("MBD='{0}' and AgencyCode<>'001' and MID<>'{1}' and MState='1'", bdmodel.MID, model.MID));
-                    if (smodel.Count > 0)
-                    {
-                        if (DAL.Member.HasMemberConfigInDic(model.MID))
-                            model = DAL.Member.tempMemberList[model.MID];
-                        if (DAL.Member.HasMemberConfigInDic(smodel[0].MID))
-                            smodel[0] = DAL.Member.tempMemberList[smodel[0].MID];
-                        if (!DAL.Member.tempMemberAdd(bdmodel))
-                            bdmodel = DAL.Member.tempMemberList[bdmodel.MID];
+        //private static Hashtable DPMoneyChangeTran(Model.Member model, Model.Member shmodel, decimal dptopmoney, int dpcount, Hashtable MyHs)
+        //{
+        //    Model.Member bdmodel = DAL.Member.GetModel(model.MBD);
+        //    if (bdmodel != null && bdmodel.MBD != bdmodel.MID)
+        //    {
+        //        if (!bdmodel.Role.Super)
+        //        {
+        //            List<Model.Member> smodel = DAL.MemberCollection.GetMemberEntityList(string.Format("MBD='{0}' and AgencyCode<>'001' and MID<>'{1}' and MState='1'", bdmodel.MID, model.MID));
+        //            if (smodel.Count > 0)
+        //            {
+        //                if (DAL.Member.HasMemberConfigInDic(model.MID))
+        //                    model = DAL.Member.tempMemberList[model.MID];
+        //                if (DAL.Member.HasMemberConfigInDic(smodel[0].MID))
+        //                    smodel[0] = DAL.Member.tempMemberList[smodel[0].MID];
+        //                if (!DAL.Member.tempMemberAdd(bdmodel))
+        //                    bdmodel = DAL.Member.tempMemberList[bdmodel.MID];
 
-                        int dpmoney = smodel[0].MConfig.UpSumMoney > model.MConfig.UpSumMoney ? model.MConfig.UpSumMoney : smodel[0].MConfig.UpSumMoney;
+        //                int dpmoney = smodel[0].MConfig.UpSumMoney > model.MConfig.UpSumMoney ? model.MConfig.UpSumMoney : smodel[0].MConfig.UpSumMoney;
 
-                        //if (dpmoney > 0 && dpcount <= 9999999)
-                        {
-                            dpcount += 1;
-                            decimal money = dpmoney * BLL.Configuration.Model.B_DPFloat;
-                            if (bdmodel.MConfig.TJCount >= BLL.Configuration.Model.B_MaxDPCount)
-                                HBChangeTran(money, BLL.Member.ManageMember.TModel.MID, bdmodel.MID, "R_DP", shmodel, "MHB", "", MyHs);
-                        }
+        //                //if (dpmoney > 0 && dpcount <= 9999999)
+        //                {
+        //                    dpcount += 1;
+        //                    decimal money = dpmoney * BLL.Configuration.Model.B_DPFloat;
+        //                    if (bdmodel.MConfig.TJCount >= BLL.Configuration.Model.B_MaxDPCount)
+        //                        HBChangeTran(money, BLL.Member.ManageMember.TModel.MID, bdmodel.MID, "R_DP", shmodel, "MHB", "", MyHs);
+        //                }
 
-                        model.MConfig.UpSumMoney -= dpmoney;
-                        smodel[0].MConfig.UpSumMoney -= dpmoney;
+        //                model.MConfig.UpSumMoney -= dpmoney;
+        //                smodel[0].MConfig.UpSumMoney -= dpmoney;
 
-                        DAL.MemberConfig.UpdateConfigTran(model.MID, "UpSumMoney", (-dpmoney).ToString(), shmodel, false, SqlDbType.Int, MyHs);
-                        DAL.MemberConfig.UpdateConfigTran(smodel[0].MID, "UpSumMoney", (-dpmoney).ToString(), shmodel, false, SqlDbType.Int, MyHs);
+        //                DAL.MemberConfig.UpdateConfigTran(model.MID, "UpSumMoney", (-dpmoney).ToString(), shmodel, false, SqlDbType.Int, MyHs);
+        //                DAL.MemberConfig.UpdateConfigTran(smodel[0].MID, "UpSumMoney", (-dpmoney).ToString(), shmodel, false, SqlDbType.Int, MyHs);
 
 
-                    }
-                }
-                DPMoneyChangeTran(bdmodel, shmodel, dptopmoney, dpcount, MyHs);
-            }
-            return MyHs;
-        }
+        //            }
+        //        }
+        //        DPMoneyChangeTran(bdmodel, shmodel, dptopmoney, dpcount, MyHs);
+        //    }
+        //    return MyHs;
+        //}
 
         public static bool HBJLChangeTran(Model.Member model, decimal money, string type)
         {

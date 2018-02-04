@@ -70,7 +70,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li style=" display:none;">
                             <div class="item-content in_register">
 
                                 <div class="item-inner">
@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li style=" display:none;">
                             <div class="item-content in_register">
 
                                 <div class="item-inner">
@@ -158,11 +158,11 @@
         } else if (!$('#txtSecPsd').val().TryPassword()) {
             layer.msg("资金密码不能为空，且必须为6-20位字母或数字组合");
             
-        } else if ($('#txtSecPsd').val() != $('#txtSecPsd2').val()) {
-            layer.msg("资金密码与确认资金密码不一样");
+        //} else if ($('#txtSecPsd').val() != $('#txtSecPsd2').val()) {
+        //    layer.msg("资金密码与确认资金密码不一样");
             
-        } else if ($('#txtPassword').val() == $('#txtSecPsd').val()) {
-            layer.msg("资金密码与登录密码不能相同");
+        //} else if ($('#txtPassword').val() == $('#txtSecPsd').val()) {
+        //    layer.msg("资金密码与登录密码不能相同");
             
         } else if (!$('#txtTel').val().TryTel()) {
             layer.msg("手机号码格式不正确");

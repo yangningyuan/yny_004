@@ -18,7 +18,7 @@ namespace yny_004.Model
         /// <summary>
         /// 市场业绩
         /// </summary>
-        public int YJMoney { get; set; }
+        public decimal YJMoney { get; set; }
         /// <summary>
         /// 推荐业绩数量总
         /// </summary>
@@ -26,15 +26,15 @@ namespace yny_004.Model
         /// <summary>
         /// 推荐业绩
         /// </summary>
-        public int TJMoney { get; set; }
+        public decimal TJMoney { get; set; }
         /// <summary>
         /// 有效投资额
         /// </summary>
-        public int SHMoney { get; set; }
+        public decimal SHMoney { get; set; }
         /// <summary>
         /// 双轨对碰
         /// </summary>
-        public int UpSumMoney { get; set; }
+        public decimal UpSumMoney { get; set; }
         /// <summary>
         /// 毛收益
         /// </summary>
@@ -60,7 +60,7 @@ namespace yny_004.Model
         /// </summary>
         public decimal TotalTXMoney { get; set; }
         /// <summary>
-        /// 股权
+        /// 余额
         /// </summary>
         public decimal MHB { get; set; }
         /// <summary>
@@ -68,7 +68,7 @@ namespace yny_004.Model
         /// </summary>
         public decimal MJJ { get; set; }
         /// <summary>
-        /// 资金池
+        /// 公排复投币
         /// </summary>
         public decimal MJB { get; set; }
         private decimal _mgp;
@@ -87,7 +87,7 @@ namespace yny_004.Model
             }
         }
         /// <summary>
-        /// 红包区
+        /// 红包余额
         /// </summary>
         public decimal MCW { get; set; }
         /// <summary>

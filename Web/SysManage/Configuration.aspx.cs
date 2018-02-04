@@ -140,7 +140,7 @@ namespace yny_004.Web.SysManage
                 {
                     jishuqi++;
                     sb.Append(Request.Form[key]);
-                    if (jishuqi % 8 != 0)
+                    if (jishuqi % 6 != 0)
                         sb.Append("|");
                     else
                         sb.Append("≌");
@@ -158,17 +158,16 @@ namespace yny_004.Web.SysManage
                 {
                     MAgencyType = cols[0],
                     MAgencyName = cols[1],
-                    //Money = int.Parse(cols[2]),
-
-                    //TXFloat = decimal.Parse(cols[4]),
-                    YJMoney = string.IsNullOrEmpty(cols[2]) ? 0 : decimal.Parse(cols[2]),
-                    DPFloat = string.IsNullOrEmpty(cols[3]) ? 0 : decimal.Parse(cols[3]),
-                    ReBuyFloat = string.IsNullOrEmpty(cols[4]) ? 0 : decimal.Parse(cols[4]),
-                    SubCount = int.Parse(cols[5]),
+                    Money = string.IsNullOrEmpty(cols[2]) ? 0 : decimal.Parse(cols[2]),
+                    TXFloat = decimal.Parse(cols[3]),
+                    //YJMoney = string.IsNullOrEmpty(cols[3]) ? 0 : decimal.Parse(cols[3]),
+                    //DPFloat = string.IsNullOrEmpty(cols[4]) ? 0 : decimal.Parse(cols[4]),
+                    //ReBuyFloat = string.IsNullOrEmpty(cols[5]) ? 0 : decimal.Parse(cols[5]),
+                    //SubCount = int.Parse(cols[6]),
                     //DPTopMoney = decimal.Parse(cols[6]),
 
-                    ViewLevel = int.Parse(cols[6]),
-                    MColor = cols[7],
+                    ViewLevel = int.Parse(cols[4]),
+                    MColor = cols[5],
                 });
             }
             return SHMoneyList;

@@ -136,7 +136,7 @@ namespace yny_004.Model
         /// <summary>
         /// 预激活费用
         /// </summary>
-        public int SHMoney { get; set; }
+        public decimal SHMoney { get; set; }
         /// <summary>
         /// 身份证号码
         /// </summary>

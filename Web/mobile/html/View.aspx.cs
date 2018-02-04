@@ -1,5 +1,6 @@
 ﻿using CommonBLL;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -32,13 +33,15 @@ namespace yny_004.Web.mobile.html
                 txtBank.DataValueField = "Name";
                 txtBank.DataBind();
             }
-
+            BindDdlPwdQuestion(ddlQuestion);
             MemberModel = TModel;
         }
 
         protected override void SetValue()
         {
         }
+
+        
 
         public Model.Member MemberModel
         {
@@ -55,8 +58,8 @@ namespace yny_004.Web.mobile.html
                 model.Bank = Request.Form["txtBank"];
                 model.Branch = Request.Form["txtBranch"];
                 model.BankNumber = Request.Form["txtBankNumber"];
-                model.Province = Request.Form["ddlProvince"];
-                model.City = Request.Form["ddlCity"];
+                //model.Province = Request.Form["ddlProvince"];
+                //model.City = Request.Form["ddlCity"];
                 //model.Address = Request.Form["hduploadPic1"].Trim();
                 //model.NumID = Request.Form["txtNumID"];
                 //model.Address = "";
@@ -84,10 +87,10 @@ namespace yny_004.Web.mobile.html
                     txtBank.Value = value.Bank;
                     txtBranch.Value = value.Branch;
                     txtBankNumber.Value = value.BankNumber;
-                    ddlCity.Value = value.City;
-                    ddlProvince.Value = value.Province;
-                    provice = value.Province;
-                    City = value.City;
+                    //ddlCity.Value = value.City;
+                    //ddlProvince.Value = value.Province;
+                    //provice = value.Province;
+                    //City = value.City;
                     //txtNumID.Value = value.NumID;
                     //hduploadPic1.Value = value.Address;
                     //pic = "";

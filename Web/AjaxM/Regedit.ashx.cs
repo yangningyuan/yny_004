@@ -18,7 +18,7 @@ namespace yny_004.Web.AjaxM
                 model.MID = _context.Request.Form["txtTel"].Trim();
                 model.MName = _context.Request.Form["txtMName"].Trim();
                 model.Password = _context.Request.Form["txtPassword"].Trim();
-                model.SecPsd = _context.Request.Form["txtSecPsd"].Trim();
+                //model.SecPsd = _context.Request.Form["txtSecPsd"].Trim();
                 model.Tel = _context.Request.Form["txtTel"].Trim();
                 model.RoleCode = "Notactive";
                 model.AgencyCode = "001";
@@ -36,10 +36,10 @@ namespace yny_004.Web.AjaxM
                 //model.MBD = Request.Form["txtMBD"];
                 //model.MSH = Request.Form["txtMSH"];
                 model.MSH = "";
-                model.Bank = _context.Request.Form["txtBank"];
-                model.Branch = _context.Request.Form["txtBranch"];
-                model.BankCardName = _context.Request.Form["txtBankCardName"];
-                model.BankNumber = _context.Request.Form["txtBankNumber"];
+                //model.Bank = _context.Request.Form["txtBank"];
+                //model.Branch = _context.Request.Form["txtBranch"];
+                //model.BankCardName = _context.Request.Form["txtBankCardName"];
+                //model.BankNumber = _context.Request.Form["txtBankNumber"];
                 model.MCreateDate = DateTime.Now;
                 model.MDate = DateTime.MaxValue;
                 model.Salt = new Random().Next(10000, 99999).ToString();
@@ -56,8 +56,8 @@ namespace yny_004.Web.AjaxM
                 //}
                 //model.NumID = Request.Form["txtNumID"];
                 //model.Country = _context.Request.Form["txtCountry"];
-                model.Province = _context.Request.Form["ddlProvince"].Trim();
-                model.City = _context.Request.Form["ddlCity"].Trim();
+                //model.Province = _context.Request.Form["ddlProvince"].Trim();
+                //model.City = _context.Request.Form["ddlCity"].Trim();
                 //model.Zone = Request.Form["ddlZone"].Trim();
 
                 model.FHState = false;
@@ -100,14 +100,14 @@ namespace yny_004.Web.AjaxM
             {
                 error += "该手机号码已被绑定";
             }
-            else
-            {
-                string code = BLL.SMS.GetSKeyBuyTel(_context.Request.Form["txtTel"].Trim(), Model.SMSType.ZCYZ);
-                if ((string.IsNullOrEmpty(code) || code != _context.Request.Form["txtTelCode"].Trim()))
-                {
-                    error += "手机验证码错误！";
-                }
-            }
+            //else
+            //{
+            //    string code = BLL.SMS.GetSKeyBuyTel(_context.Request.Form["txtTel"].Trim(), Model.SMSType.ZCYZ);
+            //    if ((string.IsNullOrEmpty(code) || code != _context.Request.Form["txtTelCode"].Trim()))
+            //    {
+            //        error += "手机验证码错误！";
+            //    }
+            //}
             if (!string.IsNullOrEmpty(error))
             {
                 context.Response.Write(error);

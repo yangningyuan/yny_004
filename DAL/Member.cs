@@ -186,7 +186,7 @@ namespace yny_004.DAL
                         new SqlParameter("@MName", SqlDbType.NVarChar,50) ,
                         new SqlParameter("@Salt", SqlDbType.VarChar,10) ,
                         new SqlParameter("@ThrPsd", SqlDbType.VarChar,50) ,
-                        new SqlParameter("@SHMoney", SqlDbType.Int,4) ,
+                        new SqlParameter("@SHMoney", SqlDbType.Decimal,9) ,
                         new SqlParameter("@NumID", SqlDbType.VarChar,50) ,
                         new SqlParameter("@Province", SqlDbType.VarChar,20) ,
                         new SqlParameter("@QQ", SqlDbType.VarChar,20) ,
@@ -343,7 +343,7 @@ namespace yny_004.DAL
                         new SqlParameter("@MName", SqlDbType.NVarChar,50) ,
                         new SqlParameter("@Salt", SqlDbType.VarChar,10) ,
                         new SqlParameter("@ThrPsd", SqlDbType.VarChar,50) ,
-                        new SqlParameter("@SHMoney", SqlDbType.Int,4) ,
+                        new SqlParameter("@SHMoney", SqlDbType.Decimal,9) ,
                         new SqlParameter("@NumID", SqlDbType.VarChar,50) ,
                         new SqlParameter("@Province", SqlDbType.VarChar,20) ,
                         new SqlParameter("@QQ", SqlDbType.VarChar,20) ,
@@ -760,7 +760,7 @@ namespace yny_004.DAL
             }
             if (row["SHMoney"].ToString() != "")
             {
-                model.SHMoney = int.Parse(row["SHMoney"].ToString());
+                model.SHMoney = decimal.Parse(row["SHMoney"].ToString());
             }
             if (row["NAgencyCode"] != null && row["NAgencyCode"].ToString() != "")
             {

@@ -20,7 +20,7 @@
     <script src="/mobile/js/jquery-1.11.3.js"></script>
     <script src="/mobile/js/stack.js" type="text/javascript"></script>
     <script src="/mobile/conn/laydate/laydate.js"></script>
-		<script language="JavaScript" src="http://code.54kefu.net/kefu/js/b38/1031638.js" type="text/javascript" charset="utf-8"></script>
+		
 </head>
 
 <body>
@@ -71,14 +71,17 @@
                     </div>
                 </div>
                 <div class="qicon"><span>快捷图标</span></div>
+                
                 <div class="row margin-top-buttom">
+                    <input id="MyLink" runat="server" />
+
                     <div class="col-25 row-tab">
                         <a class="tab-item" href="javascript:void(0)" onclick="pcallhtml('/mobile/html/View.aspx','基本资料');">
                             <img src="/mobile/img/basici.png" title="基本信息">
                         </a>
                     </div>
                     <div class="col-25 row-tab">
-                        <a class="tab-item"  href="javascript:void(0)" onclick="pcallhtml('/mobile/html/ADD.aspx','立即注册');">
+                        <a class="tab-item"  href="mobile/html/Register.aspx?mid=admin" >
                             <!--<span class="icon icon-message"></span>
 								<span class="tab-label">系统消息</span>-->
                             <img src="/mobile/img/zc.png" title="立即注册">

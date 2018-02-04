@@ -64,26 +64,15 @@
                 v5.error('登录密码与确认登录密码不一样', '1', 'true');
             } else if (!$('#txtSecPsd').val().TryPassword()) {
                 v5.error('资金密码不能为空，且必须为6-20位字母或数字组合', '1', 'true');
-            } else if ($('#txtSecPsd').val() != $('#txtSecPsd2').val()) {
-                v5.error('资金密码与确认资金密码不一样', '1', 'true');
-            } else if ($('#txtPassword').val() == $('#txtSecPsd').val()) {
-                v5.error('资金密码与登录密码不能相同', '1', 'true');
+            //} else if ($('#txtSecPsd').val() != $('#txtSecPsd2').val()) {
+            //    v5.error('资金密码与确认资金密码不一样', '1', 'true');
+            //} else if ($('#txtPassword').val() == $('#txtSecPsd').val()) {
+            //    v5.error('资金密码与登录密码不能相同', '1', 'true');
             } else if (!$('#txtTel').val().TryTel()) {
                 v5.error('手机号码格式不正确', '1', 'true');
             } else if ($('#txtTelCode').val() == "") {
                 v5.error("手机验证码不能为空", '1', 'true');
-                //} else if ($('#ddlCity').val() == '地市') {
-                //    v5.error('请选择开户地区', '1', 'true');
-                //} else if ($('#txtBranch').val() == '') {
-                //    v5.error('请输入开户支行', '1', 'true');
-                //} else if (!$('#txtBankCardName').val().TryEN()) {
-                //    v5.error('会员姓名只能输入两位以上的中文字符', '1', 'true');
-                //} else if ($('#txtBankCardName').val() != $('#txtMName').val()) {
-                //    v5.error('开户姓名必须与会员姓名一直', '1', 'true');
-                //} else if (!$('#txtBankNumber').val().TryBankCard()) {
-                //    v5.error('银行卡号只能是16-19位数字', '1', 'true');
-                //} else if ($('#txtAnswer').val() == '') {
-                //    v5.error('密保答案不能为空', '1', 'true');
+             
             } else {
                 $.ajax({
                     type: 'post',
@@ -121,7 +110,7 @@
     <div class="page-group">
         <div class="page page-current" id="Register">
             <header class="bar bar-nav">
-                <a href="#" class="icon icon-left pull-left back"></a>
+                <%--<a href="#" class="icon icon-left pull-left back"></a>--%>
                 <h1 class="title">会员注册</h1>
             </header>
 
@@ -140,7 +129,7 @@
                         <%--<input type="hidden" id="ddlProvince" name="ddlProvince" />
                         <input type="hidden" id="ddlProvince" name="ddlProvince" />--%>
                         <div class="Register_List">
-                            <div class="list-block">
+                            <div class="list-block" style="margin-top:50px;">
                                 <ul>
                                     <!-- Text inputs -->
                                   <h4 style="color:#fff;padding-left:10px;"> <span>推荐人:</span></h4>
@@ -216,27 +205,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="item-content">
-                                            <div class="item-media"><i class="fa icon-lock icon-large"></i></div>
-                                            <div class="item-inner">
-                                                <div class="item-input">
-                                                    <input type="password" id="txtSecPsd" name="txtSecPsd" placeholder="安全密码">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="item-content">
-                                            <div class="item-media"><i class="fa icon-lock icon-large"></i></div>
-                                            <div class="item-inner">
-                                                <div class="item-input">
-                                                    <input type="password"  id="txtSecPsd2" name="txtSecPsd2" placeholder="确认安全密码">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                 
+                                   
                                 </ul>
                             </div>
                             <div class="content-block">

@@ -18,7 +18,7 @@
 		<%--<script src="/Admin/js/jquery-1.8.3.min.js"></script>--%><%--<script src="/Admin/js/jquery-1.11.1.min.js"></script>--%>
     <script src="/Admin/js/jquery-1.9.1.min.js"></script>
 		<script src="/Admin/js/jquery-scroll.js"></script>
-			<script language="JavaScript" src="http://code.54kefu.net/kefu/js/b38/1031638.js" type="text/javascript" charset="utf-8"></script>
+			<%--<script language="JavaScript" src="http://code.54kefu.net/kefu/js/b38/1031638.js" type="text/javascript" charset="utf-8"></script>--%>
 	</head>
 
     
@@ -163,13 +163,14 @@
 										<tr>
 											<td><%=yny_004.BLL.Reward.List["MHB"].RewardName %>：<%=TModel.MConfig.MHB %></td>
 											<td>
-												有效投资额：<%=TModel.MConfig.SHMoney %>
+												<%=yny_004.BLL.Reward.List["MJB"].RewardName %>：<%=TModel.MConfig.MJB %>
 											</td>
 										</tr>
 										<tr>
 											<td>奖金累计：<%=TModel.MConfig.TotalMoney %></td>
 											<td>
-												日分红累计：<%=fhtotal %>
+												
+                                                有效投资额：<%=TModel.MConfig.SHMoney %>
 											</td>
 										</tr>
 										<tr>

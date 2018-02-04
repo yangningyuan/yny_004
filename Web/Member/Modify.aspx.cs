@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using CommonBLL;
+using System.Collections;
 
 namespace yny_004.Web.Member
 {
@@ -62,8 +63,10 @@ namespace yny_004.Web.Member
                 model.Bank = Request.Form["txtBank"];
                 model.Branch = Request.Form["txtBranch"];
                 model.BankNumber = Request.Form["txtBankNumber"];
-                model.Province = Request.Form["ddlProvince"];
-                model.City = Request.Form["ddlCity"];
+                model.SecPsd = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(Request.Form["txtSePwd"] + model.Salt, "MD5").ToUpper();
+
+                //model.Province = Request.Form["ddlProvince"];
+                //model.City = Request.Form["ddlCity"];
                 //model.Address = Request.Form["hduploadPic1"].Trim();
                 //model.NumID = Request.Form["txtNumID"];
                 //model.Address = "";
@@ -96,10 +99,11 @@ namespace yny_004.Web.Member
                     txtBank.Value = value.Bank;
                     txtBranch.Value = value.Branch;
                     txtBankNumber.Value = value.BankNumber;
-                    ddlCity.Value = value.City;
-                    ddlProvince.Value = value.Province;
-                    provice = value.Province;
-                    City = value.City;
+                    
+                    //ddlCity.Value = value.City;
+                    //ddlProvince.Value = value.Province;
+                    //provice = value.Province;
+                    //City = value.City;
                     //txtNumID.Value = value.NumID;
                     //hduploadPic1.Value = value.Address;
                     //pic = "";
@@ -116,7 +120,32 @@ namespace yny_004.Web.Member
                 }
             }
         }
-
+        protected void UpdateQuestion(int mid, Hashtable MyHs)
+        {
+            if (!string.IsNullOrEmpty(Request.Form["txtAnswer"]))
+            {
+                Model.Sys_SQ_Answer objAns = new BLL.Sys_SQ_Answer().GetList("MID=" + mid + " and IsDeleted=0").FirstOrDefault();
+                if (objAns != null)
+                {
+                    objAns.QId = long.Parse(Request.Form["ddlQuestion"]);
+                    objAns.Answer = Request.Form["txtAnswer"];
+                    new BLL.Sys_SQ_Answer().Update(objAns, MyHs);
+                }
+                else
+                {
+                    objAns = new Model.Sys_SQ_Answer();
+                    objAns.QId = long.Parse(Request.Form["ddlQuestion"]);
+                    objAns.Answer = Request.Form["txtAnswer"];
+                    objAns.MID = mid;
+                    objAns.IsDeleted = false;
+                    objAns.CreatedBy = BLL.Member.ManageMember.TModel.MID;
+                    objAns.CreatedTime = DateTime.Now;
+                    objAns.Code = Guid.NewGuid().ToString();
+                    objAns.Status = 1;
+                    new BLL.Sys_SQ_Answer().Insert(objAns, MyHs);
+                }
+            }
+        }
         /// <summary>
         /// 更新基本资料
         /// </summary>
@@ -126,14 +155,14 @@ namespace yny_004.Web.Member
         {
             string error = "";
 
-            if (string.IsNullOrWhiteSpace(MemberModel.Province))
-            {
-                return "省不能为空";
-            }
-            if (string.IsNullOrWhiteSpace(MemberModel.City))
-            {
-                return "市不能为空";
-            }
+            //if (string.IsNullOrWhiteSpace(MemberModel.Province))
+            //{
+            //    return "省不能为空";
+            //}
+            //if (string.IsNullOrWhiteSpace(MemberModel.City))
+            //{
+            //    return "市不能为空";
+            //}
 
             if (BLL.WebBase.Model.TelVerify)
             {
@@ -154,7 +183,11 @@ namespace yny_004.Web.Member
             }
             if (string.IsNullOrEmpty(error))
             {
-                if (BllModel.Update(MemberModel))
+                
+                Hashtable MyHs = new Hashtable();
+                UpdateQuestion(MemberModel.ID,MyHs);
+                BllModel.Update(MemberModel, MyHs);
+                if (BLL.CommonBase.RunHashtable(MyHs))
                 {
                     BLL.OperationRecordBLL.Add(TModel.MID, ChangeType.O_XGZL, "修改资料");
                     return "操作成功";

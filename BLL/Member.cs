@@ -115,7 +115,7 @@ namespace yny_004.BLL
                 return "升级会员不存在";
             if (string.IsNullOrEmpty(model.MTJ))
                 return "请联系管理员设置您的推荐人";
-            int sjmoney = shmoney.Money - model.MAgencyType.Money;
+            decimal sjmoney = shmoney.Money - model.MAgencyType.Money;
             lock (DAL.Member.tempMemberList)
             {
                 //DAL.Member.tempMemberList.Clear();
@@ -467,11 +467,11 @@ namespace yny_004.BLL
             if (retStr != "")
                 return inserModel;
             string password = model.Password;
-            string secpsd = model.SecPsd;
+            //string secpsd = model.SecPsd;
             //if (string.IsNullOrEmpty(model.FMID))
             {
                 model.Password = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(model.Password + model.Salt, "MD5").ToUpper();
-                model.SecPsd = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(model.SecPsd + model.Salt, "MD5").ToUpper();
+                //model.SecPsd = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(model.SecPsd + model.Salt, "MD5").ToUpper();
             }
             if (DAL.Member.Insert(model))
             {

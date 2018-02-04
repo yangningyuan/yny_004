@@ -48,11 +48,11 @@ namespace yny_004.DAL
         /// <summary>
         /// 得到绑定列表
         /// </summary>
-        /// <returns></returns>
+        /// <returns>+ ' (' + MAgencyName + ')' as 'MoneyMAgencyName' </returns>
         public static DataTable GetSHMoneyListDataTable(string strWhere = "", string order = "MAgencyType")
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select *,Money + ' (' + MAgencyName + ')' as 'MoneyMAgencyName'  FROM SHMoney");
+            strSql.Append("select *,Money  FROM SHMoney");
             if (!string.IsNullOrEmpty(strWhere))
             {
                 strSql.Append(" where " + strWhere + " ");
@@ -99,7 +99,7 @@ namespace yny_004.DAL
                 }
                 if (row["Money"] != null && row["Money"].ToString() != "")
                 {
-                    model.Money = int.Parse(row["Money"].ToString());
+                    model.Money = decimal.Parse(row["Money"].ToString());
                 }
                 if (row["BTFloat"] != null && row["BTFloat"].ToString() != "")
                 {
@@ -201,7 +201,7 @@ namespace yny_004.DAL
             SqlParameter[] parameters = {
 					new SqlParameter("@MAgencyType", SqlDbType.VarChar,10),
 					new SqlParameter("@MAgencyName", SqlDbType.VarChar,20),
-					new SqlParameter("@Money", SqlDbType.VarChar,50),
+					new SqlParameter("@Money", SqlDbType.Decimal,9),
 					new SqlParameter("@BTFloat", SqlDbType.Decimal,9),
 					new SqlParameter("@TJFloat", SqlDbType.Decimal,9),
 					new SqlParameter("@TXFloat", SqlDbType.Decimal,9),

@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <%--<li>
                     <div class="item-content">
                         <div class="item-inner">
                             <div class="item-title label">开户地区</div>
@@ -39,7 +39,7 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li>--%>
                 <li>
                     <div class="item-content">
                         <div class="item-inner">
@@ -82,7 +82,38 @@
                         </div>
                     </div>
                 </li>
-
+                 <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">设置交易密码</div>
+                            <div class="item-input">
+                                <input id="txtSePwd" name="txtSePwd" runat="server" maxlength="20" type="text"  />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                 <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">密保问题</div>
+                            <div class="item-input">
+                                 <select id="ddlQuestion" name="ddlQuestion" runat="server">
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                 <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">密保答案</div>
+                            <div class="item-input">
+                                <input id="txtAnswer" name="txtAnswer" runat="server" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+               
             </ul>
         </form>
     </div>
@@ -96,12 +127,12 @@
 </div>
 <script>
 
-    setup();
+    <%--setup();
     $(function () {
         $("#ddlProvince").val('<%=provice%>');
         change(1);
         $("#ddlCity").val('<%=City%>');
-    });
+    });--%>
 
         function checkChange() {
             if ($('#txtMName').val() == '') {
@@ -113,12 +144,14 @@
             } else if ($('#txtBankCardName').val() == '') {
                 layer.msg('请输入开户姓名');
                 
-            } else if ($('#ddlCity').val() == '地市') {
-                layer.msg('请选择开户地区');
-                
+            //} else if ($('#ddlCity').val() == '地市') {
+            //    layer.msg('请选择开户地区');
             } else if (!$('#txtBankNumber').val().TryBankCard()) {
                 layer.msg('银行卡号只能是16-19位数字');
-               
+            } else if ($('#txtSePwd').val() == "") {
+                layer.msg('交易密码不能为空');
+            } else if ($('#txtAnswer').val()=="") {
+                layer.msg('密保答案不能为空');
             } else {
                 ActionModel("Member/Modify.aspx?Action=modify", $('#form1').serialize());
             }

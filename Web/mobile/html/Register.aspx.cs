@@ -20,7 +20,7 @@ namespace yny_004.Web.mobile.html
                     if (tjmodel != null)
                     {
                         txtMTJ.Value = Request.QueryString["mid"];
-                        //txtMTJ.Attributes["readonly"] = "readonly";
+                        txtMTJ.Attributes["readonly"] = "readonly";
                     }
                 }
             }

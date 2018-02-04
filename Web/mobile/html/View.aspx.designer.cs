@@ -22,33 +22,6 @@ namespace yny_004.Web.mobile.html {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtMName;
         
         /// <summary>
-        /// ddlProvince 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlProvince;
-        
-        /// <summary>
-        /// ddlCity 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlCity;
-        
-        /// <summary>
-        /// ddlZone 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlZone;
-        
-        /// <summary>
         /// txtBank 控件。
         /// </summary>
         /// <remarks>
@@ -83,5 +56,32 @@ namespace yny_004.Web.mobile.html {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtBankNumber;
+        
+        /// <summary>
+        /// txtSePwd 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtSePwd;
+        
+        /// <summary>
+        /// ddlQuestion 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlQuestion;
+        
+        /// <summary>
+        /// txtAnswer 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtAnswer;
     }
 }
