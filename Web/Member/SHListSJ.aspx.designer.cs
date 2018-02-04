@@ -7,27 +7,36 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace yny_004.Web.ChangeMoney {
+namespace yny_004.Web.Member {
     
     
-    public partial class HBGM {
+    public partial class SHListSJ {
         
         /// <summary>
-        /// txtMID 控件。
+        /// Head1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtMID;
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
         
         /// <summary>
-        /// btnOK 控件。
+        /// DivSearch 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputButton btnOK;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivSearch;
+        
+        /// <summary>
+        /// DivOperation 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivOperation;
     }
 }

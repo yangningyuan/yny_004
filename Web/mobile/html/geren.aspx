@@ -9,8 +9,17 @@
                             <div class="col-70">
                                 <ul class="personlist">
                                     <li><strong><%=TModel.MID %>，您好</strong></li>
-                                    <li><label></label><i class="zs"></i><span class="po1"><%=TModel.MAgencyType.MAgencyName %></span></li>
-                                    <li><span>团队有效投资额：<b><%=TModel.MConfig.YJMoney %></b></span>&nbsp;</li>
+                                    <li><label></label><i class="zs"></i><span class="po1"><%=TModel.MAgencyType.MAgencyName %></span>
+                                        <%
+                                            if (!TModel.MState)
+                                            {
+                                                %>
+                                        <a href="javascript:pcallhtmlNoV('/mobile/html/UpMAgencyType.aspx','激活');" title="" class="background_1">激活</a>
+                                            <%
+                                            }
+                                             %>
+                                    </li>
+                                    <%--<li><span>团队有效投资额：<b><%=TModel.MConfig.YJMoney %></b></span>&nbsp;</li>--%>
                                     <li><span>会员类型：<b><%=TModel.Role.RName %></b></span>&nbsp;</li>
                                     <li><i class="jiangjin"></i><%=yny_004.BLL.Reward.List["MHB"].RewardName %>：<%=TModel.MConfig.MHB %></li>
                                     <li><i class="currentm"></i><%=yny_004.BLL.Reward.List["MJB"].RewardName %>：<%=TModel.MConfig.MJB %></li>

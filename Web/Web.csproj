@@ -289,7 +289,10 @@
     <Content Include="login\images\logo.png" />
     <Content Include="login\images\yanzhengma.jpg" />
     <Content Include="Member\MyLink.aspx" />
+    <Content Include="Member\SHListSJ.aspx" />
+    <Content Include="Member\Structure.aspx" />
     <Content Include="Member\TJTree.aspx" />
+    <Content Include="Member\UpMAgencyType.aspx" />
     <Content Include="mobile\conn\bootstrap\css\bootstrap.min.css" />
     <Content Include="mobile\conn\bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="mobile\conn\bootstrap\js\bootstrap.min.js" />
@@ -360,6 +363,7 @@
     <Content Include="mobile\html\TXChange.aspx" />
     <Content Include="mobile\html\TXList.aspx" />
     <Content Include="mobile\html\TZ.aspx" />
+    <Content Include="mobile\html\UpMAgencyType.aspx" />
     <Content Include="mobile\html\View.aspx" />
     <Content Include="mobile\html\Code.aspx" />
     <Content Include="mobile\html\WXChange.aspx" />
@@ -1443,6 +1447,22 @@
     <Compile Include="Common\UploadExcel.ashx.cs">
       <DependentUpon>UploadExcel.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Member\Handler\SHList.ashx.cs">
+      <DependentUpon>SHList.ashx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\Handler\SHListSJ.ashx.cs">
+      <DependentUpon>SHListSJ.ashx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\Handler\SJList.ashx.cs">
+      <DependentUpon>SJList.ashx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\Handler\Structure.ashx.cs">
+      <DependentUpon>Structure.ashx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Member\Handler\TJTree.ashx.cs">
       <DependentUpon>TJTree.ashx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1454,12 +1474,33 @@
     <Compile Include="Member\MyLink.aspx.designer.cs">
       <DependentUpon>MyLink.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Member\SHListSJ.aspx.cs">
+      <DependentUpon>SHListSJ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\SHListSJ.aspx.designer.cs">
+      <DependentUpon>SHListSJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Structure.aspx.cs">
+      <DependentUpon>Structure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\Structure.aspx.designer.cs">
+      <DependentUpon>Structure.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Member\TJTree.aspx.cs">
       <DependentUpon>TJTree.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Member\TJTree.aspx.designer.cs">
       <DependentUpon>TJTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\UpMAgencyType.aspx.cs">
+      <DependentUpon>UpMAgencyType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\UpMAgencyType.aspx.designer.cs">
+      <DependentUpon>UpMAgencyType.aspx</DependentUpon>
     </Compile>
     <Compile Include="Message\Handler\NoticeList.ashx.cs">
       <DependentUpon>NoticeList.ashx</DependentUpon>
@@ -1773,6 +1814,13 @@
     </Compile>
     <Compile Include="mobile\html\TZ.aspx.designer.cs">
       <DependentUpon>TZ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mobile\html\UpMAgencyType.aspx.cs">
+      <DependentUpon>UpMAgencyType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobile\html\UpMAgencyType.aspx.designer.cs">
+      <DependentUpon>UpMAgencyType.aspx</DependentUpon>
     </Compile>
     <Compile Include="mobile\html\View.aspx.cs">
       <DependentUpon>View.aspx</DependentUpon>
@@ -2606,6 +2654,10 @@
     <Content Include="mobile\font_icons\iconfont.eot" />
     <Content Include="mobile\font_icons\iconfont.ttf" />
     <Content Include="mobile\font_icons\iconfont.woff" />
+    <Content Include="Member\Handler\SHListSJ.ashx" />
+    <Content Include="Member\Handler\SHList.ashx" />
+    <Content Include="Member\Handler\SJList.ashx" />
+    <Content Include="Member\Handler\Structure.ashx" />
     <None Include="plugin\ztree\demo\cn\asyncData\getNodes.php" />
     <None Include="plugin\ztree\demo\cn\asyncData\getNodesForBigData.php" />
     <None Include="plugin\ztree\demo\en\asyncData\getNodes.php" />

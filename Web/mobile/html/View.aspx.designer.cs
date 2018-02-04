@@ -64,7 +64,7 @@ namespace yny_004.Web.mobile.html {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtSePwd;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtSePwd;
         
         /// <summary>
         /// ddlQuestion 控件。
@@ -83,5 +83,14 @@ namespace yny_004.Web.mobile.html {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtAnswer;
+        
+        /// <summary>
+        /// btn 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn;
     }
 }

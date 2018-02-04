@@ -19,18 +19,7 @@
                             <input id="txtFromMID" runat="server" class="normal_input" type="text" />
                         </td>
                     </tr>
-                    <tr>
-                        <td align="right">
-                            <span>
-                                <%=yny_004.BLL.Reward.List["MJB"].RewardName%>余额：</span>
-                        </td>
-                        <td>
-                            <label id="txtMGP">
-                                <%=TModel.MConfig.MJB.ToString("F2")%></label>
-                            <%if (TModel.Role.Super)
-                                { %><input type="button" class="normal_btnok btn btn-success" value="查询" onclick="findMJB()" /><%} %>
-                        </td>
-                    </tr>
+                 
                       <tr>
                         <td align="right">
                             <span>
@@ -64,8 +53,8 @@
                         </td>
                         <td>
                             
-                            <input id="Radio1" type="radio" value="MJB" name="RioHK" checked="checked" /><%=yny_004.BLL.Reward.List["MJB"].RewardName%>
-                            <input id="RioJB" type="radio" value="MHB" name="RioHK"/><%=yny_004.BLL.Reward.List["MHB"].RewardName %>
+                            
+                            <input id="RioJB" type="radio" value="MHB" name="RioHK" checked="checked"/><%=yny_004.BLL.Reward.List["MHB"].RewardName %>
                         </td>
                     </tr>
                     <tr>

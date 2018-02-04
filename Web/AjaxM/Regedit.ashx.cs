@@ -32,7 +32,7 @@ namespace yny_004.Web.AjaxM
                 //    model.MTJ = BLL.Member.ManageMember.TModel.MID;
                 //}
                 //model.MBDIndex = int.Parse(Request.Form["ddlMBDIndex"]);
-                model.MBD = model.MTJ;
+                model.MBD = BLL.Member.ManageMember.TModel.MID;
                 //model.MBD = Request.Form["txtMBD"];
                 //model.MSH = Request.Form["txtMSH"];
                 model.MSH = "";

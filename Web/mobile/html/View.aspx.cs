@@ -23,6 +23,7 @@ namespace yny_004.Web.mobile.html
                 if (!string.IsNullOrEmpty(TModel.BankCardName))
                 {
                     txtBankCardName.Attributes.Add("readonly", "readonly");
+                    btn.Visible = false;
                 }
             }
             //if (TModel.Role.IsAdmin)

@@ -94,20 +94,8 @@
                             <img src="/mobile/img/cz.png" title="公告查询 ">
                         </a>
                     </div>
-                    <div class="col-25 row-tab">
-                        <a class="tab-item" href="javascript:void(0)" onclick="pcallhtml('/mobile/html/InvestApply.aspx','申请投资');">
-                            <!--<span class="fa icon-sitemap"></span>
-								<span class="tab-label">我的团队</span>-->
-                            <img src="/mobile/img/sq.png" title="申请投资">
-                        </a>
-                    </div>
-                    <div class="col-25 row-tab">
-                        <a class="tab-item"  href="javascript:void(0)" onclick="pcallhtml('/mobile/html/InvestList.aspx','投资明细');">
-                            <!--<span class="icon icon-code"></span>
-								<span class="tab-label">我的二维码</span>-->
-                            <img src="/mobile/img/tz.png" title="投资明细">
-                        </a>
-                    </div>
+                   
+                
                     <div class=" col-25 row-tab ">
                         <a class="tab-item " href="javascript:void(0)" onclick="pcallhtml('/mobile/html/HBList.aspx','转账查询');">
                             <!--<span class="fa icon-tag "></span>
@@ -136,20 +124,8 @@
                             <img src="/mobile/img/zz.png " title="提现管理">
                         </a>
                     </div>
-                    <div class="col-25 row-tab ">
-                        <a class="tab-item " href="javascript:void(0)" onclick="pcallhtml('/mobile/html/InvestList.aspx','申请退本');">
-                            <!--<span class="fa icon-upload-alt "></span>
-								<span class="tab-label ">我要升级</span>-->
-                            <img src="/mobile/img/sqtb.png " title="申请退本">
-                        </a>
-                    </div>
-                    <div class="col-25 row-tab ">
-                        <a class="tab-item " href="javascript:void(0)" onclick="pcallhtml('/mobile/html/Pwd.aspx','密码设置');">
-                            <!--<span class="fa icon-upload-alt "></span>
-								<span class="tab-label ">我要升级</span>-->
-                            <img src="/mobile/img/updatepwd.png " title="修改密码">
-                        </a>
-                    </div>
+                   
+                    
                     <div class="col-25 row-tab ">
                         <a class="tab-item " href="javascript:void(0)" onclick="pcallhtml('/mobile/html/TJTree.aspx','推荐图谱');">
                             <!--<span class="fa icon-upload-alt "></span>

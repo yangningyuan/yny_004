@@ -9,15 +9,15 @@
     <p>
         <a href="javascript:void(0)" onclick="pcallhtml('/mobile/html/HBChange.aspx','转账');" class="button button-fill button-success">转账</a>
     </p>
-     <p>
+     <%--<p>
         <a href="javascript:void(0)" onclick="pcallhtml('/mobile/html/HBToJBChange.aspx','转换');" class="button button-fill button-success">转换</a>
-    </p>
+    </p>--%>
     <form id="form1">
         <div class="buttons-tab">
             <input type="hidden" value="ZC" id="state" runat="server" />
             <a href="javascript:void(0)" onclick="$('#state').val('ZC'); dianji(this); " class="tab-link active button requery">转出</a>
             <a href="javascript:void(0)" onclick="$('#state').val('ZR'); dianji(this); " class="tab-link button requery">转入</a>
-            <a href="javascript:void(0)" onclick="$('#state').val('DH'); dianji(this); " class="tab-link button requery">转换</a>
+            <%--<a href="javascript:void(0)" onclick="$('#state').val('DH'); dianji(this); " class="tab-link button requery">转换</a>--%>
         </div>
     </form>
     <script type="text/x-jquery-tmpl" id="HBListTmpl">

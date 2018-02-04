@@ -87,7 +87,7 @@
                         <div class="item-inner">
                             <div class="item-title label">设置交易密码</div>
                             <div class="item-input">
-                                <input id="txtSePwd" name="txtSePwd" runat="server" maxlength="20" type="text"  />
+                                <input id="txtSePwd" name="txtSePwd" runat="server" maxlength="20" type="password"  />
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
             </ul>
         </form>
     </div>
-    <div class="content-block">
+    <div class="content-block" id="btn" runat="server">
         <div class="row">
             <div class="col-100">
                 <a href="javascript:void(0)" onclick="checkChange();" class="button button-big button-fill button-success">修改资料</a>
@@ -153,7 +153,18 @@
             } else if ($('#txtAnswer').val()=="") {
                 layer.msg('密保答案不能为空');
             } else {
-                ActionModel("Member/Modify.aspx?Action=modify", $('#form1').serialize());
+                //ActionModel("Member/Modify.aspx?Action=modify", $('#form1').serialize());
+                $.ajax({
+                    type: 'post',
+                    url: 'Member/Modify.aspx?Action=modify',
+                    data: $('#form1').serialize(),
+                    success: function (info) {
+                        layer.msg(info);
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 1000);
+                    }
+                });
             }
         }
 </script>

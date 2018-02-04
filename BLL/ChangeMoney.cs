@@ -148,10 +148,10 @@ namespace yny_004.BLL
                 return "提现金额应是" + DAL.Configuration.TModel.B_TXBaseMoney + "的倍数";
             }
 
-            if (BLL.ChangeMoney.GetDayTXCount(model.MID) >=model.MAgencyType.SubCount)
-            {
-                return "每周只能提现"+ model.MAgencyType.SubCount + "次";
-            }
+            //if (BLL.ChangeMoney.GetDayTXCount(model.MID) >=model.MAgencyType.SubCount)
+            //{
+            //    return "每周只能提现"+ model.MAgencyType.SubCount + "次";
+            //}
 
             //if (DateTime.Now.DayOfWeek != DayOfWeek.Monday)
             //{
@@ -177,7 +177,7 @@ namespace yny_004.BLL
         /// <returns></returns>
         public static Hashtable TXChangeTran(int money, Model.Member model, string moneyType, bool ifSendMsg)
         {
-            decimal txfloat = Convert.ToDecimal(BLL.ConfigDictionaryNew.GetConfigDictionary(Convert.ToInt32(money), "TXTake", "").DValue);
+            decimal txfloat = model.MAgencyType.TXFloat;
             Model.ChangeMoney changemoney = new Model.ChangeMoney();
             changemoney.ChangeDate = DateTime.Now;
             changemoney.ChangeType = "TX";
@@ -774,7 +774,7 @@ namespace yny_004.BLL
                     shmodel = DAL.Member.tempMemberList[shmodel.MID];
                 YJCountTran(shmodel, shmodel, MyHs);
                 TJCountTran(shmodel, MyHs);
-
+                R_JD(shmodel.SHMoney - shmodel.MConfig.SHMoney, shmodel, shmodel, 1, MyHs);
                 //if (model.PCode == "001")
                 //{
                 //    R_HBRecord(shmodel, MyHs);
@@ -782,7 +782,7 @@ namespace yny_004.BLL
                 //}
                 //R_LP(shmodel, shmodel, MyHs);
 
-                //DAL.MemberConfig.UpdateConfigTran(shmodel.MID, "SHMoney", shmodel.SHMoney.ToString(), shmodel, true, SqlDbType.Int, MyHs);
+                DAL.MemberConfig.UpdateConfigTran(shmodel.MID, "SHMoney", shmodel.SHMoney.ToString(), shmodel, true, SqlDbType.Decimal, MyHs);
             }
             else if (model.PCode == "003")//静态分红
             {
@@ -961,7 +961,7 @@ namespace yny_004.BLL
                 decimal tjmoney = shmodel.SHMoney - shmodel.MConfig.SHMoney;
                 tjmodel.MConfig.TJMoney += tjmoney;
                 DAL.MemberConfig.UpdateConfigTran(tjmodel.MID, "TJMoney", tjmoney.ToString(), shmodel, false, SqlDbType.Decimal, MyHs);
-
+                
                 //团队股权
                 //tjmodel.MConfig.HLGQCount += tjmoney;
                 //DAL.MemberConfig.UpdateConfigTran(tjmodel.MID, "HLGQCount", tjmoney.ToString(), shmodel, false, SqlDbType.Int, MyHs);
@@ -970,6 +970,12 @@ namespace yny_004.BLL
                 {
                     tjmodel.MConfig.TJCount += 1;
                     DAL.MemberConfig.UpdateConfigTran(tjmodel.MID, "TJCount", "1", shmodel, false, SqlDbType.Int, MyHs);
+
+                    Model.ConfigDictionary cd = DAL.ConfigDictionary.GetConfigDictionary(tjmodel.MConfig.TJCount,"TJFloat","");
+                    if (cd != null)
+                    {
+                        HBChangeTran(Convert.ToDecimal(cd.DValue), BLL.Member.ManageMember.TModel.MID, tjmodel.MID, "R_TJ", shmodel, "MCW", "", MyHs);
+                    }
                     //BLL.LuckyMoney.Add(tjmodel.MID, MyHs);
                 }
                 //if (!DAL.Member.HasMemberConfigInDic(tjmodel.MID))//不存在
@@ -1339,7 +1345,20 @@ namespace yny_004.BLL
             }
             return MyHs;
         }
-
+        public static Hashtable R_JD(decimal money, Model.Member member, Model.Member shmember, int level, Hashtable MyHs)
+        {
+            Model.Member MTJ = DAL.Member.GetModel(member.MTJ);
+            if (MTJ != null && !MTJ.Role.IsAdmin)
+            {
+                if (level <= BLL.Configuration.Model.ConfigDictionaryList["JDFloat"].Max(emp => emp.EndLevel))
+                {
+                    decimal tjfloat = Convert.ToDecimal(DAL.ConfigDictionary.GetConfigDictionary(level, "JDFloat", "").DValue);
+                    HBChangeTran( tjfloat, BLL.Member.ManageMember.TModel.MID, MTJ.MID, "R_JD", shmember, "MCW", "", MyHs);
+                    R_JD(money, MTJ, shmember, level + 1, MyHs);
+                }
+            }
+            return MyHs;
+        }
         /// <summary>
         /// 日分红
         /// </summary>

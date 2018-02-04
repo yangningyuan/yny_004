@@ -5,7 +5,7 @@
         <form id="form1">
             <ul>
                 <!-- Text inputs -->
-                <li>
+              <%--  <li>
                     <div class="item-content">
                         <div class="item-inner">
                             <div class="item-title label"><%=yny_004.BLL.Reward.List["MJB"].RewardName %></div>
@@ -14,7 +14,7 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li>--%>
                  <li>
                     <div class="item-content">
                         <div class="item-inner">
@@ -70,19 +70,9 @@
                         <div class="item-inner">
                             <div class="item-title label">选择币种</div>
                             <div class="item-input">
-                                <label class="label-checkbox item-content">
-                                    <input type="radio" name="RioHK" checked="checked" value="MJB">
-                                    <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-                                    <div class="item-inner">
-                                        <div class="item-title-row">
-                                            <div class="item-title"><%=yny_004.BLL.Reward.List["MJB"].RewardName %></div>
-
-                                        </div>
-
-                                    </div>
-                                </label>
+                                
                                  <label class="label-checkbox item-content">
-                                    <input type="radio" name="RioHK"  value="MHB">
+                                    <input type="radio" name="RioHK"  value="MHB" checked="checked">
                                     <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
                                     <div class="item-inner">
                                         <div class="item-title-row">

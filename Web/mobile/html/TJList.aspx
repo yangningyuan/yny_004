@@ -14,7 +14,7 @@
             <td>${MHB}</td>
             <td>${MJB}</td>
             <td>${Date}</td>
-            
+            <td>{{html op}}</td>
         </tr>
     </script>
 
@@ -25,6 +25,7 @@
                 <th><%=yny_004.BLL.Reward.List["MHB"].RewardName %></th>
                 <th><%=yny_004.BLL.Reward.List["MJB"].RewardName %></th>
                 <th>注册/激活时间</th>
+                <th>操作</th>
             </tr>
         </thead>
         <tbody id="data_container">
@@ -35,6 +36,11 @@
     </div>
 </div>
 <script>
+
+
+    function upmember(mid) {
+        ActionModel("/mobile/html/TJList.aspx?Action=add&mid=" + mid, $('#form1').serialize());
+    }
     $(function () {
         $('#data_container').on('click', '.list-detail', function () {
             //console.log(parseInt($(this).next().css('height')));

@@ -42,7 +42,7 @@
                     </td>
                     <td class="tdAvalibleMoney">
                         <select id="ddlFrom" name="ddlFrom">
-                            <option value="MHB">奖金币</option>
+                            <option value="MHB">余额</option>
                         </select>
                     </td>
                 </tr>

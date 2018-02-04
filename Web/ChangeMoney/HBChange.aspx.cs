@@ -35,19 +35,19 @@ namespace yny_004.Web.ChangeMoney
         protected override string btnAdd_Click()
         {
             string MType = "MHB";
-            MType = Request.Form["RioHK"];
-            if (MType == "MJB")
-            {
-                MType = "MJB";
-            }
-            else if (MType == "MHB")
-            {
-                MType = "MHB";
-            }
-            else
-            {
-                return "转账币种错误";
-            }
+            //MType = Request.Form["RioHK"];
+            //if (MType == "MJB")
+            //{
+            //    MType = "MJB";
+            //}
+            //else if (MType == "MHB")
+            //{
+            //    MType = "MHB";
+            //}
+            //else
+            //{
+            //    return "转账币种错误";
+            //}
             Model.Member fmodel = null;
             Model.Member tmodel = null;
             if (!TModel.Role.Super)
@@ -55,13 +55,13 @@ namespace yny_004.Web.ChangeMoney
             else
                 fmodel = BllModel.GetModel(Request.Form["txtFromMID"]);
             tmodel = BllModel.GetModel(Request.Form["txtMID"]);
-            if (MType == "MHB")
-            {
-                if (tmodel.AgencyCode != "003" && tmodel.AgencyCode != "004" && tmodel.AgencyCode != "005" && tmodel.AgencyCode != "006")
-                {
-                    return "奖金币只能转给领导人";
-                }
-            }
+            //if (MType == "MHB")
+            //{
+            //    if (tmodel.AgencyCode != "003" && tmodel.AgencyCode != "004" && tmodel.AgencyCode != "005" && tmodel.AgencyCode != "006")
+            //    {
+            //        return "奖金币只能转给领导人";
+            //    }
+            //}
 
             if (fmodel == null || tmodel == null)
             {

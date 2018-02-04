@@ -200,10 +200,10 @@ namespace yny_004.BLL
                 DAL.Member.tempMemberAdd(model);
                 if (!BLL.ChangeMoney.EnoughChange(shmodel.MID, sjmoney, moneyType))
                     return "您的" + BLL.Reward.List[moneyType].RewardName + "不足";
-                //if (BLL.ChangeMoney.HBChangeTran(sjmoney, shmodel.MID, ManageMember.TModel.MID, "SH", model, moneyType, model.MAgencyType._MAgencyName + " -> " + shmoney._MAgencyName, MyHs) > 0)
+                if (BLL.ChangeMoney.HBChangeTran(sjmoney, shmodel.MID, ManageMember.TModel.MID, "SH", model, moneyType, model.MAgencyType._MAgencyName + " -> " + shmoney._MAgencyName, MyHs) > 0)
                 {
-                    model.MConfig.YJMoney += (int)sjmoney;
-                    DAL.MemberConfig.UpdateConfigTran(model.MID, "YJMoney", sjmoney.ToString(), model, false, SqlDbType.Int, MyHs);
+                    model.MConfig.YJMoney += sjmoney;
+                    DAL.MemberConfig.UpdateConfigTran(model.MID, "YJMoney", sjmoney.ToString(), model, false, SqlDbType.Decimal, MyHs);
 
                     string PCode = "005";//升级
                     if (!model.MState)
@@ -220,8 +220,8 @@ namespace yny_004.BLL
                         DAL.MemberConfig.UpdateConfigTran(model.MID, "JTFHState", "1", model, true, SqlDbType.Bit, MyHs);
                         model.MConfig.DTFHState = true;
                         DAL.MemberConfig.UpdateConfigTran(model.MID, "DTFHState", "1", model, true, SqlDbType.Bit, MyHs);
-                        model.MConfig.UpSumMoney += (int)sjmoney;
-                        DAL.MemberConfig.UpdateConfigTran(model.MID, "UpSumMoney", sjmoney.ToString(), model, false, SqlDbType.Int, MyHs);
+                        model.MConfig.UpSumMoney += sjmoney;
+                        DAL.MemberConfig.UpdateConfigTran(model.MID, "UpSumMoney", sjmoney.ToString(), model, false, SqlDbType.Decimal, MyHs);
 
                         model.RoleCode = "Nomal";
                         model.Role = BLL.Roles.RolsList["Nomal"];
@@ -242,7 +242,7 @@ namespace yny_004.BLL
                     }
 
                     DAL.Member.UpdateRole(model, MyHs);
-                    model.SHMoney += (int)sjmoney;
+                    model.SHMoney += sjmoney;
 
                     Model.Accounts account = new Model.Accounts()
                     {
@@ -1078,9 +1078,9 @@ namespace yny_004.BLL
             {
                 return "不存在该推荐人";
             }
-            //shmodel.MBD = DAL.Member.GetMBD2(BLL.Member.ManageMember.TModel.MID, 6);
-            //int count = DAL.Member.GetBDCount(shmodel.MBD, true);
-            //shmodel.MBDIndex = count + 1;
+            shmodel.MBD = DAL.Member.GetMBD2(BLL.Member.ManageMember.TModel.MID, 3);
+            int count = DAL.Member.GetBDCount(shmodel.MBD, true);
+            shmodel.MBDIndex = count + 1;
 
             return "";
         }
