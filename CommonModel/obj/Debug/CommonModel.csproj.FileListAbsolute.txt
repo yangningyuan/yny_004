@@ -3,3 +3,8 @@ C:\Users\yny\Desktop\yny_004\CommonModel\bin\Debug\CommonModel.pdb
 C:\Users\yny\Desktop\yny_004\CommonModel\obj\Debug\CommonModel.csprojResolveAssemblyReference.cache
 C:\Users\yny\Desktop\yny_004\CommonModel\obj\Debug\CommonModel.dll
 C:\Users\yny\Desktop\yny_004\CommonModel\obj\Debug\CommonModel.pdb
+D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\bin\Debug\CommonModel.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\bin\Debug\CommonModel.pdb
+D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\obj\Debug\CommonModel.csprojResolveAssemblyReference.cache
+D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\obj\Debug\CommonModel.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\obj\Debug\CommonModel.pdb

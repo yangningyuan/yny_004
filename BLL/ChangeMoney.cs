@@ -1347,7 +1347,7 @@ namespace yny_004.BLL
         }
         public static Hashtable R_JD(decimal money, Model.Member member, Model.Member shmember, int level, Hashtable MyHs)
         {
-            Model.Member MTJ = DAL.Member.GetModel(member.MTJ);
+            Model.Member MTJ = DAL.Member.GetModel(member.MBD);
             if (MTJ != null && !MTJ.Role.IsAdmin)
             {
                 if (level <= BLL.Configuration.Model.ConfigDictionaryList["JDFloat"].Max(emp => emp.EndLevel))
