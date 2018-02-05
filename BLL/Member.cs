@@ -487,6 +487,60 @@ namespace yny_004.BLL
             return inserModel;
         }
 
+        /// <summary>
+        /// 注册会员
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>返回注册成功之后的会员信息</returns>
+        public static Model.Member InsertAndReturnEntityft(Model.Member model, int count, bool NeedEmail, ref string retStr)
+        {
+            string p1 = model.Password;
+            string p2 = model.SecPsd;
+            Model.Member inserModel = null;
+            if (model.AgencyCode == "001")
+            {
+                model.MState = false;
+                model.RoleCode = BLL.Roles.RolsList["Notactive"].RType;
+                model.NAgencyCode = "001";
+                model.MCreateDate = DateTime.Now;
+                model.MDate = DateTime.MaxValue;
+                model.FHState = false;
+                model.MConfig = new Model.MemberConfig
+                {
+                    MID = model.MID,
+                    JJTypeList = DAL.Reward.RewardStr,
+                    DTFHState = true,
+                    JTFHState = true,
+                    TXStatus = true,
+                    ZZStatus = true,
+                    GQCount = count,
+                    HLGQCount = count,
+                    TJFloat = 0
+                };
+            }
+            //model.Country = GetArea(model.Province);
+            retStr = Validation(model, false);
+            if (retStr != "")
+                return inserModel;
+            string password = model.Password;
+            //string secpsd = model.SecPsd;
+            //if (string.IsNullOrEmpty(model.FMID))
+            {
+                model.Password = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(model.Password + model.Salt, "MD5").ToUpper();
+                //model.SecPsd = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(model.SecPsd + model.Salt, "MD5").ToUpper();
+            }
+            if (DAL.Member.Insert(model))
+            {
+                inserModel = DAL.Member.GetModel(model.MID);
+            }
+            else
+            {
+                retStr = "注册失败";
+            }
+            return inserModel;
+        }
+
+
         private static string GetArea(string pr)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -998,16 +1052,20 @@ namespace yny_004.BLL
             return "操作失败";
         }
 
-        public static string Validation(Model.Member shmodel)
+        public static string Validation(Model.Member shmodel,bool istel=true)
         {
             //if (DAL.Member.GetNumIDCount(shmodel.BankNumber, "BankNumber") >= 1)
             //{
             //    return "一个银行卡号只能注册1单";
             //}
-            if (DAL.Member.GetNumIDCount(shmodel.Tel, "Tel") >=BLL.Configuration.Model.E_BbinMaxCount)
+            if (istel)
             {
-                return "一个手机号只能注册1单";
+                if (DAL.Member.GetNumIDCount(shmodel.Tel, "Tel") >= BLL.Configuration.Model.E_BbinMaxCount)
+                {
+                    return "一个手机号只能注册1单";
+                }
             }
+            
             //if (DAL.Member.GetNumIDCount(shmodel.MName, "MName") >= 1)
             //{
             //    return "一个会员姓名只能注册1单";

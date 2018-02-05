@@ -86,9 +86,9 @@ namespace yny_004.BLL
                 };
 
                 string error = "";
-                Model.Member strmodel = yny_004.BLL.Member.InsertAndReturnEntity(model, 0, true, ref error);
+                Model.Member strmodel = yny_004.BLL.Member.InsertAndReturnEntityft(model, 0, true, ref error);
 
-                if (model == null)
+                if (strmodel == null)
                 {
                     continue;
                 }
