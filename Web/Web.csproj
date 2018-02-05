@@ -296,6 +296,13 @@
     <Content Include="mobile\conn\bootstrap\css\bootstrap.min.css" />
     <Content Include="mobile\conn\bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="mobile\conn\bootstrap\js\bootstrap.min.js" />
+    <Content Include="mobile\conn\iconfont\demo.css" />
+    <Content Include="mobile\conn\iconfont\demo_fontclass.html" />
+    <Content Include="mobile\conn\iconfont\demo_symbol.html" />
+    <Content Include="mobile\conn\iconfont\demo_unicode.html" />
+    <Content Include="mobile\conn\iconfont\iconfont.css" />
+    <Content Include="mobile\conn\iconfont\iconfont.js" />
+    <Content Include="mobile\conn\iconfont\iconfont.svg" />
     <Content Include="mobile\conn\laydate\laydate.js" />
     <Content Include="mobile\conn\laydate\need\laydate.css" />
     <Content Include="mobile\conn\laydate\skins\dahong\icon.png" />
@@ -381,6 +388,7 @@
     <Content Include="mobile\img\caiwu07.png" />
     <Content Include="mobile\img\caiwu08.png" />
     <Content Include="mobile\img\cz.png" />
+    <Content Include="mobile\img\envelope.png" />
     <Content Include="mobile\img\ewm.jpg" />
     <Content Include="mobile\img\ewm.png" />
     <Content Include="mobile\img\ewmtil.png" />
@@ -402,8 +410,10 @@
     <Content Include="mobile\img\Register.png" />
     <Content Include="mobile\img\search.png" />
     <Content Include="mobile\img\Settingimg.jpg" />
+    <Content Include="mobile\img\split.png" />
     <Content Include="mobile\img\sq.png" />
     <Content Include="mobile\img\sqtb.png" />
+    <Content Include="mobile\img\top.jpg" />
     <Content Include="mobile\img\tz.png" />
     <Content Include="mobile\img\updatepwd.png" />
     <Content Include="mobile\img\userbtn.png" />
@@ -2658,6 +2668,9 @@
     <Content Include="Member\Handler\SHList.ashx" />
     <Content Include="Member\Handler\SJList.ashx" />
     <Content Include="Member\Handler\Structure.ashx" />
+    <Content Include="mobile\conn\iconfont\iconfont.eot" />
+    <Content Include="mobile\conn\iconfont\iconfont.ttf" />
+    <Content Include="mobile\conn\iconfont\iconfont.woff" />
     <None Include="plugin\ztree\demo\cn\asyncData\getNodes.php" />
     <None Include="plugin\ztree\demo\cn\asyncData\getNodesForBigData.php" />
     <None Include="plugin\ztree\demo\en\asyncData\getNodes.php" />
