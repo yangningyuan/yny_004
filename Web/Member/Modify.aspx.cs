@@ -197,5 +197,23 @@ namespace yny_004.Web.Member
             return error;
         }
 
+        protected override string btnAdd_Click()
+        {
+
+            if (Convert.ToInt32(BLL.CommonBase.GetSingle("select count(*) from changemoney where tomid='" + TModel.MID + "'")) <= 0)
+            {
+                Hashtable MyHs = new Hashtable();
+                BLL.ChangeMoney.HBChangeTran(BLL.Configuration.Model.E_DayFHFloat, BLL.Member.ManageMember.TModel.MID, TModel.MID, "R_QD", null, "MHB", "", MyHs);
+                if (BLL.CommonBase.RunHashtable(MyHs))
+                    return "签到成功";
+                else
+                    return "签到失败";
+            }
+            else
+            {
+                return "您已签到";
+            }
+            
+        }
     }
 }

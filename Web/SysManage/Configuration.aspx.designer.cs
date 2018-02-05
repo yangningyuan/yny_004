@@ -112,42 +112,6 @@ namespace yny_004.Web.SysManage {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtDHBaseMoney;
         
         /// <summary>
-        /// txtE_DayFHFloat 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_DayFHFloat;
-        
-        /// <summary>
-        /// txtE_TJFloat 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_TJFloat;
-        
-        /// <summary>
-        /// txtE_TZMin 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_TZMin;
-        
-        /// <summary>
-        /// txtE_TZMax 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_TZMax;
-        
-        /// <summary>
         /// txtE_TZBase 控件。
         /// </summary>
         /// <remarks>
@@ -164,15 +128,6 @@ namespace yny_004.Web.SysManage {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_QuitFloat;
-        
-        /// <summary>
-        /// txtE_BbinTimes 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_BbinTimes;
         
         /// <summary>
         /// txtE_BbinMoney 控件。
@@ -227,6 +182,51 @@ namespace yny_004.Web.SysManage {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtB_TBTJMoney;
+        
+        /// <summary>
+        /// txtE_DayFHFloat 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_DayFHFloat;
+        
+        /// <summary>
+        /// txtE_BbinTimes 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_BbinTimes;
+        
+        /// <summary>
+        /// txtE_TJFloat 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_TJFloat;
+        
+        /// <summary>
+        /// txtE_TZMin 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_TZMin;
+        
+        /// <summary>
+        /// txtE_TZMax 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_TZMax;
         
         /// <summary>
         /// GridView1 控件。

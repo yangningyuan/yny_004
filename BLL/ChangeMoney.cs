@@ -30,6 +30,80 @@ namespace yny_004.BLL
             }
             return count;
         }
+        /// <summary>
+        /// 批量生产子账号
+        /// </summary>
+        /// <returns></returns>
+        public static bool ListMyAdd()
+        {
+            List<Model.Member> listmember = BLL.Member.ManageMember.GetMemberEntityList("  [FMID] IS NULL AND MID<>'admin'  AND MID IN(SELECT mid FROM dbo.MemberConfig WHERE MJB>=" + BLL.Configuration.Model.SHMoneyList["002"].Money + " );");
+            foreach (var item in listmember)
+            {
+                string strmid = BLL.Member.GetTestMID();
+                Model.Member model = new Model.Member
+                {
+                    MID = strmid,
+                    MSH = BLL.Member.ManageMember.TModel.MID,
+                    MTJ = item.MID,
+                    MCreateDate = DateTime.Now,
+                    MDate = DateTime.MaxValue,
+                    AgencyCode = "001",
+                    Address = "子账号注册",
+                    Bank = item.Bank,
+                    Branch = item.Branch,
+                    BankNumber = item.BankNumber,
+                    BankCardName = item.BankCardName,
+                    IsClock = false,
+                    IsClose = false,
+                    MState = false,
+                    FHState = false,
+                    FMID = item.MID.Trim(),
+                    MName = item.MName,
+                    NumID = item.NumID,
+                    Password = item.Password,
+                    QQ = item.QQ,
+                    RoleCode = "Notactive",
+                    Salt = item.Salt,
+                    SecPsd = item.SecPsd,
+                    SHMoney = 0,
+                    Tel = item.Tel,
+                    MBDIndex = 0,
+                    MBD = BLL.Member.ManageMember.TModel.MID,
+                    ValidTime = DateTime.Now,
+                    Zone = item.Zone,
+                    MConfig = new Model.MemberConfig
+                    {
+                        MID = strmid,
+                        JJTypeList = BLL.Reward.RewardStr,
+                        DTFHState = true,
+                        JTFHState = true,
+                        TXStatus = true,
+                        ZZStatus = true,
+                        GQCount = 0,
+                        HLGQCount = 0,
+                        EPXingCount = 5
+                    }
+                };
+
+                string error = "";
+                Model.Member strmodel = yny_004.BLL.Member.InsertAndReturnEntity(model, 0, true, ref error);
+
+                if (model == null)
+                {
+                    continue;
+                }
+                try
+                {
+                    Model.SHMoney shmoney = BLL.Configuration.Model.SHMoneyList["002"];
+                    BLL.Member.ManageMember.UpMAgencyType(shmoney, model.MID, "MJB", item, shmoney.Money);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            return true;
+        }
 
         /// <summary>
         /// 取到今天的提现次数
