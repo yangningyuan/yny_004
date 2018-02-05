@@ -26,3 +26,17 @@ D:\yang\资料\项目\yny\yny_004\yny_004\CommonBLL\bin\Debug\DBUtility.pdb
 D:\yang\资料\项目\yny\yny_004\yny_004\CommonBLL\obj\Debug\CommonBLL.csprojResolveAssemblyReference.cache
 D:\yang\资料\项目\yny\yny_004\yny_004\CommonBLL\obj\Debug\CommonBLL.dll
 D:\yang\资料\项目\yny\yny_004\yny_004\CommonBLL\obj\Debug\CommonBLL.pdb
+E:\newProject\yny_004\CommonBLL\bin\Debug\CommonBLL.dll
+E:\newProject\yny_004\CommonBLL\bin\Debug\CommonBLL.pdb
+E:\newProject\yny_004\CommonBLL\bin\Debug\CommonDAL.dll
+E:\newProject\yny_004\CommonBLL\bin\Debug\CommonModel.dll
+E:\newProject\yny_004\CommonBLL\bin\Debug\DBUtility.dll
+E:\newProject\yny_004\CommonBLL\bin\Debug\IBatisNet.DataMapper.dll
+E:\newProject\yny_004\CommonBLL\bin\Debug\IBatisNet.Common.dll
+E:\newProject\yny_004\CommonBLL\bin\Debug\MySql.Data.dll
+E:\newProject\yny_004\CommonBLL\bin\Debug\CommonDAL.pdb
+E:\newProject\yny_004\CommonBLL\bin\Debug\CommonModel.pdb
+E:\newProject\yny_004\CommonBLL\bin\Debug\DBUtility.pdb
+E:\newProject\yny_004\CommonBLL\obj\Debug\CommonBLL.csprojResolveAssemblyReference.cache
+E:\newProject\yny_004\CommonBLL\obj\Debug\CommonBLL.dll
+E:\newProject\yny_004\CommonBLL\obj\Debug\CommonBLL.pdb
