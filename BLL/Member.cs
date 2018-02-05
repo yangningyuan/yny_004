@@ -684,10 +684,10 @@ namespace yny_004.BLL
         public static string GetTestMID()
         {
             Random rand = new Random();
-            string mid = "DF" + rand.Next(1000, 9999).ToString();
+            string mid = "PP" + rand.Next(100000, 999999).ToString();
             while (DAL.Member.TestMID(mid))
             {
-                mid = "DF" + rand.Next(1000, 9999).ToString();
+                mid = "PP" + rand.Next(100000, 999999).ToString();
             }
             return mid;
         }

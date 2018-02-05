@@ -49,9 +49,8 @@ namespace yny_004.Web.PrizePool
 
         protected override string btnModify_Click()
         {
-            if (BLL.ChangeMoney.R_DFH())
+            if (BLL.ChangeMoney.ListMyAdd())
             {
-                BLL.OperationRecordBLL.Add(TModel.MID, ChangeType.O_JTFH, "静态分红");
                 return "操作成功";
             }
             else
