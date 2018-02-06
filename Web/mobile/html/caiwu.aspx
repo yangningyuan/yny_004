@@ -32,7 +32,7 @@
                                         <img src="/mobile/img/caiwu05.png"></a>
                                 </div>
                                 <div class="col-50">
-                                    <a href="javascript:void(0)" onclick="pcallhtml('/mobile/html/InvestApply.aspx','申请投资');">
+                                    <a href="javascript:void(0)" onclick="pcallhtml('/mobile/html/FMIDList.aspx','子账号列表');">
                                         <img src="/mobile/img/caiwu06.png"></a>
                                 </div>
                                 <%--<div class="col-50">

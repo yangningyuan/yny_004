@@ -1427,7 +1427,14 @@ namespace yny_004.BLL
                 if (level <= BLL.Configuration.Model.ConfigDictionaryList["JDFloat"].Max(emp => emp.EndLevel))
                 {
                     decimal tjfloat = Convert.ToDecimal(DAL.ConfigDictionary.GetConfigDictionary(level, "JDFloat", "").DValue);
-                    HBChangeTran( tjfloat, BLL.Member.ManageMember.TModel.MID, MTJ.MID, "R_JD", shmember, "MCW", "", MyHs);
+
+                    if (!string.IsNullOrEmpty(MTJ.FMID))//如果是子账号
+                    {
+                        HBChangeTran(tjfloat, BLL.Member.ManageMember.TModel.MID, MTJ.FMID, "R_JD", shmember, "MCW", MTJ.MID+"子账号奖励", MyHs);
+                    }
+                    else {
+                        HBChangeTran(tjfloat, BLL.Member.ManageMember.TModel.MID, MTJ.MID, "R_JD", shmember, "MCW", "", MyHs);
+                    }
                     R_JD(money, MTJ, shmember, level + 1, MyHs);
                 }
             }

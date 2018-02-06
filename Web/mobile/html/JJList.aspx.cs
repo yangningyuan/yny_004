@@ -16,7 +16,7 @@ namespace yny_004.Web.mobile.html
             string mkey = "";
             mkey = TModel.MID;
             string shmid = "";
-            List<string> cTypeList = new List<string> { "R_LD", "R_RFH", "R_TJ" };
+            List<string> cTypeList = new List<string> { "R_JD", "R_QD", "R_TJ" };
             List<string> mTypeList = new List<string> { "MHB", "MJB", "MCW" };
 
             if (!string.IsNullOrEmpty(Request["begin_time"]))
