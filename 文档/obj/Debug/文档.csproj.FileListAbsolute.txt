@@ -8,3 +8,8 @@ D:\yang\资料\项目\yny\yny_004\yny_004\文档\bin\Debug\文档.pdb
 D:\yang\资料\项目\yny\yny_004\yny_004\文档\obj\Debug\文档.csprojResolveAssemblyReference.cache
 D:\yang\资料\项目\yny\yny_004\yny_004\文档\obj\Debug\文档.dll
 D:\yang\资料\项目\yny\yny_004\yny_004\文档\obj\Debug\文档.pdb
+E:\newProject\yny_004\文档\bin\Debug\文档.dll
+E:\newProject\yny_004\文档\bin\Debug\文档.pdb
+E:\newProject\yny_004\文档\obj\Debug\文档.csprojResolveAssemblyReference.cache
+E:\newProject\yny_004\文档\obj\Debug\文档.dll
+E:\newProject\yny_004\文档\obj\Debug\文档.pdb

@@ -2688,13 +2688,10 @@
     <Content Include="Member\Handler\SHList.ashx" />
     <Content Include="Member\Handler\SJList.ashx" />
     <Content Include="Member\Handler\Structure.ashx" />
-<<<<<<< HEAD
     <Content Include="mobile\conn\iconfont\iconfont.eot" />
     <Content Include="mobile\conn\iconfont\iconfont.ttf" />
     <Content Include="mobile\conn\iconfont\iconfont.woff" />
-=======
     <Content Include="Member\Handler\FMIDList.ashx" />
->>>>>>> e4523b476c8debd8cde175f9814580486dcbdb35
     <None Include="plugin\ztree\demo\cn\asyncData\getNodes.php" />
     <None Include="plugin\ztree\demo\cn\asyncData\getNodesForBigData.php" />
     <None Include="plugin\ztree\demo\en\asyncData\getNodes.php" />
