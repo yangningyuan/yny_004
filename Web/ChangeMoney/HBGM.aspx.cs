@@ -24,7 +24,9 @@ namespace yny_004.Web.ChangeMoney
                     string MType = "MHB";
                     if (Request.Form["rdo"] == "MJB")
                         MType = "MJB";
-                    if (BLL.ChangeMoney.EnoughChange(TModel.MID, int.Parse(Request.Form["txtMHB"]), MType))
+					if (Request.Form["rdo"] == "MCW")
+						MType = "MCW";
+					if (BLL.ChangeMoney.EnoughChange(TModel.MID, int.Parse(Request.Form["txtMHB"]), MType))
                     {
                         Hashtable MyHs = new Hashtable();
                         BLL.ChangeMoney.CZMoneyChange(TModel.MID, Request.Form["txtMID"], int.Parse(Request.Form["txtMHB"]), MType, MyHs);

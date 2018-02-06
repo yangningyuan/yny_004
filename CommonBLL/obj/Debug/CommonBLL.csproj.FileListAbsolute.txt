@@ -40,3 +40,17 @@ E:\newProject\yny_004\CommonBLL\bin\Debug\DBUtility.pdb
 E:\newProject\yny_004\CommonBLL\obj\Debug\CommonBLL.csprojResolveAssemblyReference.cache
 E:\newProject\yny_004\CommonBLL\obj\Debug\CommonBLL.dll
 E:\newProject\yny_004\CommonBLL\obj\Debug\CommonBLL.pdb
+D:\工作目录\yny_004\CommonBLL\bin\Debug\CommonBLL.dll
+D:\工作目录\yny_004\CommonBLL\bin\Debug\CommonBLL.pdb
+D:\工作目录\yny_004\CommonBLL\bin\Debug\CommonDAL.dll
+D:\工作目录\yny_004\CommonBLL\bin\Debug\CommonModel.dll
+D:\工作目录\yny_004\CommonBLL\bin\Debug\DBUtility.dll
+D:\工作目录\yny_004\CommonBLL\bin\Debug\IBatisNet.DataMapper.dll
+D:\工作目录\yny_004\CommonBLL\bin\Debug\IBatisNet.Common.dll
+D:\工作目录\yny_004\CommonBLL\bin\Debug\MySql.Data.dll
+D:\工作目录\yny_004\CommonBLL\bin\Debug\CommonDAL.pdb
+D:\工作目录\yny_004\CommonBLL\bin\Debug\CommonModel.pdb
+D:\工作目录\yny_004\CommonBLL\bin\Debug\DBUtility.pdb
+D:\工作目录\yny_004\CommonBLL\obj\Debug\CommonBLL.csprojResolveAssemblyReference.cache
+D:\工作目录\yny_004\CommonBLL\obj\Debug\CommonBLL.dll
+D:\工作目录\yny_004\CommonBLL\obj\Debug\CommonBLL.pdb

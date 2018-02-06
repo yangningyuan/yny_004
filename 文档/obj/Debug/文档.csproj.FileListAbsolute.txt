@@ -13,3 +13,8 @@ E:\newProject\yny_004\文档\bin\Debug\文档.pdb
 E:\newProject\yny_004\文档\obj\Debug\文档.csprojResolveAssemblyReference.cache
 E:\newProject\yny_004\文档\obj\Debug\文档.dll
 E:\newProject\yny_004\文档\obj\Debug\文档.pdb
+D:\工作目录\yny_004\文档\bin\Debug\文档.dll
+D:\工作目录\yny_004\文档\bin\Debug\文档.pdb
+D:\工作目录\yny_004\文档\obj\Debug\文档.csprojResolveAssemblyReference.cache
+D:\工作目录\yny_004\文档\obj\Debug\文档.dll
+D:\工作目录\yny_004\文档\obj\Debug\文档.pdb

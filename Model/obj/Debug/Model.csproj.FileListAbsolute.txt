@@ -34,3 +34,15 @@ E:\newProject\yny_004\Model\bin\Debug\DBUtility.pdb
 E:\newProject\yny_004\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 E:\newProject\yny_004\Model\obj\Debug\yny_004.Model.dll
 E:\newProject\yny_004\Model\obj\Debug\yny_004.Model.pdb
+D:\工作目录\yny_004\Model\bin\Debug\yny_004.Model.dll
+D:\工作目录\yny_004\Model\bin\Debug\yny_004.Model.pdb
+D:\工作目录\yny_004\Model\bin\Debug\CommonModel.dll
+D:\工作目录\yny_004\Model\bin\Debug\DBUtility.dll
+D:\工作目录\yny_004\Model\bin\Debug\IBatisNet.DataMapper.dll
+D:\工作目录\yny_004\Model\bin\Debug\IBatisNet.Common.dll
+D:\工作目录\yny_004\Model\bin\Debug\MySql.Data.dll
+D:\工作目录\yny_004\Model\bin\Debug\CommonModel.pdb
+D:\工作目录\yny_004\Model\bin\Debug\DBUtility.pdb
+D:\工作目录\yny_004\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\工作目录\yny_004\Model\obj\Debug\yny_004.Model.dll
+D:\工作目录\yny_004\Model\obj\Debug\yny_004.Model.pdb

@@ -1892,7 +1892,7 @@ h2 {
     font-weight: bold;
     font-size: 0.9rem;
 }
-.i_opticy {
+.i_opticy,.i_opticy2 {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -1906,7 +1906,7 @@ h2 {
     z-index: 10200;
     display: none;
 }
-.i_signIn {
+.i_signIn,.i_signInqhb {
     width: 13rem;
     height: 15rem;
     position: absolute;
@@ -1920,22 +1920,22 @@ h2 {
     margin-bottom: auto;
     background: initial;
 }
-.i_signIn .i_popup {
+.i_signIn .i_popup,.i_signInqhb .i_popup2 {
     width: 13rem;
     height: 15rem;
     background: url(../img/split.png) no-repeat;
     background-size: 100% 100%;
 }
-.i_signIn .i_popup.envelope {
+.i_signIn .i_popup.envelope,.i_signInqhb .i_popup2.envelope {
     background: url(../img/envelope.png) no-repeat;
     background-size: 100% 100%;
 }
-.i_signIn .i_popup .i_signIn_cont {
+.i_signIn .i_popup .i_signIn_cont,.i_signInqhb .i_popup2 .i_signIn_cont2 {
     width: 100%;
     height: 100%;
     position: relative;
 }
-.i_signIn_cont .i_signIn_btn {
+.i_signIn_cont .i_signIn_btn,.i_signIn_cont2 .i_signIn_btnqhb {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
@@ -1944,7 +1944,7 @@ h2 {
     top: 16%;
     opacity: 0;
 }
-.i_signIn_cont p {
+.i_signIn_cont p,.i_signIn_cont2 p {
     font-size: 0.8rem;
     color: #ffe2b1;
     position: absolute;
@@ -1952,15 +1952,15 @@ h2 {
     transform: translate(-50%,-50%);
 }
 
-.i_signIn_top30 {
+.i_signIn_top30,.i_signIn_top302 {
     top: 45%;
 }
-.i_signIn_top40 {
+.i_signIn_top40,.i_signIn_top402 {
     top: 55%;
 }
-.i_signIn_top50 {
+.i_signIn_top50,.i_signIn_top502 {
     top: 50%;
 }
-.i_signIn_top70 {
+.i_signIn_top70,.i_signIn_top702 {
     top: 70%;
 }

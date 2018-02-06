@@ -199,13 +199,19 @@ namespace yny_004.Web.Member
 
         protected override string btnAdd_Click()
         {
+			int qdcount = Convert.ToInt32(BLL.CommonBase.GetSingle("select count(*) from changemoney where tomid='" + TModel.MID + "' and changetype='R_QD' "));
 
-            if (Convert.ToInt32(BLL.CommonBase.GetSingle("select count(*) from changemoney where tomid='" + TModel.MID + "'")) <= 0)
+			if (qdcount <= 0)
             {
+				if (qdcount >= BLL.Configuration.Model.E_BbinTimes)
+				{
+					return "已达到最大签到次数";
+				}
+				
                 Hashtable MyHs = new Hashtable();
                 BLL.ChangeMoney.HBChangeTran(BLL.Configuration.Model.E_DayFHFloat, BLL.Member.ManageMember.TModel.MID, TModel.MID, "R_QD", null, "MHB", "", MyHs);
                 if (BLL.CommonBase.RunHashtable(MyHs))
-                    return "签到成功";
+                    return "签到成功"+ BLL.Configuration.Model.E_DayFHFloat+"元";
                 else
                     return "签到失败";
             }
@@ -223,14 +229,53 @@ namespace yny_004.Web.Member
             {
                 if (BLL.ChangeMoney.EnoughChange(TModel.MID, BLL.Configuration.Model.E_TJFloat, "MHB"))
                 {
+					if (TModel.MConfig.MCW <= 0)
+						return "红包余额不足";
                     Hashtable MyHs = new Hashtable();
                     BLL.ChangeMoney.KFMoneyChange(TModel.MID,BLL.Member.ManageMember.TModel.MID,BLL.Configuration.Model.E_TJFloat,"MHB",MyHs);
                     Random r = new Random();
                     int i = r.Next(BLL.Configuration.Model.E_TZMin, BLL.Configuration.Model.E_TZMax);                    
-                    decimal x = (decimal)i / 1000;
+                    decimal x = (decimal)i;
 
-                    return x.ToString();
-                }
+					int t = r.Next(0, 9);
+					decimal xt = (decimal)t/10;
+
+					decimal money = 0;
+					if ((x + xt) > BLL.Configuration.Model.E_TZMax)
+					{
+						money = x;
+					}
+					else
+					{
+						money = x + xt;
+					}
+					if (TModel.MConfig.MCW < money)
+					{
+						money = TModel.MConfig.MCW;
+					}
+					TModel.MConfig.MCW -= money;
+					BLL.Member.UpdateConfigTran(TModel.MID,"MCW","-"+money.ToString(),null,false,System.Data.SqlDbType.Decimal,MyHs);
+
+					decimal yue = money * BLL.Configuration.Model.E_BbinMoney;
+					decimal gpft = money * BLL.Configuration.Model.E_BbinFHFloat;
+					TModel.MConfig.MHB += yue;
+					BLL.Member.UpdateConfigTran(TModel.MID, "MHB", "+" + yue.ToString(), null, false, System.Data.SqlDbType.Decimal, MyHs);
+					TModel.MConfig.MJB += gpft;
+					BLL.Member.UpdateConfigTran(TModel.MID, "MJB", "+" + gpft.ToString(), null, false, System.Data.SqlDbType.Decimal, MyHs);
+
+					Model.LuckyMoney luck = new Model.LuckyMoney();
+					luck.MID = TModel.MID;
+					luck.isValid = 0;
+					luck.ApplyMoney = money;
+					luck.CreateTime = DateTime.Now;
+					luck.EditTime = DateTime.Now;
+					BLL.LuckyMoney.Add(luck, MyHs);
+					if (BLL.CommonBase.RunHashtable(MyHs))
+						return money.ToString();
+					else
+						return "未重载...";
+
+				}
                 else
                 {
                     return "余额不足";

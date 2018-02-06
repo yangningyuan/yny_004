@@ -112,21 +112,18 @@
                                 require-msg="退本扣费比例" /><font color="red">*</font>
                         </td>
                     </tr>
-                    <tr style="display:none;">
-                        
-                        <td style="text-align: right; width: 20%;">体验金额度:
+                  
+                    <tr>
+                         <td style="text-align: right; width: 20%;">推荐见点余额百分比:
                         </td>
                         <td>
                             <input id="txtE_BbinMoney" runat="server" class="normal_input" type="text" require-type="decimal"
-                                require-msg="体验金额度" /><font color="red">*</font>
+                                require-msg="推荐见点余额百分比" /><font color="red">*</font>
                         </td>
-                    </tr>
-                    <tr style="display:none;">
-                       
-                        <td style="text-align: right; width: 20%;">体验金日分红比例:</td>
+                        <td style="text-align: right; width: 20%;">推荐见点公排复投百分比:</td>
                         <td>
                             <input id="txtE_BbinFHFloat" runat="server" class="normal_input" type="text" require-type="decimal"
-                                require-msg="体验金日分红比例" /><font color="red">*</font>
+                                require-msg="推荐见点公排复投百分比" /><font color="red">*</font>
                         </td>
                     </tr>
                     <tr style="display:none;">

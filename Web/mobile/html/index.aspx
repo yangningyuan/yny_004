@@ -49,7 +49,7 @@
                     <i class="iconfont">&#xe699;</i>
                     <span class="tab-label">首页</span>
                 </a>
-                <a class="tab-item" href="javascript:void(0)" onclick="pcallhtml('/mobile/html/caiwu.aspx','财务');">
+                <a class="tab-item" href="javascript:void(0)" onclick="javascript:pcallhtml('/mobile/html/CW.aspx','财务');">
                     <i class="iconfont">&#xe7d1;</i>
                     <span class="tab-label">财务</span>
                 </a>
@@ -60,7 +60,7 @@
                     <span class="icon icon-share"></span>
                     <span class="tab-label">图谱</span>
                 </a>--%>
-                <a class="tab-item" href="javascript:void(0)" onclick="pcallhtml('/mobile/html/ShopMenu.aspx','购物区');">
+                <a class="tab-item" href="javascript:void(0)" onclick="javascript:pcallhtml('/mobile/html/TD.aspx','团队管理');">
                     <i class="iconfont">&#xe61c;</i>
                     <span class="tab-label">团队</span>
                 </a>
@@ -89,13 +89,13 @@
                     <input id="MyLink" runat="server" />
                     <ul class="indexMenuList">
                         <li>
-                            <a href="" class="regist"><i class="iconfont">&#xe683;</i> <p>注册</p></a>
+                            <a href="<%=GetPromoteLinkTel() %>" class="regist"><i class="iconfont">&#xe683;</i> <p>注册</p></a>
                         </li>
                         <li>
-                            <a href="" class="tixian"><i class="iconfont">&#xe624;</i> <p>提现</p></a>
+                            <a href="javascript:pcallhtml('/mobile/html/TXList.aspx','提现');" class="tixian"><i class="iconfont">&#xe624;</i> <p>提现</p></a>
                         </li>
                         <li>
-                            <a href="" class="zhuanzhang"><i class="iconfont">&#xe63f;</i> <p>转账</p></a>
+                            <a href="javascript:pcallhtml('/mobile/html/HBList.aspx','转账');" class="zhuanzhang"><i class="iconfont">&#xe63f;</i> <p>转账</p></a>
                         </li>
                         <li>
                             <a href="" class="qiandao"><i class="iconfont">&#xe635;</i> <p>签到</p></a>
@@ -104,24 +104,24 @@
                 </div>
                 <ul class="i_list overflow">
                     <li>
-                        <a href="Notice.html" class="external">
+                        <a href="javascript:pcallhtml('/mobile/html/NoticeList.aspx','公告');" class="external">
                             <span>系统公告</span>
                         </a>
                     </li>
                     <li>
-                        <a href="envelope.html" class="external">
+                        <a href="javascript:pcallhtml('/mobile/html/LuckList.aspx','抢红包');" class="external">
                             <span>红包区</span>
                         </a>
                     </li>
                 </ul>
                 <ul class="i_pay overflow box_shadow">
                     <li>
-                        <span>余额</span>
-                         <p>1007.75</p>
+                        <span><%=yny_004.BLL.Reward.List["MHB"].RewardName %></span>
+                         <p><%=TModel.MConfig.MHB %></p>
                     </li>
                     <li>
-                        <span>激活币</span> 
-                        <p>0</p>
+                        <span><%=yny_004.BLL.Reward.List["MJB"].RewardName  %></span> 
+                        <p><%=TModel.MConfig.MJB %></p>
                     </li>
                 </ul>
         </div>
@@ -131,7 +131,7 @@
                        <input type="button" class="i_signIn_btn">
                         <div class="i_signIn_pay hide">
                             <p class="i_signIn_top30">
-                                <b></b>元</p> 
+                                <b id="chbmoney"></b></p> 
                             <p class="i_signIn_top40">已存入余额.</p>
                         </div> 
                         <p class="i_signIn_top50">每日签到抢红包</p>
@@ -180,10 +180,21 @@
             $('.i_signIn').css('display', 'block')
         })
         $('.i_signIn_btn').on('click', function () {
-            $('.i_signIn_pay').css('display', 'block');
-            $('.i_signIn_top50').css('display', 'none');
-            $('.i_signIn_top70').css('display', 'block');
-            $('.i_signIn .i_popup').addClass('envelope');
+
+            $.ajax({
+                type: 'post',
+                url: 'Member/Modify.aspx?Action=add',
+                data: "",
+                success: function (info) {
+                     document.getElementById("chbmoney").innerHTML=info;
+                    $('.i_signIn_pay').css('display', 'block');
+                    $('.i_signIn_top50').css('display', 'none');
+                    $('.i_signIn_top70').css('display', 'block');
+                    $('.i_signIn .i_popup').addClass('envelope');
+                }
+            });
+
+            
         })
         function showPacket() {
 
