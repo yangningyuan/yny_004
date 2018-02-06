@@ -11,3 +11,16 @@ D:\yang\资料\项目\yny\yny_004\yny_004\CommonBLL\bin\Release\CommonModel.pdb
 D:\yang\资料\项目\yny\yny_004\yny_004\CommonBLL\obj\Release\CommonBLL.csprojResolveAssemblyReference.cache
 D:\yang\资料\项目\yny\yny_004\yny_004\CommonBLL\obj\Release\CommonBLL.dll
 D:\yang\资料\项目\yny\yny_004\yny_004\CommonBLL\obj\Release\CommonBLL.pdb
+D:\工作目录\yny_004\CommonBLL\bin\Release\CommonBLL.dll
+D:\工作目录\yny_004\CommonBLL\bin\Release\CommonBLL.pdb
+D:\工作目录\yny_004\CommonBLL\bin\Release\CommonDAL.dll
+D:\工作目录\yny_004\CommonBLL\bin\Release\CommonModel.dll
+D:\工作目录\yny_004\CommonBLL\bin\Release\DBUtility.dll
+D:\工作目录\yny_004\CommonBLL\bin\Release\IBatisNet.DataMapper.dll
+D:\工作目录\yny_004\CommonBLL\bin\Release\IBatisNet.Common.dll
+D:\工作目录\yny_004\CommonBLL\bin\Release\MySql.Data.dll
+D:\工作目录\yny_004\CommonBLL\bin\Release\CommonDAL.pdb
+D:\工作目录\yny_004\CommonBLL\bin\Release\CommonModel.pdb
+D:\工作目录\yny_004\CommonBLL\obj\Release\CommonBLL.csprojResolveAssemblyReference.cache
+D:\工作目录\yny_004\CommonBLL\obj\Release\CommonBLL.dll
+D:\工作目录\yny_004\CommonBLL\obj\Release\CommonBLL.pdb

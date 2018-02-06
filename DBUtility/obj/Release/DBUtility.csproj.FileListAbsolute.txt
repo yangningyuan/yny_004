@@ -5,3 +5,10 @@ D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\bin\Release\MySql.Data.dll
 D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\bin\Release\ThoughtWorks.QRCode.dll
 D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\obj\Release\DBUtility.csprojResolveAssemblyReference.cache
 D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\obj\Release\DBUtility.dll
+D:\工作目录\yny_004\DBUtility\bin\Release\DBUtility.dll
+D:\工作目录\yny_004\DBUtility\bin\Release\IBatisNet.Common.dll
+D:\工作目录\yny_004\DBUtility\bin\Release\IBatisNet.DataMapper.dll
+D:\工作目录\yny_004\DBUtility\bin\Release\MySql.Data.dll
+D:\工作目录\yny_004\DBUtility\bin\Release\ThoughtWorks.QRCode.dll
+D:\工作目录\yny_004\DBUtility\obj\Release\DBUtility.csprojResolveAssemblyReference.cache
+D:\工作目录\yny_004\DBUtility\obj\Release\DBUtility.dll
