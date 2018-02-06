@@ -75,9 +75,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:pcallhtml('/mobile/html/TZ.aspx','投资中心');" class="item-link item-content">
+                                <a href="javascript:pcallhtml('/mobile/html/FMIDList.aspx','子账号列表');" class="item-link item-content">
                                     <div class="item-inner">
-                                        <div class="item-title">投资中心</div>
+                                        <div class="item-title">子账号列表</div>
                                     </div>
                                 </a>
                             </li>

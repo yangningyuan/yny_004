@@ -1,0 +1,126 @@
+﻿@charset "utf-8";
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, button {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Microsoft YaHei", 微软雅黑, Helvetica, Arial, sans-serif;
+}
+button, input, textarea, fieldset {
+	padding: 0;
+*overflow:visible;
+}
+input, textarea {
+	outline: none;
+	resize: none;
+}
+/*input[type=checkbox]{
+	visibility:hidden;
+}*/
+fieldset, img {
+	border: 0;
+}
+label {
+	cursor: pointer;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	font-size: 1em;
+	line-height: 1.6;
+	color: #222;
+	margin: 0;
+}
+/*禁止苹果浏览器的默认按钮UI渲染*/
+input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], button {
+	-webkit-appearance: none;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*reset end*/
+.whole {
+	max-width: 480px;
+	width: 100%;
+	margin: 0 auto;
+	background: url(/Admin/login_phone/images/bg.jpg) no-repeat;
+	min-height: 100%;
+	background-size: cover;
+}
+.logoBox {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 20%;
+    padding-bottom: 20px;
+    text-align: Center;
+}
+.logoBox img {
+    width: 100%;
+}
+.information, .login_btn {
+	width: 80%;
+	margin: 0 auto;
+}
+.user, .password, .yzm {
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.user label, .password label, .yzm label {
+	display: block;
+	width: 100%;
+ color:#rgb(53, 53, 53)；  margin-bottom: 2%;
+}
+.user .inputBox, .password .inputBox {
+	width: 100%;
+}
+.user .inputBox input, .password .inputBox input {
+	width: 100%;
+	background: white;
+	border: none;
+	padding: 12px 4px;
+	border-radius: 4px;
+	border: solid 1px #ccc;
+}
+.login{
+filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#f16a33,endColorStr=#f04807); /*IE*/ 
+background:-moz-linear-gradient(top,#f16a33,#f04807);/*火狐*/ 
+background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#f16a33), to(#f04807));/*谷歌*/ 
+background-image: -webkit-gradient(linear,left bottom,left top,color-start(0, #f16a33),color-stop(1, #f04807));/* Safari & Chrome*/ 
+ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f16a33', endColorstr='#f04807')"; /* IE8 */ 
+}
+.login_btn input.remember{
+color:dimgrey;
+}
+.inputBox2 input {
+	width: 56%;
+	font-size: 14px;
+	/* padding: 6px; */
+	margin: 0 auto;
+	border-radius: 4px;
+	border: none;
+	display: inline-block;
+	float: left;
+	padding: 12px 4px;
+	border: solid 1px #ccc;
+}
+.yzm_imgages img {
+	width: 40%;
+	height: 46px;
+	color: #b2b2b2;
+	float: left;
+	margin-left: 4%;
+}
+.login_btn input {
+	width: 100%;
+	color: #fff;
+/*	background: #FB571B;*/
+	font-size: 22px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: none;
+	padding: 8px 0px;
+	    margin-bottom: 20px;
+}

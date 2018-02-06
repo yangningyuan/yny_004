@@ -288,6 +288,7 @@
     <Content Include="login\images\logo .png" />
     <Content Include="login\images\logo.png" />
     <Content Include="login\images\yanzhengma.jpg" />
+    <Content Include="Member\FMIDList.aspx" />
     <Content Include="Member\MyLink.aspx" />
     <Content Include="Member\SHListSJ.aspx" />
     <Content Include="Member\Structure.aspx" />
@@ -334,6 +335,7 @@
     <Content Include="mobile\html\Cars.aspx" />
     <Content Include="mobile\html\CW.aspx" />
     <Content Include="mobile\html\findpwd.aspx" />
+    <Content Include="mobile\html\FMIDList.aspx" />
     <Content Include="mobile\html\geren.aspx" />
     <Content Include="mobile\html\GGTZ.aspx" />
     <Content Include="mobile\html\GMList.aspx" />
@@ -1457,6 +1459,17 @@
     <Compile Include="Common\UploadExcel.ashx.cs">
       <DependentUpon>UploadExcel.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Member\FMIDList.aspx.cs">
+      <DependentUpon>FMIDList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\FMIDList.aspx.designer.cs">
+      <DependentUpon>FMIDList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Handler\FMIDList.ashx.cs">
+      <DependentUpon>FMIDList.ashx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Member\Handler\SHList.ashx.cs">
       <DependentUpon>SHList.ashx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1572,6 +1585,13 @@
     </Compile>
     <Compile Include="mobile\html\findpwd.aspx.designer.cs">
       <DependentUpon>findpwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mobile\html\FMIDList.aspx.cs">
+      <DependentUpon>FMIDList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobile\html\FMIDList.aspx.designer.cs">
+      <DependentUpon>FMIDList.aspx</DependentUpon>
     </Compile>
     <Compile Include="mobile\html\geren.aspx.cs">
       <DependentUpon>geren.aspx</DependentUpon>
@@ -2668,9 +2688,13 @@
     <Content Include="Member\Handler\SHList.ashx" />
     <Content Include="Member\Handler\SJList.ashx" />
     <Content Include="Member\Handler\Structure.ashx" />
+<<<<<<< HEAD
     <Content Include="mobile\conn\iconfont\iconfont.eot" />
     <Content Include="mobile\conn\iconfont\iconfont.ttf" />
     <Content Include="mobile\conn\iconfont\iconfont.woff" />
+=======
+    <Content Include="Member\Handler\FMIDList.ashx" />
+>>>>>>> e4523b476c8debd8cde175f9814580486dcbdb35
     <None Include="plugin\ztree\demo\cn\asyncData\getNodes.php" />
     <None Include="plugin\ztree\demo\cn\asyncData\getNodesForBigData.php" />
     <None Include="plugin\ztree\demo\en\asyncData\getNodes.php" />

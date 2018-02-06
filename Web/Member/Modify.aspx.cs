@@ -215,5 +215,27 @@ namespace yny_004.Web.Member
             }
             
         }
+        protected object qhbobj = new object();
+
+        protected override string btnOther_Click()
+        {
+            lock (qhbobj)
+            {
+                if (BLL.ChangeMoney.EnoughChange(TModel.MID, BLL.Configuration.Model.E_TJFloat, "MHB"))
+                {
+                    Hashtable MyHs = new Hashtable();
+                    BLL.ChangeMoney.KFMoneyChange(TModel.MID,BLL.Member.ManageMember.TModel.MID,BLL.Configuration.Model.E_TJFloat,"MHB",MyHs);
+                    Random r = new Random();
+                    int i = r.Next(BLL.Configuration.Model.E_TZMin, BLL.Configuration.Model.E_TZMax);                    
+                    decimal x = (decimal)i / 1000;
+
+                    return x.ToString();
+                }
+                else
+                {
+                    return "余额不足";
+                }
+            }
+        }
     }
 }
