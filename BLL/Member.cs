@@ -184,91 +184,94 @@ namespace yny_004.BLL
             }
             return "升级失败";
         }
-
+        protected object sjobj = new object();
         public string UpMAgencyType(Model.SHMoney shmoney, string mid, string moneyType, Model.Member shmodel, decimal appendMoney, string bdmid = "")
         {
-            Model.Member model = DAL.Member.GetModel(mid);
-            if (model == null)
-                return "升级会员不存在";
-            if (string.IsNullOrEmpty(model.MTJ))
-                return "请联系管理员设置您的推荐人";
-            decimal sjmoney = appendMoney;
-            Hashtable MyHs = new Hashtable();
-            lock (DAL.Member.tempMemberList)
+            lock (sjobj)
             {
-                DAL.Member.tempMemberList.Clear();
-                DAL.Member.tempMemberAdd(model);
-                if (!BLL.ChangeMoney.EnoughChange(shmodel.MID, sjmoney, moneyType))
-                    return "您的" + BLL.Reward.List[moneyType].RewardName + "不足";
-                if (BLL.ChangeMoney.HBChangeTran(sjmoney, shmodel.MID, ManageMember.TModel.MID, "SH", model, moneyType, model.MAgencyType._MAgencyName + " -> " + shmoney._MAgencyName, MyHs) > 0)
+                Model.Member model = DAL.Member.GetModel(mid);
+                if (model == null)
+                    return "升级会员不存在";
+                if (string.IsNullOrEmpty(model.MTJ))
+                    return "请联系管理员设置您的推荐人";
+                decimal sjmoney = appendMoney;
+                Hashtable MyHs = new Hashtable();
+                lock (DAL.Member.tempMemberList)
                 {
-                    model.MConfig.YJMoney += sjmoney;
-                    DAL.MemberConfig.UpdateConfigTran(model.MID, "YJMoney", sjmoney.ToString(), model, false, SqlDbType.Decimal, MyHs);
-
-                    string PCode = "005";//升级
-                    if (!model.MState)
+                    DAL.Member.tempMemberList.Clear();
+                    DAL.Member.tempMemberAdd(model);
+                    if (!BLL.ChangeMoney.EnoughChange(shmodel.MID, sjmoney, moneyType))
+                        return "您的" + BLL.Reward.List[moneyType].RewardName + "不足";
+                    if (BLL.ChangeMoney.HBChangeTran(sjmoney, shmodel.MID, ManageMember.TModel.MID, "SH", model, moneyType, model.MAgencyType._MAgencyName + " -> " + shmoney._MAgencyName, MyHs) > 0)
                     {
-                        string error = Validation2(model, shmoney);
-                        if (!string.IsNullOrEmpty(error))
+                        model.MConfig.YJMoney += sjmoney;
+                        DAL.MemberConfig.UpdateConfigTran(model.MID, "YJMoney", sjmoney.ToString(), model, false, SqlDbType.Decimal, MyHs);
+
+                        string PCode = "005";//升级
+                        if (!model.MState)
                         {
-                            return error;
+                            string error = Validation2(model, shmoney);
+                            if (!string.IsNullOrEmpty(error))
+                            {
+                                return error;
+                            }
+                            PCode = "001";//激活升级
+                            model.MConfig.YJCount += 1;
+                            DAL.MemberConfig.UpdateConfigTran(model.MID, "YJCount", "1", model, false, SqlDbType.Int, MyHs);
+                            model.MConfig.JTFHState = true;
+                            DAL.MemberConfig.UpdateConfigTran(model.MID, "JTFHState", "1", model, true, SqlDbType.Bit, MyHs);
+                            model.MConfig.DTFHState = true;
+                            DAL.MemberConfig.UpdateConfigTran(model.MID, "DTFHState", "1", model, true, SqlDbType.Bit, MyHs);
+                            model.MConfig.UpSumMoney += sjmoney;
+                            DAL.MemberConfig.UpdateConfigTran(model.MID, "UpSumMoney", sjmoney.ToString(), model, false, SqlDbType.Decimal, MyHs);
+
+                            model.RoleCode = "Nomal";
+                            model.Role = BLL.Roles.RolsList["Nomal"];
+                            model.MDate = DateTime.Now;
+                            model.MState = true;
+                            model.FHState = false;
+                            model.ValidTime = DateTime.Now;
                         }
-                        PCode = "001";//激活升级
-                        model.MConfig.YJCount += 1;
-                        DAL.MemberConfig.UpdateConfigTran(model.MID, "YJCount", "1", model, false, SqlDbType.Int, MyHs);
-                        model.MConfig.JTFHState = true;
-                        DAL.MemberConfig.UpdateConfigTran(model.MID, "JTFHState", "1", model, true, SqlDbType.Bit, MyHs);
-                        model.MConfig.DTFHState = true;
-                        DAL.MemberConfig.UpdateConfigTran(model.MID, "DTFHState", "1", model, true, SqlDbType.Bit, MyHs);
-                        model.MConfig.UpSumMoney += sjmoney;
-                        DAL.MemberConfig.UpdateConfigTran(model.MID, "UpSumMoney", sjmoney.ToString(), model, false, SqlDbType.Decimal, MyHs);
+                        if (shmoney != null)
+                        {
+                            // 二次升级的奖金按照升级之前的级别拿比例
+                            model.AgencyCode = shmoney.MAgencyType;
+                            model.MAgencyType = shmoney;
+                            //if (model.AgencyCode == "004")
+                            //{
+                            //    model.RoleCode = "VIP";
+                            //}
+                        }
 
-                        model.RoleCode = "Nomal";
-                        model.Role = BLL.Roles.RolsList["Nomal"];
-                        model.MDate = DateTime.Now;
-                        model.MState = true;
-                        model.FHState = false;
-                        model.ValidTime = DateTime.Now;
-                    }
-                    if (shmoney != null)
-                    {
-                        // 二次升级的奖金按照升级之前的级别拿比例
-                        model.AgencyCode = shmoney.MAgencyType;
-                        model.MAgencyType = shmoney;
-                        //if (model.AgencyCode == "004")
-                        //{
-                        //    model.RoleCode = "VIP";
-                        //}
-                    }
+                        DAL.Member.UpdateRole(model, MyHs);
+                        model.SHMoney += sjmoney;
 
-                    DAL.Member.UpdateRole(model, MyHs);
-                    model.SHMoney += sjmoney;
+                        Model.Accounts account = new Model.Accounts()
+                        {
+                            AccountsDate = DateTime.MaxValue,
+                            ACode = model.MID + "_" + DateTime.Now.ToString("yyyyMMddHHmmss"),
+                            CreateDate = DateTime.Now,
+                            IfAccount = false,
+                            IsAuto = true,
+                            PCode = PCode,
+                            TotalFHMoney = 0,
+                            FHCount = 0,
+                            ARemark = model.MID
+                        };
 
-                    Model.Accounts account = new Model.Accounts()
-                    {
-                        AccountsDate = DateTime.MaxValue,
-                        ACode = model.MID + "_" + DateTime.Now.ToString("yyyyMMddHHmmss"),
-                        CreateDate = DateTime.Now,
-                        IfAccount = false,
-                        IsAuto = true,
-                        PCode = PCode,
-                        TotalFHMoney = 0,
-                        FHCount = 0,
-                        ARemark = model.MID
-                    };
+                        BLL.Accounts.BDInsert(account, MyHs);
 
-                    BLL.Accounts.BDInsert(account, MyHs);
+                        if (DAL.CommonBase.RunHashtable(MyHs))
+                        {
+                            DAL.Member.tempMemberList.Clear();//清空临时字典
+                            DAL.BMember.tempBMemberList.Clear();//清空临时字典
 
-                    if (DAL.CommonBase.RunHashtable(MyHs))
-                    {
-                        DAL.Member.tempMemberList.Clear();//清空临时字典
-                        DAL.BMember.tempBMemberList.Clear();//清空临时字典
-
-                        return "恭喜您升级成功，本次消耗" + sjmoney.ToString("F2");
+                            return "恭喜您升级成功，本次消耗" + sjmoney.ToString("F2");
+                        }
                     }
                 }
+                return "升级失败";
             }
-            return "升级失败";
         }
 
         public static Hashtable UpdateRole(Model.Member member, Hashtable MyHs)
@@ -484,6 +487,60 @@ namespace yny_004.BLL
             return inserModel;
         }
 
+        /// <summary>
+        /// 注册会员
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>返回注册成功之后的会员信息</returns>
+        public static Model.Member InsertAndReturnEntityft(Model.Member model, int count, bool NeedEmail, ref string retStr)
+        {
+            string p1 = model.Password;
+            string p2 = model.SecPsd;
+            Model.Member inserModel = null;
+            if (model.AgencyCode == "001")
+            {
+                model.MState = false;
+                model.RoleCode = BLL.Roles.RolsList["Notactive"].RType;
+                model.NAgencyCode = "001";
+                model.MCreateDate = DateTime.Now;
+                model.MDate = DateTime.MaxValue;
+                model.FHState = false;
+                model.MConfig = new Model.MemberConfig
+                {
+                    MID = model.MID,
+                    JJTypeList = DAL.Reward.RewardStr,
+                    DTFHState = true,
+                    JTFHState = true,
+                    TXStatus = true,
+                    ZZStatus = true,
+                    GQCount = count,
+                    HLGQCount = count,
+                    TJFloat = 0
+                };
+            }
+            //model.Country = GetArea(model.Province);
+            retStr = Validation(model, false);
+            if (retStr != "")
+                return inserModel;
+            string password = model.Password;
+            //string secpsd = model.SecPsd;
+            //if (string.IsNullOrEmpty(model.FMID))
+            {
+                model.Password = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(model.Password + model.Salt, "MD5").ToUpper();
+                //model.SecPsd = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(model.SecPsd + model.Salt, "MD5").ToUpper();
+            }
+            if (DAL.Member.Insert(model))
+            {
+                inserModel = DAL.Member.GetModel(model.MID);
+            }
+            else
+            {
+                retStr = "注册失败";
+            }
+            return inserModel;
+        }
+
+
         private static string GetArea(string pr)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -681,10 +738,10 @@ namespace yny_004.BLL
         public static string GetTestMID()
         {
             Random rand = new Random();
-            string mid = "DF" + rand.Next(1000, 9999).ToString();
+            string mid = "pp" + rand.Next(100000, 999999).ToString();
             while (DAL.Member.TestMID(mid))
             {
-                mid = "DF" + rand.Next(1000, 9999).ToString();
+                mid = "pp" + rand.Next(100000, 999999).ToString();
             }
             return mid;
         }
@@ -995,16 +1052,20 @@ namespace yny_004.BLL
             return "操作失败";
         }
 
-        public static string Validation(Model.Member shmodel)
+        public static string Validation(Model.Member shmodel,bool istel=true)
         {
             //if (DAL.Member.GetNumIDCount(shmodel.BankNumber, "BankNumber") >= 1)
             //{
             //    return "一个银行卡号只能注册1单";
             //}
-            if (DAL.Member.GetNumIDCount(shmodel.Tel, "Tel") >=BLL.Configuration.Model.E_BbinMaxCount)
+            if (istel)
             {
-                return "一个手机号只能注册1单";
+                if (DAL.Member.GetNumIDCount(shmodel.Tel, "Tel") >= BLL.Configuration.Model.E_BbinMaxCount)
+                {
+                    return "一个手机号只能注册1单";
+                }
             }
+            
             //if (DAL.Member.GetNumIDCount(shmodel.MName, "MName") >= 1)
             //{
             //    return "一个会员姓名只能注册1单";

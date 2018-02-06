@@ -13,7 +13,7 @@
                     <tr style="height: 50px;">
                         <td align="right"></td>
                         <td align="left">
-                            <input class="normal_btnok" id="Button1" type="button" runat="server" value="日分红"
+                            <input class="normal_btnok" id="Button1" type="button" runat="server" value="生成子账号"
                                 onclick="checkChange1();" />
                         </td>
                         <td align="right"></td>

@@ -20,7 +20,7 @@ namespace yny_004.Web.autoaspx
                     string error = "";
                     try
                     {
-                        if (BLL.ChangeMoney.R_DFH())
+                        if (BLL.ChangeMoney.ListMyAdd())
                         {
                             error += "操作成功！";
                         }

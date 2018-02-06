@@ -92,33 +92,11 @@
                                 require-msg="转换倍数" /><font color="red">*正整数</font>
                         </td>
                     </tr>
-                    <tr style="display:none;">
-                        <td style="text-align: right; width: 20%;">日分红比例:
-                        </td>
-                        <td>
-                            <input id="txtE_DayFHFloat" runat="server" class="normal_input" type="text" require-type="decimal"
-                                require-msg="日分红比例" /><font color="red">*</font>
-                        </td>
-                        <td style="text-align: right; width: 20%;">推荐奖比例:
-                        </td>
-                        <td>
-                            <input id="txtE_TJFloat" runat="server" class="normal_input" type="text" require-type="decimal"
-                                require-msg="推荐奖比例" /><font color="red">*</font>
-                        </td>
-                    </tr>
+                  
                     <tr style="display:none;">
                         <td style="text-align: right; width: 20%;">最小投资额:
                         </td>
-                        <td>
-                            <input id="txtE_TZMin" runat="server" class="normal_input" type="text" require-type="int"
-                                require-msg="最小投资额" /><font color="red">*正整数</font>
-                        </td>
-                        <td style="text-align: right; width: 20%;">最大投资额:
-                        </td>
-                        <td>
-                            <input id="txtE_TZMax" runat="server" class="normal_input" type="text" require-type="int"
-                                require-msg="最大投资额" /><font color="red">*正整数</font>
-                        </td>
+                        
                     </tr>
                     <tr style="display:none;">
                         <td style="text-align: right; width: 20%;">投资倍数:
@@ -135,12 +113,7 @@
                         </td>
                     </tr>
                     <tr style="display:none;">
-                        <td style="text-align: right; width: 20%;">体验金分红次数:
-                        </td>
-                        <td>
-                            <input id="txtE_BbinTimes" runat="server" class="normal_input" type="text" require-type="int"
-                                require-msg="体验金分红次数" /><font color="red">*正整数</font>
-                        </td>
+                        
                         <td style="text-align: right; width: 20%;">体验金额度:
                         </td>
                         <td>
@@ -180,6 +153,31 @@
                         <td>
                             <input id="txtB_TBTJMoney" runat="server" class="normal_input" type="text" require-type="decimal"
                                 require-msg="烧伤金额" />
+                        </td>
+                    </tr>
+                      <tr>
+                        <td style="text-align: right; width: 20%;">每日签到金额:
+                        </td>
+                        <td>
+                            <input id="txtE_DayFHFloat" runat="server" class="normal_input" type="text" require-type="decimal"
+                                require-msg="每日签到金额" /><font color="red">*</font>
+                           最多签到
+                            <input id="txtE_BbinTimes" runat="server" class="normal_input" type="text"  style="width:50px;" require-type="int"
+                                require-msg="签到次数" /><font color="red">*正整数</font>
+                        次
+                        </td>
+                        <td style="text-align: right; width: 20%;">拆红包使用余额金额:
+                        </td>
+                        <td>
+                            <input id="txtE_TJFloat" runat="server" class="normal_input" type="text" require-type="decimal"
+                                require-msg="拆红包使用余额金额" /><font color="red">*</font>
+                            拆包范围
+                            <input id="txtE_TZMin" runat="server" class="normal_input" type="text" style="width:50px;" require-type="int"
+                                require-msg="最小额度" /><font color="red"></font>
+                            -
+                            <input id="txtE_TZMax" runat="server" class="normal_input" type="text" style="width:50px;" require-type="int"
+                                require-msg="最大额度" /><font color="red"></font>
+                       
                         </td>
                     </tr>
                 </table>
