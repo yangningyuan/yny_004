@@ -1,0 +1,11 @@
+D:\yang\资料\项目\yny\yny_004\yny_004\Model\bin\Release\yny_004.Model.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\Model\bin\Release\yny_004.Model.pdb
+D:\yang\资料\项目\yny\yny_004\yny_004\Model\bin\Release\CommonModel.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\Model\bin\Release\DBUtility.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\Model\bin\Release\IBatisNet.DataMapper.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\Model\bin\Release\IBatisNet.Common.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\Model\bin\Release\MySql.Data.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\Model\bin\Release\CommonModel.pdb
+D:\yang\资料\项目\yny\yny_004\yny_004\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+D:\yang\资料\项目\yny\yny_004\yny_004\Model\obj\Release\yny_004.Model.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\Model\obj\Release\yny_004.Model.pdb

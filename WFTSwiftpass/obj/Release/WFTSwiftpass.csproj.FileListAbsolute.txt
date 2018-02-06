@@ -1,0 +1,5 @@
+D:\yang\资料\项目\yny\yny_004\yny_004\WFTSwiftpass\bin\Release\WFTSwiftpass.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\WFTSwiftpass\bin\Release\WFTSwiftpass.pdb
+D:\yang\资料\项目\yny\yny_004\yny_004\WFTSwiftpass\obj\Release\WFTSwiftpass.csprojResolveAssemblyReference.cache
+D:\yang\资料\项目\yny\yny_004\yny_004\WFTSwiftpass\obj\Release\WFTSwiftpass.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\WFTSwiftpass\obj\Release\WFTSwiftpass.pdb

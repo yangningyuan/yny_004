@@ -1,0 +1,5 @@
+D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\bin\Release\CommonModel.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\bin\Release\CommonModel.pdb
+D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\obj\Release\CommonModel.csprojResolveAssemblyReference.cache
+D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\obj\Release\CommonModel.dll
+D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\obj\Release\CommonModel.pdb
