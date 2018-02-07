@@ -12,4 +12,3 @@ E:\newProject\yny_004\CommonModel\bin\Debug\CommonModel.dll
 E:\newProject\yny_004\CommonModel\bin\Debug\CommonModel.pdb
 E:\newProject\yny_004\CommonModel\obj\Debug\CommonModel.dll
 E:\newProject\yny_004\CommonModel\obj\Debug\CommonModel.pdb
-E:\newProject\yny_004\CommonModel\obj\Debug\CommonModel.csprojResolveAssemblyReference.cache

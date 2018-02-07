@@ -811,15 +811,24 @@ header.bar.User-header:after {
 
 .logo-login {
     position: absolute;
-    top: 4rem;
+        top: 3rem;
     width: auto;
+    height: 4rem;
     left: 0;
     right: 0;
     margin: auto;
     opacity: 0;
     animation: bounceInDown 1s forwards;
 }
-
+.logoTitle {
+        position: absolute;
+    top: 6.5rem;
+    font-weight: bold;
+    color: #60a4f9;
+    font-size: 1rem;
+    width: 100%;
+    text-align:center;
+}
 
 /*公告*/
 

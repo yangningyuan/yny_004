@@ -81,6 +81,7 @@
             <div class="content Register" style="top: 0;">
             <img src="../img/login.jpg" />
                 <img src="../img/logo-login.png" class="logo-login" />
+                <p class="logoTitle">派派红包</p>
                 <input type="hidden" id="inpwd" runat="server" />
                 <div class="Register_Info row" style="top: 8rem;">
                     <div class="Register_List">

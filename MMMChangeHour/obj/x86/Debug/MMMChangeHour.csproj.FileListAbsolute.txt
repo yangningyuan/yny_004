@@ -15,4 +15,3 @@ E:\newProject\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.exe
 E:\newProject\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.pdb
 E:\newProject\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.exe
 E:\newProject\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.pdb
-E:\newProject\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.csprojResolveAssemblyReference.cache

@@ -12,4 +12,3 @@ E:\newProject\yny_004\WFTSwiftpass\bin\Release\WFTSwiftpass.dll
 E:\newProject\yny_004\WFTSwiftpass\bin\Release\WFTSwiftpass.pdb
 E:\newProject\yny_004\WFTSwiftpass\obj\Debug\WFTSwiftpass.dll
 E:\newProject\yny_004\WFTSwiftpass\obj\Debug\WFTSwiftpass.pdb
-E:\newProject\yny_004\WFTSwiftpass\obj\Debug\WFTSwiftpass.csprojResolveAssemblyReference.cache

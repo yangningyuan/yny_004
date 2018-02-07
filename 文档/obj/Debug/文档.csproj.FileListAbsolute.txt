@@ -17,5 +17,3 @@ E:\newProject\yny_004\文档\bin\Debug\文档.dll
 E:\newProject\yny_004\文档\bin\Debug\文档.pdb
 E:\newProject\yny_004\文档\obj\Debug\文档.dll
 E:\newProject\yny_004\文档\obj\Debug\文档.pdb
-E:\newProject\yny_004\文档\bin\Debug\dll\Newtonsoft.Json.dll
-E:\newProject\yny_004\文档\obj\Debug\文档.csprojResolveAssemblyReference.cache
