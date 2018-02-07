@@ -12,3 +12,7 @@ E:\newProject\yny_004\CommonModel\bin\Debug\CommonModel.dll
 E:\newProject\yny_004\CommonModel\bin\Debug\CommonModel.pdb
 E:\newProject\yny_004\CommonModel\obj\Debug\CommonModel.dll
 E:\newProject\yny_004\CommonModel\obj\Debug\CommonModel.pdb
+D:\工作目录\yny_004\CommonModel\bin\Debug\CommonModel.dll
+D:\工作目录\yny_004\CommonModel\bin\Debug\CommonModel.pdb
+D:\工作目录\yny_004\CommonModel\obj\Debug\CommonModel.dll
+D:\工作目录\yny_004\CommonModel\obj\Debug\CommonModel.pdb

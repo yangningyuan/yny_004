@@ -103,7 +103,6 @@ D:\工作目录\yny_004\Web\bin\Microsoft.SqlServer.Smo.dll
 D:\工作目录\yny_004\Web\bin\Microsoft.SqlServer.SmoExtended.dll
 D:\工作目录\yny_004\Web\bin\Microsoft.SqlServer.SqlClrProvider.dll
 D:\工作目录\yny_004\Web\bin\Microsoft.SqlServer.SqlEnum.dll
-D:\工作目录\yny_004\Web\bin\Newtonsoft.Json.dll
 D:\工作目录\yny_004\Web\bin\NPOI.dll
 D:\工作目录\yny_004\Web\bin\RSAForDotNet03.dll
 D:\工作目录\yny_004\Web\bin\ThoughtWorks.QRCode.dll
@@ -169,3 +168,4 @@ E:\newProject\yny_004\Web\obj\Debug\yny_004.Web.pdb
 E:\newProject\yny_004\Web\bin\yny_004.Web.dll.config
 E:\newProject\yny_004\Web\bin\yny_004.Web.dll
 E:\newProject\yny_004\Web\bin\yny_004.Web.pdb
+D:\工作目录\yny_004\Web\bin\Newtonsoft.Json.dll

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -160,4 +161,168 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87B8CEEB-8F40-4705-80CA-23593BCCC130}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>文档</RootNamespace>
+    <AssemblyName>文档</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dll\bak\Microsoft.SqlServer.ConnectionInfo.dll" />
+    <Content Include="dll\bak\Microsoft.SqlServer.Dmf.dll" />
+    <Content Include="dll\bak\Microsoft.SqlServer.Management.Sdk.Sfc.dll" />
+    <Content Include="dll\bak\Microsoft.SqlServer.RegSvrEnum.dll" />
+    <Content Include="dll\bak\Microsoft.SqlServer.ServiceBrokerEnum.dll" />
+    <Content Include="dll\bak\Microsoft.SqlServer.Smo.dll" />
+    <Content Include="dll\bak\Microsoft.SqlServer.SmoExtended.dll" />
+    <Content Include="dll\bak\Microsoft.SqlServer.SqlClrProvider.dll" />
+    <Content Include="dll\bak\Microsoft.SqlServer.SqlEnum.dll" />
+    <Content Include="dll\DBBackup.dll" />
+    <Content Include="dll\IBatisNet.Common.dll" />
+    <Content Include="dll\IBatisNet.DataMapper.dll" />
+    <Content Include="dll\MySql.Data.dll" />
+    <Content Include="dll\Newtonsoft.Json.dll" />
+    <Content Include="dll\NPOI.dll" />
+    <Content Include="dll\NPOI\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="dll\NPOI\NPOI.dll" />
+    <Content Include="dll\NPOI\NPOI.OOXML.dll" />
+    <Content Include="dll\NPOI\NPOI.OpenXml4Net.dll" />
+    <Content Include="dll\NPOI\NPOI.OpenXmlFormats.dll" />
+    <Content Include="dll\NPOI\NPOI.XML" />
+    <Content Include="dll\ThoughtWorks.QRCode.dll" />
+    <Content Include="dll\yg_dll.dll" />
+    <Content Include="静态页面\zx326_名字待定\assets\font-awesome\css\font-awesome.css" />
+    <Content Include="静态页面\zx326_名字待定\assets\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="静态页面\zx326_名字待定\css\add-ons.min.css" />
+    <Content Include="静态页面\zx326_名字待定\css\bootstrap.min.css" />
+    <Content Include="静态页面\zx326_名字待定\css\main.css" />
+    <Content Include="静态页面\zx326_名字待定\css\reset.css" />
+    <Content Include="静态页面\zx326_名字待定\css\style-responsive.css" />
+    <Content Include="静态页面\zx326_名字待定\css\style.css" />
+    <Content Include="静态页面\zx326_名字待定\find_password\css\bootstrap.css" />
+    <Content Include="静态页面\zx326_名字待定\find_password\css\style.css" />
+    <Content Include="静态页面\zx326_名字待定\find_password\find_password.htm" />
+    <Content Include="静态页面\zx326_名字待定\find_password\images\fac.ico" />
+    <Content Include="静态页面\zx326_名字待定\find_password\images\fjj.jpg" />
+    <Content Include="静态页面\zx326_名字待定\find_password\images\rlogo.png" />
+    <Content Include="静态页面\zx326_名字待定\images\arrow-up.png" />
+    <Content Include="静态页面\zx326_名字待定\images\bg.jpg" />
+    <Content Include="静态页面\zx326_名字待定\images\border.jpg" />
+    <Content Include="静态页面\zx326_名字待定\images\customSelect-arrow.gif" />
+    <Content Include="静态页面\zx326_名字待定\images\element.png" />
+    <Content Include="静态页面\zx326_名字待定\images\exit.png" />
+    <Content Include="静态页面\zx326_名字待定\images\fac.ico" />
+    <Content Include="静态页面\zx326_名字待定\images\gold.png" />
+    <Content Include="静态页面\zx326_名字待定\images\icon01.png" />
+    <Content Include="静态页面\zx326_名字待定\images\icon02.png" />
+    <Content Include="静态页面\zx326_名字待定\images\icon03.png" />
+    <Content Include="静态页面\zx326_名字待定\images\icon04.png" />
+    <Content Include="静态页面\zx326_名字待定\images\K.jpg" />
+    <Content Include="静态页面\zx326_名字待定\images\k2.jpg" />
+    <Content Include="静态页面\zx326_名字待定\images\left-arrow.png" />
+    <Content Include="静态页面\zx326_名字待定\images\logo.png" />
+    <Content Include="静态页面\zx326_名字待定\images\man.jpg" />
+    <Content Include="静态页面\zx326_名字待定\images\man.png" />
+    <Content Include="静态页面\zx326_名字待定\images\p1.png" />
+    <Content Include="静态页面\zx326_名字待定\images\p2.png" />
+    <Content Include="静态页面\zx326_名字待定\images\qd.png" />
+    <Content Include="静态页面\zx326_名字待定\images\right-arrow.png" />
+    <Content Include="静态页面\zx326_名字待定\images\search-icon.jpg" />
+    <Content Include="静态页面\zx326_名字待定\images\share.png" />
+    <Content Include="静态页面\zx326_名字待定\index.html" />
+    <Content Include="静态页面\zx326_名字待定\js\bootstrap.min.js" />
+    <Content Include="静态页面\zx326_名字待定\js\common-scripts.js" />
+    <Content Include="静态页面\zx326_名字待定\js\jquery-1.8.3.min.js" />
+    <Content Include="静态页面\zx326_名字待定\js\jquery-scroll.js" />
+    <Content Include="静态页面\zx326_名字待定\js\jquery.nicescroll.js" />
+    <Content Include="静态页面\zx326_名字待定\js\jquery.scrollTo.min.js" />
+    <Content Include="静态页面\zx326_名字待定\js\main.js" />
+    <Content Include="静态页面\zx326_名字待定\Login\css\login.css" />
+    <Content Include="静态页面\zx326_名字待定\Login\images\fac.ico" />
+    <Content Include="静态页面\zx326_名字待定\Login\images\footerjpg.jpg" />
+    <Content Include="静态页面\zx326_名字待定\Login\images\loginbg.jpg" />
+    <Content Include="静态页面\zx326_名字待定\Login\images\logo.png" />
+    <Content Include="静态页面\zx326_名字待定\Login\images\saved_resource.png" />
+    <Content Include="静态页面\zx326_名字待定\Login\Login.html" />
+    <Content Include="静态页面\zx326_名字待定\login_phone\css\style.css" />
+    <Content Include="静态页面\zx326_名字待定\login_phone\images\bg.jpg" />
+    <Content Include="静态页面\zx326_名字待定\login_phone\images\fac.ico" />
+    <Content Include="静态页面\zx326_名字待定\login_phone\images\Login.png" />
+    <Content Include="静态页面\zx326_名字待定\login_phone\images\yzhm.png" />
+    <Content Include="静态页面\zx326_名字待定\login_phone\Login.html" />
+    <Content Include="静态页面\zx326_名字待定\pay.html" />
+    <Content Include="静态页面\zx326_名字待定\regedit\css\bootstrap.css" />
+    <Content Include="静态页面\zx326_名字待定\regedit\css\style.css" />
+    <Content Include="静态页面\zx326_名字待定\regedit\images\bg.jpg" />
+    <Content Include="静态页面\zx326_名字待定\regedit\images\fac.ico" />
+    <Content Include="静态页面\zx326_名字待定\regedit\images\logo.png" />
+    <Content Include="静态页面\zx326_名字待定\regedit\js\bootstrap.js" />
+    <Content Include="静态页面\zx326_名字待定\regedit\js\jquery.js" />
+    <Content Include="静态页面\zx326_名字待定\regedit\js\layer.js" />
+    <Content Include="静态页面\zx326_名字待定\regedit\js\web.js" />
+    <Content Include="静态页面\zx326_名字待定\regedit\regedit.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="开发文档\" />
+    <Folder Include="测试文档\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="需求文档\zx326制度需求.docx" />
+    <None Include="静态页面\zx326_名字待定\assets\font-awesome\font\fontawesome-webfontd41d.eot" />
+    <None Include="静态页面\zx326_名字待定\assets\font-awesome\font\fontawesome-webfontf77b.eot" />
+    <None Include="静态页面\zx326_名字待定\assets\font-awesome\font\fontawesome-webfontf77b.ttf" />
+    <None Include="静态页面\zx326_名字待定\assets\font-awesome\font\fontawesome-webfontf77b.woff" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+>>>>>>> 2f6d91c018bf5b3a680db9e73fea31152c82d092
 </Project>

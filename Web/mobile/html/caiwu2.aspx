@@ -12,19 +12,19 @@
     <div>
         <ul class="fins_list box_shadow">
             <li>
-                <a href="transfer.html">
-                     <i class="iconfont">&#xe672;</i>
+                <a href="javascript:pcallhtml('/mobile/html/HBList.aspx','转账');">
+                     <i class="iconfont">&#xe614;</i>
                      <p>转账</p>
                 </a>
             </li>
             <li>
-                <a href="remittance.html">
+                <a href="javascript:pcallhtml('/mobile/html/HKChangeWY.aspx','汇款');">
                      <i class="iconfont">&#xe614;</i>
                     <p>汇款</p>
                 </a>
             </li>
              <li>
-                 <a href="signRecord.html">
+                 <a href="javascript:pcallhtml('/mobile/html/LuckQDList.aspx','签到记录');">
                       <i class="iconfont">&#xe62c;</i>
                      <p>签到记录</p>
 
@@ -32,29 +32,29 @@
 
              </li>
              <li>
-                 <a href="shareRecord.html">
+                 <a href="javascript:pcallhtml('/mobile/html/LuckTJList.aspx','推荐记录');">
                       <i class="iconfont">&#xe61f;</i>
-                     <p>分享记录</p>
+                     <p>推荐记录</p>
                  </a>
              </li> 
             <li>
-                <a href="seeRecord.html">
+                <a href="javascript:pcallhtml('/mobile/html/LuckJDList.aspx','见点记录');">
                      <i class="iconfont">&#xe61e;</i>
                     <p>见点记录</p>
                 </a>
             </li>
              <li>
-                 <a href="envelopeList.html">
+                 <a href="javascript:pcallhtml('/mobile/html/LuckList.aspx','红包中心记录');">
                      <i class="iconfont">&#xe620;</i>
                      <p>红包中心记录</p>
                  </a>
              </li>
-             <li>
+          <%--   <li>
                  <a href="systemEnvelope.html">
                      <i class="iconfont">&#xe66c;</i>
                       <p>系统红包</p>
                  </a>
-             </li>
+             </li>--%>
         </ul>
     </div>
     </form>

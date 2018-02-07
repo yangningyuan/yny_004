@@ -110,7 +110,7 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\文档\dll\Newtonsoft.Json.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="NPOI">
       <HintPath>..\文档\dll\NPOI.dll</HintPath>
