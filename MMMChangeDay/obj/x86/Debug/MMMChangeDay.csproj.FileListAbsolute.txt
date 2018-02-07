@@ -15,3 +15,4 @@ E:\newProject\yny_004\MMMChangeDay\bin\Debug\MMMChangeDay.exe
 E:\newProject\yny_004\MMMChangeDay\bin\Debug\MMMChangeDay.pdb
 E:\newProject\yny_004\MMMChangeDay\obj\x86\Debug\MMMChangeDay.exe
 E:\newProject\yny_004\MMMChangeDay\obj\x86\Debug\MMMChangeDay.pdb
+E:\newProject\yny_004\MMMChangeDay\obj\x86\Debug\MMMChangeDay.csprojResolveAssemblyReference.cache

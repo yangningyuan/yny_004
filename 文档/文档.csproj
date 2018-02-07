@@ -60,9 +60,6 @@
     <Content Include="dll\IBatisNet.Common.dll" />
     <Content Include="dll\IBatisNet.DataMapper.dll" />
     <Content Include="dll\MySql.Data.dll" />
-    <Content Include="dll\Newtonsoft.Json.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="dll\NPOI.dll" />
     <Content Include="dll\NPOI\ICSharpCode.SharpZipLib.dll" />
     <Content Include="dll\NPOI\NPOI.dll" />

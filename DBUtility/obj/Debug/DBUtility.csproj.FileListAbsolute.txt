@@ -33,3 +33,4 @@ E:\newProject\yny_004\DBUtility\bin\Debug\MySql.Data.dll
 E:\newProject\yny_004\DBUtility\bin\Debug\ThoughtWorks.QRCode.dll
 E:\newProject\yny_004\DBUtility\obj\Debug\DBUtility.dll
 E:\newProject\yny_004\DBUtility\obj\Debug\DBUtility.pdb
+E:\newProject\yny_004\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
