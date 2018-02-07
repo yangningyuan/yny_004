@@ -16,14 +16,6 @@ D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\bin\Debug\ThoughtWorks.QRCod
 D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
 D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\obj\Debug\DBUtility.dll
 D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\obj\Debug\DBUtility.pdb
-E:\newProject\yny_004\DBUtility\bin\Debug\DBUtility.dll
-E:\newProject\yny_004\DBUtility\bin\Debug\DBUtility.pdb
-E:\newProject\yny_004\DBUtility\bin\Debug\IBatisNet.Common.dll
-E:\newProject\yny_004\DBUtility\bin\Debug\IBatisNet.DataMapper.dll
-E:\newProject\yny_004\DBUtility\bin\Debug\MySql.Data.dll
-E:\newProject\yny_004\DBUtility\bin\Debug\ThoughtWorks.QRCode.dll
-E:\newProject\yny_004\DBUtility\obj\Debug\DBUtility.dll
-E:\newProject\yny_004\DBUtility\obj\Debug\DBUtility.pdb
 D:\工作目录\yny_004\DBUtility\bin\Debug\DBUtility.dll
 D:\工作目录\yny_004\DBUtility\bin\Debug\DBUtility.pdb
 D:\工作目录\yny_004\DBUtility\bin\Debug\IBatisNet.Common.dll
@@ -33,3 +25,11 @@ D:\工作目录\yny_004\DBUtility\bin\Debug\ThoughtWorks.QRCode.dll
 D:\工作目录\yny_004\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
 D:\工作目录\yny_004\DBUtility\obj\Debug\DBUtility.dll
 D:\工作目录\yny_004\DBUtility\obj\Debug\DBUtility.pdb
+E:\newProject\yny_004\DBUtility\bin\Debug\DBUtility.dll
+E:\newProject\yny_004\DBUtility\bin\Debug\DBUtility.pdb
+E:\newProject\yny_004\DBUtility\bin\Debug\IBatisNet.Common.dll
+E:\newProject\yny_004\DBUtility\bin\Debug\IBatisNet.DataMapper.dll
+E:\newProject\yny_004\DBUtility\bin\Debug\MySql.Data.dll
+E:\newProject\yny_004\DBUtility\bin\Debug\ThoughtWorks.QRCode.dll
+E:\newProject\yny_004\DBUtility\obj\Debug\DBUtility.dll
+E:\newProject\yny_004\DBUtility\obj\Debug\DBUtility.pdb
