@@ -8,3 +8,8 @@ D:\yang\资料\项目\yny\yny_004\yny_004\WFTSwiftpass\bin\Release\WFTSwiftpass.
 D:\yang\资料\项目\yny\yny_004\yny_004\WFTSwiftpass\obj\Debug\WFTSwiftpass.csprojResolveAssemblyReference.cache
 D:\yang\资料\项目\yny\yny_004\yny_004\WFTSwiftpass\obj\Debug\WFTSwiftpass.dll
 D:\yang\资料\项目\yny\yny_004\yny_004\WFTSwiftpass\obj\Debug\WFTSwiftpass.pdb
+E:\newProject\yny_004\WFTSwiftpass\bin\Release\WFTSwiftpass.dll
+E:\newProject\yny_004\WFTSwiftpass\bin\Release\WFTSwiftpass.pdb
+E:\newProject\yny_004\WFTSwiftpass\obj\Debug\WFTSwiftpass.csprojResolveAssemblyReference.cache
+E:\newProject\yny_004\WFTSwiftpass\obj\Debug\WFTSwiftpass.dll
+E:\newProject\yny_004\WFTSwiftpass\obj\Debug\WFTSwiftpass.pdb

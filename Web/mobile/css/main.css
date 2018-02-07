@@ -1964,3 +1964,37 @@ h2 {
 .i_signIn_top70,.i_signIn_top702 {
     top: 70%;
 }
+.fins_list {
+    width: 100%;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    text-align: center;
+    background: #fff;
+}
+.box_shadow {
+    box-shadow: 1px 5px 5px #c3defc;
+}
+.fins_list li {
+    width: 49%;
+    padding: 0.5rem 0;
+    margin: 0 0.1rem 0.25rem 0;
+    border-right: solid 0.05rem #e0e0e0;
+    border-bottom: solid 0.05rem #e0e0e0;
+    float: left;
+}
+.fins_list li a {
+    display: block;
+}
+.fins_list li .iconfont {
+    display: inline-block;
+    font-size: 2rem;
+    color:#098df9;
+}
+.fins_list li p {
+        margin: 0.5rem 0
+}
+.fins_list li:nth-child(7n+7) {
+    border-bottom: none;
+    border-right: none;
+    width: 100%;
+}

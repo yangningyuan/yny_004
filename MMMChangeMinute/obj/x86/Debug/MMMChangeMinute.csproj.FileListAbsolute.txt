@@ -10,3 +10,8 @@ D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeMinute\bin\Debug\MMMChangeMin
 D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeMinute\obj\x86\Debug\MMMChangeMinute.csprojResolveAssemblyReference.cache
 D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeMinute\obj\x86\Debug\MMMChangeMinute.exe
 D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeMinute\obj\x86\Debug\MMMChangeMinute.pdb
+E:\newProject\yny_004\MMMChangeMinute\bin\Debug\MMMChangeMinute.exe.config
+E:\newProject\yny_004\MMMChangeMinute\bin\Debug\MMMChangeMinute.exe
+E:\newProject\yny_004\MMMChangeMinute\bin\Debug\MMMChangeMinute.pdb
+E:\newProject\yny_004\MMMChangeMinute\obj\x86\Debug\MMMChangeMinute.exe
+E:\newProject\yny_004\MMMChangeMinute\obj\x86\Debug\MMMChangeMinute.pdb
