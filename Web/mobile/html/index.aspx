@@ -49,7 +49,7 @@
                     <i class="iconfont">&#xe699;</i>
                     <span class="tab-label">首页</span>
                 </a>
-                <a class="tab-item" href="javascript:void(0)" onclick="javascript:pcallhtml('/mobile/html/CW.aspx','财务');">
+                <a class="tab-item" href="javascript:void(0)" onclick="javascript:pcallhtml('/mobile/html/caiwu2.aspx','财务');">
                     <i class="iconfont">&#xe7d1;</i>
                     <span class="tab-label">财务</span>
                 </a>

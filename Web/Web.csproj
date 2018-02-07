@@ -332,6 +332,7 @@
     <Content Include="mobile\html\AddReceive.aspx" />
     <Content Include="mobile\html\BuyGoods.aspx" />
     <Content Include="mobile\html\caiwu.aspx" />
+    <Content Include="mobile\html\caiwu2.aspx" />
     <Content Include="mobile\html\Cars.aspx" />
     <Content Include="mobile\html\CW.aspx" />
     <Content Include="mobile\html\findpwd.aspx" />
@@ -1566,6 +1567,13 @@
     </Compile>
     <Compile Include="mobile\html\caiwu.aspx.designer.cs">
       <DependentUpon>caiwu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mobile\html\caiwu2.aspx.cs">
+      <DependentUpon>caiwu2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobile\html\caiwu2.aspx.designer.cs">
+      <DependentUpon>caiwu2.aspx</DependentUpon>
     </Compile>
     <Compile Include="mobile\html\Cars.aspx.cs">
       <DependentUpon>Cars.aspx</DependentUpon>
