@@ -35,6 +35,19 @@
                                     <a href="javascript:void(0)" onclick="pcallhtml('/mobile/html/FMIDList.aspx','子账号列表');">
                                         <img src="/mobile/img/caiwu06.png"></a>
                                 </div>
+
+                                <div class="col-50">
+                                    <a href="javascript:void(0)" onclick="pcallhtml('/mobile/html/FMIDList.aspx','推荐奖记录');">
+                                        <img src="/mobile/img/caiwu06.png"></a>
+                                </div>
+                                <div class="col-50">
+                                    <a href="javascript:void(0)" onclick="pcallhtml('/mobile/html/FMIDList.aspx','见点奖记录');">
+                                        <img src="/mobile/img/caiwu06.png"></a>
+                                </div>
+                                <div class="col-50">
+                                    <a href="javascript:void(0)" onclick="pcallhtml('/mobile/html/FMIDList.aspx','签到奖记录');">
+                                        <img src="/mobile/img/caiwu06.png"></a>
+                                </div>
                                 <%--<div class="col-50">
                                     <a href="javascript:void(0)" onclick="pcallhtml('/mobile/html/HKList.aspx','汇款管理');">
                                         <img src="/mobile/img/caiwu07.png"></a>

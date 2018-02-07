@@ -354,6 +354,7 @@
     <Content Include="mobile\html\KFList.aspx" />
     <Content Include="mobile\html\Login.aspx" />
     <Content Include="mobile\html\LuckList.aspx" />
+    <Content Include="mobile\html\LuckTJList.aspx" />
     <Content Include="mobile\html\ModifyPwd.aspx" />
     <Content Include="mobile\html\ModifySecPwd.aspx" />
     <Content Include="mobile\html\NoticeList.aspx" />
@@ -1719,6 +1720,13 @@
     </Compile>
     <Compile Include="mobile\html\LuckList.aspx.designer.cs">
       <DependentUpon>LuckList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mobile\html\LuckTJList.aspx.cs">
+      <DependentUpon>LuckTJList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobile\html\LuckTJList.aspx.designer.cs">
+      <DependentUpon>LuckTJList.aspx</DependentUpon>
     </Compile>
     <Compile Include="mobile\html\ModifyPwd.aspx.cs">
       <DependentUpon>ModifyPwd.aspx</DependentUpon>
