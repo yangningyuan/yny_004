@@ -8,7 +8,7 @@
     </div>
     <div class="row searchbar">
         <form id="form1">
-            <input type="hidden" name="txtKey" id="countdate" />
+            <%--<input type="hidden" name="countdate" id="countdate" />--%>
             <input name="txtKey" id="mKey" type="hidden" class="sinput" />
 
             <div class="clear"></div>
@@ -27,7 +27,7 @@
             <td>${ChangeType}</td>
             <td>${SHMID}</td>
             <td>${ChangeDate}</td>
-            <td>${html caozuo}</td>
+            <td>{{html caozuo}}</td>
         </tr>
     </script>
     <table class=" table table-striped table-bordered ">
