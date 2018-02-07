@@ -46,3 +46,15 @@ E:\newProject\yny_004\Model\bin\Debug\DBUtility.pdb
 E:\newProject\yny_004\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 E:\newProject\yny_004\Model\obj\Debug\yny_004.Model.dll
 E:\newProject\yny_004\Model\obj\Debug\yny_004.Model.pdb
+E:\newProject\yny_004_2\Model\bin\Debug\yny_004.Model.dll
+E:\newProject\yny_004_2\Model\bin\Debug\yny_004.Model.pdb
+E:\newProject\yny_004_2\Model\bin\Debug\CommonModel.dll
+E:\newProject\yny_004_2\Model\bin\Debug\DBUtility.dll
+E:\newProject\yny_004_2\Model\bin\Debug\IBatisNet.DataMapper.dll
+E:\newProject\yny_004_2\Model\bin\Debug\IBatisNet.Common.dll
+E:\newProject\yny_004_2\Model\bin\Debug\MySql.Data.dll
+E:\newProject\yny_004_2\Model\bin\Debug\CommonModel.pdb
+E:\newProject\yny_004_2\Model\bin\Debug\DBUtility.pdb
+E:\newProject\yny_004_2\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\newProject\yny_004_2\Model\obj\Debug\yny_004.Model.dll
+E:\newProject\yny_004_2\Model\obj\Debug\yny_004.Model.pdb
