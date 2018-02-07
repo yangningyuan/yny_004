@@ -15,3 +15,8 @@ E:\newProject\yny_004\MMMChangeMinute\bin\Debug\MMMChangeMinute.exe
 E:\newProject\yny_004\MMMChangeMinute\bin\Debug\MMMChangeMinute.pdb
 E:\newProject\yny_004\MMMChangeMinute\obj\x86\Debug\MMMChangeMinute.exe
 E:\newProject\yny_004\MMMChangeMinute\obj\x86\Debug\MMMChangeMinute.pdb
+D:\工作目录\yny_004\MMMChangeMinute\bin\Debug\MMMChangeMinute.exe.config
+D:\工作目录\yny_004\MMMChangeMinute\bin\Debug\MMMChangeMinute.exe
+D:\工作目录\yny_004\MMMChangeMinute\bin\Debug\MMMChangeMinute.pdb
+D:\工作目录\yny_004\MMMChangeMinute\obj\x86\Debug\MMMChangeMinute.exe
+D:\工作目录\yny_004\MMMChangeMinute\obj\x86\Debug\MMMChangeMinute.pdb
