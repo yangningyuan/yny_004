@@ -8,6 +8,7 @@
     </div>
     <div class="row searchbar">
         <form id="form1">
+            <input type="hidden" name="jjid" id="jjid" />
             <input type="hidden" name="txtKey" id="countdate" />
             <input name="txtKey" id="mKey" type="hidden" class="sinput" />
 
@@ -98,4 +99,43 @@
     //    laydate.skin("molv");
     laydate(start);
     laydate(end);
+
+
+
+    $('.i_opticy2').on('click', function () {
+        $(this).css('display', 'none');
+        $('.i_signInqhb').css('display', 'none')
+        $('.i_signIn_pay2').css('display', 'none');
+        $('.i_signIn_top50').css('display', 'block');
+        $('.i_signIn_top70').css('display', 'none');
+        $('.i_signInqhb .i_popup2').removeClass('envelope');
+    })
+    //$('.qianghongbao').on('click', function () {
+    //    $('.i_opticy2').css('display', 'block');
+    //    $('.i_signInqhb').css('display', 'block')
+    //})
+
+    function jjchb(cid)
+    {
+        alert(cid);
+        $('.i_opticy2').css('display', 'block');
+        $('.i_signInqhb').css('display', 'block');
+    }
+    $('.i_signIn_btnqhb').on('click', function () {
+
+        $.ajax({
+            type: 'post',
+            url: 'Member/Modify.aspx?Action=other',
+            data: "",
+            success: function (info) {
+                document.getElementById("chbmoney").innerHTML = info;
+                $('.i_signIn_pay2').css('display', 'block');
+                $('.i_signIn_top502').css('display', 'none');
+                $('.i_signIn_top702').css('display', 'block');
+                $('.i_signInqhb .i_popup2').addClass('envelope');
+            }
+        });
+
+
+    })
 </script>

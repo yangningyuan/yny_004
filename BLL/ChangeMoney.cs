@@ -760,9 +760,9 @@ namespace yny_004.BLL
             {
                 decimal txfloat = Convert.ToDecimal(BLL.ConfigDictionaryNew.GetConfigDictionary(Convert.ToInt32(changemoney.Money), "TXTake", "").DValue);
                 changemoney.TakeOffMoney = Math.Round(changemoney.Money * txfloat, 2);
-                decimal fjmoney = Convert.ToDecimal(BLL.CommonBase.GetSingle("SELECT ISNULL(SUM(Money),0) FROM dbo.ChangeMoney WHERE ChangeType='appplyIn' AND DATEDIFF(WEEK,ChangeDate,GETDATE())=1 AND FromMID IN(SELECT mid FROM  dbo.getSubBDMember('" +changemoney.FromMID+ "'));"));
-                if (fjmoney<FromModel.MAgencyType.DPFloat)
-                    changemoney.ReBuyMoney=(changemoney.Money-changemoney.TakeOffMoney)*FromModel.MAgencyType.ReBuyFloat;
+                decimal fjmoney = Convert.ToDecimal(BLL.CommonBase.GetSingle("SELECT ISNULL(SUM(Money),0) FROM dbo.ChangeMoney WHERE ChangeType='appplyIn' AND DATEDIFF(WEEK,ChangeDate,GETDATE())=1 AND FromMID IN(SELECT mid FROM  dbo.getSubBDMember('" + changemoney.FromMID + "'));"));
+                if (fjmoney < FromModel.MAgencyType.DPFloat)
+                    changemoney.ReBuyMoney = (changemoney.Money - changemoney.TakeOffMoney) * FromModel.MAgencyType.ReBuyFloat;
             }
         }
 
@@ -959,7 +959,7 @@ namespace yny_004.BLL
         public static Hashtable UpMAgencyCode(Model.Member model, Hashtable MyHs)
         {
             string agencycode = model.AgencyCode;
-            List<Model.SHMoney> list = BLL.Configuration.Model.SHMoneyList.Values.Where(emp =>  emp.YJMoney <= model.MConfig.YJMoney).ToList();
+            List<Model.SHMoney> list = BLL.Configuration.Model.SHMoneyList.Values.Where(emp => emp.YJMoney <= model.MConfig.YJMoney).ToList();
             foreach (Model.SHMoney item in list)
             {
                 if (item.YJMoney > model.MAgencyType.YJMoney)
@@ -1035,7 +1035,7 @@ namespace yny_004.BLL
                 decimal tjmoney = shmodel.SHMoney - shmodel.MConfig.SHMoney;
                 tjmodel.MConfig.TJMoney += tjmoney;
                 DAL.MemberConfig.UpdateConfigTran(tjmodel.MID, "TJMoney", tjmoney.ToString(), shmodel, false, SqlDbType.Decimal, MyHs);
-                
+
                 //团队股权
                 //tjmodel.MConfig.HLGQCount += tjmoney;
                 //DAL.MemberConfig.UpdateConfigTran(tjmodel.MID, "HLGQCount", tjmoney.ToString(), shmodel, false, SqlDbType.Int, MyHs);
@@ -1045,10 +1045,11 @@ namespace yny_004.BLL
                     tjmodel.MConfig.TJCount += 1;
                     DAL.MemberConfig.UpdateConfigTran(tjmodel.MID, "TJCount", "1", shmodel, false, SqlDbType.Int, MyHs);
 
-                    Model.ConfigDictionary cd = DAL.ConfigDictionary.GetConfigDictionary(tjmodel.MConfig.TJCount,"TJFloat","");
+                    Model.ConfigDictionary cd = DAL.ConfigDictionary.GetConfigDictionary(tjmodel.MConfig.TJCount, "TJFloat", "");
                     if (cd != null)
                     {
-                        HBChangeTran(Convert.ToDecimal(cd.DValue), BLL.Member.ManageMember.TModel.MID, tjmodel.MID, "R_TJ", shmodel, "MCW", "", MyHs);
+                        JJChangeTran(Convert.ToDecimal(cd.DValue), "R_TJ", "MHB", tjmodel, shmodel, "", "", "", MyHs);
+                        //HBChangeTran(Convert.ToDecimal(cd.DValue), BLL.Member.ManageMember.TModel.MID, tjmodel.MID, "R_TJ", shmodel, "MCW", "", MyHs);
                     }
                     //BLL.LuckyMoney.Add(tjmodel.MID, MyHs);
                 }
@@ -1068,6 +1069,80 @@ namespace yny_004.BLL
             }
             return MyHs;
         }
+
+
+        public static Hashtable JJChangeTran(decimal jjmoney, string changetype, string moneyType, Model.Member tmodel, Model.Member shmodel, string remarks, string cfileds, string cfileds2, Hashtable MyHs)
+        {
+            Model.ChangeMoney changemoney = new Model.ChangeMoney()
+            {
+                ChangeDate = DateTime.Now,
+                ChangeType = changetype,
+                CState = false,
+                FromMID = BLL.Member.ManageMember.TModel.MID,
+                ToMID = tmodel.MID,
+                Money = jjmoney,
+                MoneyType = moneyType,
+                SHMID = shmodel.MID,
+                CRemarks = remarks,
+            };
+
+
+            return InsertTran(changemoney, MyHs);
+        }
+
+        /// <summary>
+        /// 解冻操作操作
+        /// </summary>
+        /// <param name="money"></param>
+        /// <param name="frommid"></param>
+        /// <param name="tomid"></param>
+        /// <param name="changetype"></param>
+        /// <param name="shmodel"></param>
+        /// <param name="moneytype"></param>
+        /// <param name="remark"></param>
+        /// <param name="MyHs"></param>
+        /// <returns></returns>
+        public static Hashtable JDChangeTran(Model.ChangeMoney changemoney, Hashtable MyHs)
+        {
+            string fromMId = string.Empty, toMId = string.Empty;
+
+            fromMId = changemoney.FromMID;
+            toMId = changemoney.ToMID;
+            if (!DAL.Member.HasMemberConfigInDic(changemoney.FromMID))
+            {
+                Model.Member frommodel = DAL.Member.GetModel(changemoney.FromMID);
+                DAL.Member.tempMemberAdd(frommodel);
+            }
+            if (!DAL.Member.HasMemberConfigInDic(changemoney.ToMID))
+            {
+                Model.Member tomodel = DAL.Member.GetModel(changemoney.ToMID);
+                DAL.Member.tempMemberAdd(tomodel);
+            }
+
+            if (DAL.Member.tempMemberList[toMId].IsClock || DAL.Member.tempMemberList[toMId].IsClose)//如果被冻结。
+            {
+                return MyHs;
+            }
+            else
+            {
+                //JDTakeOffMoneyTran(changemoney, DAL.Member.tempMemberList[toMId], MyHs);
+            }
+
+            if (!changemoney.CState && changemoney.Money > 0.01M)//已解冻的
+            {
+                changemoney.CState = true;
+                changemoney.ReBuyMoney = changemoney.Money * BLL.Configuration.Model.E_BbinFHFloat;
+                DAL.MemberConfig.UpdateConfigTran(changemoney.ToMID, "MJB", changemoney.ReBuyMoney.ToString(), null, false, SqlDbType.Decimal, MyHs);
+
+                //changemoney.TakeOffMoney = changemoney.Money * DAL.Member.tempMemberList[toMId].MAgencyType.TakeOffFloat;
+                DAL.MemberConfig.UpdateConfigTran(changemoney.ToMID, "TotalMoney", changemoney.Money.ToString(), null, false, SqlDbType.Decimal, MyHs);
+                DAL.MemberConfig.UpdateConfigTran(changemoney.ToMID, "RealMoney", (changemoney.Money - changemoney.TakeOffMoney).ToString(), null, false, SqlDbType.Decimal, MyHs);
+                TranChangeTran(changemoney, MyHs);
+                BLL.ChangeMoney.UpdataTran(changemoney, MyHs);
+            }
+            return MyHs;
+        }
+
 
         /// <summary>
         /// 报单补贴奖哈希表,管理员不给予奖励
@@ -1430,10 +1505,13 @@ namespace yny_004.BLL
 
                     if (!string.IsNullOrEmpty(MTJ.FMID))//如果是子账号
                     {
-                        HBChangeTran(tjfloat, BLL.Member.ManageMember.TModel.MID, MTJ.FMID, "R_JD", shmember, "MCW", MTJ.MID+"子账号奖励", MyHs);
+                        Model.Member fmid= BLL.Member.GetModelByMID(MTJ.FMID);
+                        //HBChangeTran(tjfloat, BLL.Member.ManageMember.TModel.MID, MTJ.FMID, "R_JD", shmember, "MCW", MTJ.MID + "子账号奖励", MyHs);
+                        JJChangeTran(tjfloat, "R_JD", "MHB", fmid, shmember, MTJ.MID + "子账号奖励", "", "", MyHs);
                     }
                     else {
-                        HBChangeTran(tjfloat, BLL.Member.ManageMember.TModel.MID, MTJ.MID, "R_JD", shmember, "MCW", "", MyHs);
+                        //HBChangeTran(tjfloat, BLL.Member.ManageMember.TModel.MID, MTJ.MID, "R_JD", shmember, "MCW", "", MyHs);
+                        JJChangeTran(tjfloat, "R_JD", "MHB", MTJ, shmember, "", "", "", MyHs);
                     }
                     R_JD(money, MTJ, shmember, level + 1, MyHs);
                 }

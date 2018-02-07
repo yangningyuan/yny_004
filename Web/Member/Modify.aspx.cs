@@ -229,8 +229,8 @@ namespace yny_004.Web.Member
             {
                 if (BLL.ChangeMoney.EnoughChange(TModel.MID, BLL.Configuration.Model.E_TJFloat, "MHB"))
                 {
-					if (TModel.MConfig.MCW <= 0)
-						return "红包余额不足";
+					//if (TModel.MConfig.MCW <= 0)
+					//	return "红包余额不足";
                     Hashtable MyHs = new Hashtable();
                     BLL.ChangeMoney.KFMoneyChange(TModel.MID,BLL.Member.ManageMember.TModel.MID,BLL.Configuration.Model.E_TJFloat,"MHB",MyHs);
                     Random r = new Random();
@@ -249,14 +249,14 @@ namespace yny_004.Web.Member
 					{
 						money = x + xt;
 					}
-					if (TModel.MConfig.MCW < money)
-					{
-						money = TModel.MConfig.MCW;
-					}
-					TModel.MConfig.MCW -= money;
-					BLL.Member.UpdateConfigTran(TModel.MID,"MCW","-"+money.ToString(),null,false,System.Data.SqlDbType.Decimal,MyHs);
+                    if (BLL.Configuration.Model.E_TZMax < money)
+                    {
+                        money = BLL.Configuration.Model.E_TZMax;
+                    }
+                    //TModel.MConfig.MCW -= money;
+                    //BLL.Member.UpdateConfigTran(TModel.MID,"MCW","-"+money.ToString(),null,false,System.Data.SqlDbType.Decimal,MyHs);
 
-					decimal yue = money * BLL.Configuration.Model.E_BbinMoney;
+                    decimal yue = money * BLL.Configuration.Model.E_BbinMoney;
 					decimal gpft = money * BLL.Configuration.Model.E_BbinFHFloat;
 					TModel.MConfig.MHB += yue;
 					BLL.Member.UpdateConfigTran(TModel.MID, "MHB", "+" + yue.ToString(), null, false, System.Data.SqlDbType.Decimal, MyHs);
