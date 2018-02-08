@@ -49,7 +49,7 @@
                     <i class="iconfont">&#xe699;</i>
                     <span class="tab-label">首页</span>
                 </a>
-                <a class="tab-item" href="javascript:void(0)" onclick="javascript:pcallhtml('/mobile/html/CW.aspx','财务');">
+                <a class="tab-item" href="javascript:void(0)" onclick="javascript:pcallhtml('/mobile/html/caiwu2.aspx','财务');">
                     <i class="iconfont">&#xe7d1;</i>
                     <span class="tab-label">财务</span>
                 </a>
@@ -161,8 +161,8 @@
     <script src="/mobile/js/mob_paging.js" type="text/javascript"></script>
     <script src="/mobile/js/MobileSelectAll.js" type="text/javascript"></script>
     <script src="/mobile/js/jquery.linq.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="/plugin/ztree/js/jquery.ztree.core-3.5.js"></script>
-    <script type="text/javascript" src="/plugin/ztree/ztreeScript.js"></script>
+   <%-- <script type="text/javascript" src="/plugin/ztree/js/jquery.ztree.core-3.5.js"></script>
+    <script type="text/javascript" src="/plugin/ztree/ztreeScript.js"></script>--%>
     <script type="text/javascript" src="/plugin/kindeditor/kindeditor-min.js"></script>
     <script src="/Admin/js/jquery.qrcode.min.js"></script>
 
