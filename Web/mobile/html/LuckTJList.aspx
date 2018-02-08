@@ -8,7 +8,7 @@
     </div>
     <div class="row searchbar">
         <form id="form1">
-            <%--<input type="hidden" name="countdate" id="countdate" />--%>
+            <input type="hidden" name="countdate" id="countdate" />
             <input name="txtKey" id="mKey" type="hidden" class="sinput" />
 
             <div class="clear"></div>
@@ -46,7 +46,60 @@
     <div id="page_container">
     </div>
 </div>
+
+<div class="i_signInqhb" style="display: none; z-index: 10500;">
+    <div class="i_popup2">
+        <div class="i_signIn_cont2">
+            <input type="button" class="i_signIn_btnqhb">
+            <div class="i_signIn_pay2 hide">
+                <p class="i_signIn_top30">
+                    <b id="chbmoney"></b>
+                </p>
+                <p class="i_signIn_top40">已存入钱包</p>
+            </div>
+            <p class="i_signIn_top502"></p>
+            <p class="i_signIn_top702 hide">恭喜发财</p>
+        </div>
+    </div>
+</div>
+<div class="i_opticy2" style="display: none;"></div>
 <script>
+    $('.i_opticy2').on('click', function () {
+        $(this).css('display', 'none');
+        $('.i_signInqhb').css('display', 'none')
+        $('.i_signIn_pay2').css('display', 'none');
+        $('.i_signIn_top50').css('display', 'block');
+        $('.i_signIn_top70').css('display', 'none');
+        $('.i_signInqhb .i_popup2').removeClass('envelope');
+    });
+
+    function jjqhb(cid)
+    {
+        $("#countdate").val(cid);
+        $('.i_opticy2').css('display', 'block');
+        $('.i_signInqhb').css('display', 'block')
+    }
+    $('.i_signIn_btnqhb').on('click', function () {
+
+        $.ajax({
+            type: 'post',
+            url: 'Member/View.aspx?Action=other',
+            data: $('#form1').serialize(),
+            success: function (info) {
+                document.getElementById("chbmoney").innerHTML = info;
+                $('.i_signIn_pay2').css('display', 'block');
+                $('.i_signIn_top502').css('display', 'none');
+                $('.i_signIn_top702').css('display', 'block');
+                $('.i_signInqhb .i_popup2').addClass('envelope');
+                setTimeout(function () {
+                    pcallhtml('/mobile/html/LuckTJList.aspx', '推荐记录');
+                }, 1000);
+            }
+        });
+    })
+
+
+
     $(function () {
         $('#data_container').on('click', '.list-detail', function () {
             //console.log(parseInt($(this).next().css('height')));

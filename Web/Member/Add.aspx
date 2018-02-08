@@ -143,14 +143,14 @@
                                 maxlength="20" /><span class="dotted">*</span>
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display:none;">
                         <td align="right">资金密码:
                         </td>
                         <td>
                             <input id="txtSecPsd" name="txtSecPsd" class="normal_input" type="password" maxlength="20" /><span class="redWord dotted">*(6-20个字母或数字组合,且不能和登录密码相同)</span>
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display:none;">
                         <td align="right">确认资金密码:
                         </td>
                         <td>
@@ -292,12 +292,12 @@
                 v5.error('登录密码不能为空，且必须为6-20位字母或数字组合', '1', 'true');
             } else if ($('#txtPassword').val() != $('#txtPassword2').val()) {
                 v5.error('登录密码与确认登录密码不一样', '1', 'true');
-            } else if (!$('#txtSecPsd').val().TryPassword()) {
-                v5.error('资金密码不能为空，且必须为6-20位字母或数字组合', '1', 'true');
-            } else if ($('#txtSecPsd').val() != $('#txtSecPsd2').val()) {
-                v5.error('资金密码与确认资金密码不一样', '1', 'true');
-            } else if ($('#txtPassword').val() == $('#txtSecPsd').val()) {
-                v5.error('资金密码与登录密码不能相同', '1', 'true');
+            //} else if (!$('#txtSecPsd').val().TryPassword()) {
+            //    v5.error('资金密码不能为空，且必须为6-20位字母或数字组合', '1', 'true');
+            //} else if ($('#txtSecPsd').val() != $('#txtSecPsd2').val()) {
+            //    v5.error('资金密码与确认资金密码不一样', '1', 'true');
+            //} else if ($('#txtPassword').val() == $('#txtSecPsd').val()) {
+            //    v5.error('资金密码与登录密码不能相同', '1', 'true');
             } else if (!$('#txtTel').val().TryTel()) {
                 v5.error('手机号码格式不正确', '1', 'true');
             } else if ($('#txtTelCode').val() == "") {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -32,6 +33,32 @@ namespace yny_004.Web.Member
         public string ChangeString(string str)
         {
             return str.Replace("会员", "");
+        }
+
+        object obj = new object();
+        protected override string btnOther_Click()
+        {
+            lock (obj)
+            {
+                Model.ChangeMoney cm = BLL.ChangeMoney.GetModel(int.Parse(Request.Form["countdate"]));
+                if (cm != null && cm.CState == false)
+                {
+                    if (cm.ToMID != TModel.MID)
+                    {
+                        return "越权";
+                    }
+                    Hashtable MyHs = new Hashtable();
+                    BLL.ChangeMoney.JDChangeTran(cm,MyHs);
+                    if (BLL.CommonBase.RunHashtable(MyHs))
+                        return cm.Money.ToString();
+                    else
+                        return "出错啦...";
+                }
+                else {
+                    return "已拆";
+                }
+            }
+           
         }
     }
 }

@@ -1093,6 +1093,10 @@ namespace yny_004.BLL
             {
                 return "推荐人不存在";
             }
+            if (!string.IsNullOrEmpty(MTJ.FMID))
+            {
+                return "此会员不能当推荐人";
+            }
             //if (MSH == null || !MSH.MState || !MSH.Role.CanSH)
             //{
             //    return "不存在该报单中心或其没有审核权限";

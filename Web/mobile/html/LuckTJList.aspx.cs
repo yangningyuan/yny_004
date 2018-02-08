@@ -37,7 +37,7 @@ namespace yny_004.Web.mobile.html
                 ChangeType = item.ChangeTypeStr,
                 SHMID = item.SHMID,
                 ChangeDate = item.ChangeDate.ToString(),
-                caozuo=item.CState?"已拆":("jjchb('"+item.CID+"')")
+                caozuo=item.CState?"已拆":("<a class=\"button button-fill button-success\" href=\"javascript:jjqhb('"+item.CID+"')\">拆</a>")
             });
             return jss.Serialize(new { Items = list, TotalCount = totalCount });
         }

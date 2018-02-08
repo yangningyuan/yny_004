@@ -38,7 +38,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+           <%-- <li>
                 <a href="javascript:pcallhtml('/mobile/html/HKChangeFlow.aspx','银行汇款');" class="item-link item-content">
                     <div class="item-inner">
                         <div class="item-title">银行汇款</div>
@@ -58,14 +58,14 @@
                         <div class="item-title">在线充值</div>
                     </div>
                 </a>
-            </li>
-            <li>
+            </li>--%>
+           <%-- <li>
                 <a href="javascript:pcallhtml('/mobile/html/KFList.aspx','扣费记录');" class="item-link item-content">
                     <div class="item-inner">
                         <div class="item-title">扣费记录</div>
                     </div>
                 </a>
-            </li>
+            </li>--%>
         </ul>
     </div>
 </div>
