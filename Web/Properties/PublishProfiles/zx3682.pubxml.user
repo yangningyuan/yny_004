@@ -42,7 +42,11 @@
       <publishTime>02/03/2018 22:26:29</publishTime>
     </File>
     <File Include="Admin/css/style.css">
+<<<<<<< HEAD
       <publishTime>02/08/2018 14:26:30</publishTime>
+=======
+      <publishTime>02/08/2018 01:01:15</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="Admin/find_password/css/bootstrap.css">
       <publishTime>02/03/2018 22:26:29</publishTime>
@@ -114,7 +118,11 @@
       <publishTime>02/03/2018 22:26:29</publishTime>
     </File>
     <File Include="Admin/images/logo.png">
+<<<<<<< HEAD
       <publishTime>02/08/2018 14:26:30</publishTime>
+=======
+      <publishTime>02/08/2018 01:01:15</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="Admin/images/man.jpg">
       <publishTime>02/03/2018 22:26:29</publishTime>
@@ -147,7 +155,11 @@
       <publishTime>02/03/2018 22:26:29</publishTime>
     </File>
     <File Include="Admin/Index.aspx">
+<<<<<<< HEAD
       <publishTime>02/08/2018 14:26:30</publishTime>
+=======
+      <publishTime>02/08/2018 01:01:15</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="Admin/js/ajaxForm.js">
       <publishTime>02/03/2018 22:26:29</publishTime>
@@ -384,6 +396,7 @@
       <publishTime>02/03/2018 22:26:31</publishTime>
     </File>
     <File Include="bin/CommonBLL.dll">
+<<<<<<< HEAD
       <publishTime>02/09/2018 15:48:45</publishTime>
     </File>
     <File Include="bin/CommonDAL.dll">
@@ -391,12 +404,25 @@
     </File>
     <File Include="bin/CommonModel.dll">
       <publishTime>02/09/2018 15:48:45</publishTime>
+=======
+      <publishTime>02/08/2018 22:30:23</publishTime>
+    </File>
+    <File Include="bin/CommonDAL.dll">
+      <publishTime>02/08/2018 22:30:22</publishTime>
+    </File>
+    <File Include="bin/CommonModel.dll">
+      <publishTime>02/08/2018 22:30:21</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="bin/DBBackup.dll">
       <publishTime>02/03/2018 22:26:33</publishTime>
     </File>
     <File Include="bin/DBUtility.dll">
+<<<<<<< HEAD
       <publishTime>02/07/2018 14:53:48</publishTime>
+=======
+      <publishTime>02/08/2018 22:30:21</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="bin/IBatisNet.Common.dll">
       <publishTime>02/03/2018 22:26:33</publishTime>
@@ -441,7 +467,11 @@
       <publishTime>02/03/2018 22:26:33</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
+<<<<<<< HEAD
       <publishTime>02/03/2018 22:26:33</publishTime>
+=======
+      <publishTime>02/08/2018 00:19:14</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="bin/NPOI.dll">
       <publishTime>02/03/2018 22:26:33</publishTime>
@@ -453,12 +483,17 @@
       <publishTime>02/03/2018 22:26:33</publishTime>
     </File>
     <File Include="bin/WFTSwiftpass.dll">
+<<<<<<< HEAD
       <publishTime>02/08/2018 14:26:30</publishTime>
+=======
+      <publishTime>02/08/2018 22:30:21</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="bin/yg_dll.dll">
       <publishTime>02/03/2018 22:26:33</publishTime>
     </File>
     <File Include="bin/yny_004.BLL.dll">
+<<<<<<< HEAD
       <publishTime>02/09/2018 15:48:46</publishTime>
     </File>
     <File Include="bin/yny_004.DAL.dll">
@@ -469,6 +504,18 @@
     </File>
     <File Include="bin/yny_004.Web.dll">
       <publishTime>02/09/2018 17:44:22</publishTime>
+=======
+      <publishTime>02/08/2018 22:30:23</publishTime>
+    </File>
+    <File Include="bin/yny_004.DAL.dll">
+      <publishTime>02/08/2018 22:30:23</publishTime>
+    </File>
+    <File Include="bin/yny_004.Model.dll">
+      <publishTime>02/08/2018 22:30:23</publishTime>
+    </File>
+    <File Include="bin/yny_004.Web.dll">
+      <publishTime>02/08/2018 22:30:24</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="ChangeMoney/Finance.aspx">
       <publishTime>02/03/2018 22:32:01</publishTime>
@@ -648,7 +695,11 @@
       <publishTime>02/03/2018 22:26:29</publishTime>
     </File>
     <File Include="Member/Add.aspx">
+<<<<<<< HEAD
       <publishTime>02/09/2018 17:35:05</publishTime>
+=======
+      <publishTime>02/08/2018 21:22:40</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="Member/FMIDList.aspx">
       <publishTime>02/09/2018 15:39:29</publishTime>
@@ -777,6 +828,7 @@
       <publishTime>02/07/2018 14:53:48</publishTime>
     </File>
     <File Include="mobile/conn/iconfont/demo_fontclass.html">
+<<<<<<< HEAD
       <publishTime>02/08/2018 14:26:30</publishTime>
     </File>
     <File Include="mobile/conn/iconfont/demo_symbol.html">
@@ -802,6 +854,33 @@
     </File>
     <File Include="mobile/conn/iconfont/iconfont.woff">
       <publishTime>02/08/2018 14:26:30</publishTime>
+=======
+      <publishTime>02/07/2018 23:15:46</publishTime>
+    </File>
+    <File Include="mobile/conn/iconfont/demo_symbol.html">
+      <publishTime>02/07/2018 23:15:46</publishTime>
+    </File>
+    <File Include="mobile/conn/iconfont/demo_unicode.html">
+      <publishTime>02/07/2018 23:15:46</publishTime>
+    </File>
+    <File Include="mobile/conn/iconfont/iconfont.css">
+      <publishTime>02/07/2018 23:15:46</publishTime>
+    </File>
+    <File Include="mobile/conn/iconfont/iconfont.eot">
+      <publishTime>02/07/2018 23:15:46</publishTime>
+    </File>
+    <File Include="mobile/conn/iconfont/iconfont.js">
+      <publishTime>02/07/2018 23:15:46</publishTime>
+    </File>
+    <File Include="mobile/conn/iconfont/iconfont.svg">
+      <publishTime>02/07/2018 23:15:46</publishTime>
+    </File>
+    <File Include="mobile/conn/iconfont/iconfont.ttf">
+      <publishTime>02/07/2018 23:15:46</publishTime>
+    </File>
+    <File Include="mobile/conn/iconfont/iconfont.woff">
+      <publishTime>02/07/2018 23:15:46</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="mobile/conn/laydate/laydate.js">
       <publishTime>02/03/2018 22:26:29</publishTime>
@@ -861,7 +940,11 @@
       <publishTime>02/03/2018 22:26:29</publishTime>
     </File>
     <File Include="mobile/css/main.css">
+<<<<<<< HEAD
       <publishTime>02/08/2018 14:26:30</publishTime>
+=======
+      <publishTime>02/08/2018 01:01:15</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="mobile/font_icons/demo.css">
       <publishTime>02/03/2018 22:26:30</publishTime>
@@ -894,10 +977,17 @@
       <publishTime>02/03/2018 22:32:01</publishTime>
     </File>
     <File Include="mobile/html/caiwu.aspx">
+<<<<<<< HEAD
       <publishTime>02/07/2018 15:44:00</publishTime>
     </File>
     <File Include="mobile/html/caiwu2.aspx">
       <publishTime>02/09/2018 15:05:31</publishTime>
+=======
+      <publishTime>02/07/2018 23:15:46</publishTime>
+    </File>
+    <File Include="mobile/html/caiwu2.aspx">
+      <publishTime>02/07/2018 23:45:44</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="mobile/html/Cars.aspx">
       <publishTime>02/03/2018 22:32:01</publishTime>
@@ -906,7 +996,11 @@
       <publishTime>02/03/2018 22:32:01</publishTime>
     </File>
     <File Include="mobile/html/CW.aspx">
+<<<<<<< HEAD
       <publishTime>02/08/2018 16:43:21</publishTime>
+=======
+      <publishTime>02/08/2018 21:22:40</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="mobile/html/findpwd.aspx">
       <publishTime>02/03/2018 22:32:01</publishTime>
@@ -936,16 +1030,27 @@
       <publishTime>02/03/2018 22:32:01</publishTime>
     </File>
     <File Include="mobile/html/HKChangeFlow.aspx">
+<<<<<<< HEAD
       <publishTime>02/03/2018 22:32:01</publishTime>
+=======
+      <publishTime>02/07/2018 23:46:06</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="mobile/html/HKChangeWY.aspx">
       <publishTime>02/09/2018 14:31:57</publishTime>
     </File>
     <File Include="mobile/html/HKList.aspx">
+<<<<<<< HEAD
       <publishTime>02/08/2018 16:51:18</publishTime>
     </File>
     <File Include="mobile/html/index.aspx">
       <publishTime>02/09/2018 14:30:48</publishTime>
+=======
+      <publishTime>02/08/2018 21:22:40</publishTime>
+    </File>
+    <File Include="mobile/html/index.aspx">
+      <publishTime>02/08/2018 00:05:09</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="mobile/html/InvestApply.aspx">
       <publishTime>02/03/2018 22:32:01</publishTime>
@@ -963,6 +1068,7 @@
       <publishTime>02/03/2018 22:32:01</publishTime>
     </File>
     <File Include="mobile/html/Login.aspx">
+<<<<<<< HEAD
       <publishTime>02/09/2018 14:19:38</publishTime>
     </File>
     <File Include="mobile/html/LuckJDList.aspx">
@@ -976,6 +1082,21 @@
     </File>
     <File Include="mobile/html/LuckTJList.aspx">
       <publishTime>02/08/2018 15:10:22</publishTime>
+=======
+      <publishTime>02/08/2018 01:01:15</publishTime>
+    </File>
+    <File Include="mobile/html/LuckJDList.aspx">
+      <publishTime>02/08/2018 21:22:40</publishTime>
+    </File>
+    <File Include="mobile/html/LuckList.aspx">
+      <publishTime>02/08/2018 00:05:30</publishTime>
+    </File>
+    <File Include="mobile/html/LuckQDList.aspx">
+      <publishTime>02/08/2018 21:22:40</publishTime>
+    </File>
+    <File Include="mobile/html/LuckTJList.aspx">
+      <publishTime>02/08/2018 21:22:40</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="mobile/html/ModifyPwd.aspx">
       <publishTime>02/03/2018 22:32:01</publishTime>
@@ -1017,7 +1138,11 @@
       <publishTime>02/03/2018 22:32:01</publishTime>
     </File>
     <File Include="mobile/html/TD.aspx">
+<<<<<<< HEAD
       <publishTime>02/08/2018 17:01:10</publishTime>
+=======
+      <publishTime>02/08/2018 21:22:40</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="mobile/html/TJList.aspx">
       <publishTime>02/04/2018 14:40:28</publishTime>
@@ -1122,7 +1247,11 @@
       <publishTime>02/03/2018 22:26:31</publishTime>
     </File>
     <File Include="mobile/img/logo-login.png">
+<<<<<<< HEAD
       <publishTime>02/08/2018 14:26:30</publishTime>
+=======
+      <publishTime>02/08/2018 01:01:15</publishTime>
+>>>>>>> 4f59df84f1eef5dbdb0a4f7a1ada828a8959a0d7
     </File>
     <File Include="mobile/img/logo.png">
       <publishTime>02/03/2018 22:26:30</publishTime>
