@@ -4,12 +4,6 @@ C:\Users\yny\Desktop\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.pdb
 C:\Users\yny\Desktop\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.csprojResolveAssemblyReference.cache
 C:\Users\yny\Desktop\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.exe
 C:\Users\yny\Desktop\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.pdb
-D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.exe.config
-D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.exe
-D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.pdb
-D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.csprojResolveAssemblyReference.cache
-D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.exe
-D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.pdb
 E:\newProject\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.exe.config
 E:\newProject\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.exe
 E:\newProject\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.pdb
@@ -20,3 +14,8 @@ D:\工作目录\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.exe
 D:\工作目录\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.pdb
 D:\工作目录\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.exe
 D:\工作目录\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.pdb
+D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.exe.config
+D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.exe
+D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeHour\bin\Debug\MMMChangeHour.pdb
+D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.exe
+D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeHour\obj\x86\Debug\MMMChangeHour.pdb

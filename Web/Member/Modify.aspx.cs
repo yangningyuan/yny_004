@@ -249,10 +249,10 @@ namespace yny_004.Web.Member
 					{
 						money = x + xt;
 					}
-					if (TModel.MConfig.MCW < money)
-					{
-						money = TModel.MConfig.MCW;
-					}
+                    if (BLL.Configuration.Model.E_TZMax < money)
+                    {
+                        money = BLL.Configuration.Model.E_TZMax;
+                    }
                     //TModel.MConfig.MCW -= money;
                     //BLL.Member.UpdateConfigTran(TModel.MID,"MCW","-"+money.ToString(),null,false,System.Data.SqlDbType.Decimal,MyHs);
                     if (money <= 0)
