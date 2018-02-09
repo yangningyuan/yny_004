@@ -19,8 +19,7 @@
             <div class="search" id="DivSearch" runat="server">
                 <input type="button" value="查询" class="ssubmit" onclick="SearchByCondition()" />
                
-                <input name="txtKey" data-name="txtKey" id="mBDKey" value="请输入主会员账号" onfocus="if (value =='请输入主会员账号'){value =''}"
-                    onblur="if (value ==''){value='请输入主会员账号'}" type="text" class="sinput" />
+                <input name="txtKey" data-name="txtKey" id="mBDKey" placeholder="请输入主会员账号"   type="text" class="sinput" />
             </div>
         </div>
         <div class="ui_table">

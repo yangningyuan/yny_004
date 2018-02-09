@@ -133,9 +133,9 @@
                                     <a href="javascript:window.location.href='/SecurityCenter/FindPwdByAnswer.aspx'" class="button button-big" style=" background-color: #A29D94;color:white;border: none;"><span class="fa icon-key"></span>忘记密码</a>
                                 </div>
                                
-                                <div class="row" style="margin: auto;margin-top:15px;">
+                                <%--<div class="row" style="margin: auto;margin-top:15px;">
                                     <a href="javascript:window.location.href='/mobile/html/Register.aspx?mid=admin'" class="button button-big button-fill button-success"><span class="icon icon-edit"></span>立即注册</a>
-                                </div>
+                                </div>--%>
                         </div>
                       <%--  <div class="quickenter">
                             <img src="../img/quickenter.png">

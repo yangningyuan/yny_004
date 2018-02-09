@@ -173,7 +173,7 @@
         }
         function SecondButton() {
             layer.confirm("确认您已打款",function(){
-                ActionModel("ChangeMoney/HKChangeFlow.aspx?Action=add", $('#form1').serialize(),"/mobile/html/HKList.aspx");
+                ActionModel("ChangeMoney/HKChangeWY.aspx?Action=add", $('#form1').serialize(),"/mobile/html/HKList.aspx");
             })
         }
         function setValidMoney(realobj, validobj) {
@@ -185,7 +185,7 @@
             } else if ($('#txtBankName').val().Trim() == '') {
                 layer.msg("汇款人姓名不能为空");
             } else {
-                ActionModel("ChangeMoney/HKChangeFlow.aspx?Action=add", $('#form1').serialize());
+                ActionModel("ChangeMoney/HKChangeWY.aspx?Action=add", $('#form1').serialize());
             }
         }
     </script>

@@ -24,7 +24,7 @@ namespace yny_004.DAL
                 RoleCode += "'" + item.RType + "',";
             RoleCode = RoleCode.Substring(0, RoleCode.Length - 1);
             strSql.Append(" select ");
-            strSql.Append(" isnull((select SUM(Money) from ChangeMoney where ChangeType in ('appplyIn')),0) as Field1, ");
+            strSql.Append(" isnull((select SUM(Money) from ChangeMoney where ChangeType in ('SH','SJ')),0) as Field1, ");
             strSql.Append(" isnull((select SUM(money) from ChangeMoney where  ChangeType in (" + jjtype + ")),0) as Field2, ");
             strSql.Append(" isnull((select SUM(Money) from ChangeMoney where ChangeType in ('SJ','SH'))-(select SUM(money) from ChangeMoney where MoneyType='mhb' and ChangeType in (" + jjtype + ")),0) as Field3, ");//未拨出
             strSql.Append(" isnull((select SUM(money) from ChangeMoney where ChangeType='tx'  and CState='1'),0) as Field4, ");

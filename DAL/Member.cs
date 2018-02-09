@@ -609,7 +609,7 @@ namespace yny_004.DAL
         /// <returns></returns>
         public static int GetBDCount(string mid, bool mstate)
         {
-            return Convert.ToInt32(DbHelperSQL.GetSingle(string.Format("select count(1) from Member where MBD='{0}' and MID<>'{0}' {1} ", mid, (mstate ? " and MState = 1  " : ""))));
+            return Convert.ToInt32(DbHelperSQL.GetSingle(string.Format("select count(1) from Member where MBD='{0}' and MID<>'{0}' {1} ", mid,  " and MState = 1  ")));
         }
 
         #endregion

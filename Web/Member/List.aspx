@@ -101,9 +101,9 @@
                     <th>
                         <%=yny_004.BLL.Reward.List["MJB"].RewardName%>
                     </th>
-                     <th>
+                  <%--   <th>
                         <%=yny_004.BLL.Reward.List["MCW"].RewardName%>
-                    </th>
+                    </th>--%>
                     <th>推荐人
                     </th>
                     <%--<th>地区

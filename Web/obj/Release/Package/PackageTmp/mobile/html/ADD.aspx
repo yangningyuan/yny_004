@@ -26,11 +26,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <p>
+                         <%--   <p>
                                 <a class="button button-fill button-success button-big" href="javascript:sendTelCode()">获取验证码</a>
-                            </p>
+                            </p>--%>
                         </li>
-                         <li>
+                     <%--    <li>
                             <div class="item-content in_register">
 
                                 <div class="item-inner">
@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </li>--%>
                         <li>
                             <div class="item-content in_register">
 
@@ -155,8 +155,8 @@
         } else if ($('#txtPassword').val() != $('#txtPassword2').val()) {
             layer.msg("登录密码与确认登录密码不一样");
             
-        } else if (!$('#txtSecPsd').val().TryPassword()) {
-            layer.msg("资金密码不能为空，且必须为6-20位字母或数字组合");
+        //} else if (!$('#txtSecPsd').val().TryPassword()) {
+        //    layer.msg("资金密码不能为空，且必须为6-20位字母或数字组合");
             
         //} else if ($('#txtSecPsd').val() != $('#txtSecPsd2').val()) {
         //    layer.msg("资金密码与确认资金密码不一样");
@@ -166,8 +166,8 @@
             
         } else if (!$('#txtTel').val().TryTel()) {
             layer.msg("手机号码格式不正确");
-        } else if ($('#txtTelCode').val() == "") {
-            layer.msg("手机验证码不能为空");
+        //} else if ($('#txtTelCode').val() == "") {
+        //    layer.msg("手机验证码不能为空");
             //} else if ($('#ddlCity').val() == '地市') {
             //    v5.error('请选择开户地区', '1', 'true');
             //} else if ($('#txtBranch').val() == '') {

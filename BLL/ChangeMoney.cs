@@ -43,7 +43,7 @@ namespace yny_004.BLL
                 Model.Member model = new Model.Member
                 {
                     MID = strmid,
-                    MSH = BLL.Member.ManageMember.TModel.MID,
+                    MSH = "",
                     MTJ = item.MID,
                     MCreateDate = DateTime.Now,
                     MDate = DateTime.MaxValue,
@@ -827,11 +827,11 @@ namespace yny_004.BLL
             }
             else if (changemoney.ChangeType == "TX")
             {
-                decimal txfloat = Convert.ToDecimal(BLL.ConfigDictionaryNew.GetConfigDictionary(Convert.ToInt32(changemoney.Money), "TXTake", "").DValue);
+                decimal txfloat =ToModel.MAgencyType.TXFloat;
                 changemoney.TakeOffMoney = Math.Round(changemoney.Money * txfloat, 2);
-                decimal fjmoney = Convert.ToDecimal(BLL.CommonBase.GetSingle("SELECT ISNULL(SUM(Money),0) FROM dbo.ChangeMoney WHERE ChangeType='appplyIn' AND DATEDIFF(WEEK,ChangeDate,GETDATE())=1 AND FromMID IN(SELECT mid FROM  dbo.getSubBDMember('" + changemoney.FromMID + "'));"));
-                if (fjmoney < FromModel.MAgencyType.DPFloat)
-                    changemoney.ReBuyMoney = (changemoney.Money - changemoney.TakeOffMoney) * FromModel.MAgencyType.ReBuyFloat;
+                //decimal fjmoney = Convert.ToDecimal(BLL.CommonBase.GetSingle("SELECT ISNULL(SUM(Money),0) FROM dbo.ChangeMoney WHERE ChangeType='appplyIn' AND DATEDIFF(WEEK,ChangeDate,GETDATE())=1 AND FromMID IN(SELECT mid FROM  dbo.getSubBDMember('" + changemoney.FromMID + "'));"));
+                //if (fjmoney < FromModel.MAgencyType.DPFloat)
+                //    changemoney.ReBuyMoney = (changemoney.Money - changemoney.TakeOffMoney) * FromModel.MAgencyType.ReBuyFloat;
             }
         }
 

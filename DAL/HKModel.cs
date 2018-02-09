@@ -197,7 +197,7 @@ namespace yny_004.DAL
             {
                 model.HKType = int.Parse(dr["HKType"].ToString());
                 if (model.HKType == 1)
-                    model.HKTypeStr = DAL.Reward.List["MJB"].RewardName;
+                    model.HKTypeStr = DAL.Reward.List["MHB"].RewardName;
                 else
                     model.HKTypeStr = "未知类型";
             }

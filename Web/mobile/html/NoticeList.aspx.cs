@@ -12,7 +12,7 @@ namespace yny_004.Web.mobile.html
         
         protected override void SetPowerZone()
         {
-            repNoticeList.DataSource = BLL.Notice.GetNoticeList(" IsFixed = 0 ");
+            repNoticeList.DataSource = BLL.Notice.GetNoticeList("  ");
             repNoticeList.DataBind();
         }
     }

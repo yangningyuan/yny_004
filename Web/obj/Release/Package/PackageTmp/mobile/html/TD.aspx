@@ -17,6 +17,13 @@
                     </div>
                 </a>
             </li>
+              <li>
+                <a href="javascript:pcallhtml('/mobile/html/FMIDList.aspx','子账号列表');" class="item-link item-content">
+                    <div class="item-inner">
+                        <div class="item-title">子账号列表</div>
+                    </div>
+                </a>
+            </li>
             <li>
                 <a href="javascript:pcallhtml('/mobile/html/TJTree.aspx','推荐图谱');" class="item-link item-content">
                     <div class="item-inner">

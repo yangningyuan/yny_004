@@ -10,18 +10,18 @@
         <a href="javascript:void(0)"  onclick="pcallhtml('/mobile/html/PayHB.aspx','在线充值');" class="button button-fill button-success"> 网银支付</a>
     </p>--%>
 
-    <p>
+ <%--   <p>
         <a href="javascript:void(0)" onclick="pcallhtml('/mobile/html/HKChangeFlow.aspx','银行汇款');" class="button button-fill button-success">支付宝快速入金
         </a>
-    </p>
+    </p>--%>
     <p>
         <a href="javascript:void(0)" onclick="pcallhtml('/mobile/html/HKChangeWY.aspx','网银汇款');" class="button button-fill button-success">网银汇款
         </a>
     </p>
-    <p>
+ <%--   <p>
         <a href="javascript:void(0)" onclick="pcallhtml('/mobile/html/WXChange.aspx','微信汇款');" class="button button-fill button-success">微信汇款
         </a>
-    </p>
+    </p>--%>
     <script type="text/x-jquery-tmpl" id="HKListTmpl">
         <tr>
             <td>${MoneyType}</td>

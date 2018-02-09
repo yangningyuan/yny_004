@@ -24,8 +24,8 @@
                         </td>
                         <td>
                             <select runat="server" id="kfType">
-                                <option value="MHB">奖金币</option>
-                                <option value="MJB">现金币</option>
+                                <option value="MHB">余额</option>
+                                <option value="MJB">公排复投币</option>
                             </select>
                         </td>
                     </tr>

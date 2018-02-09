@@ -42,6 +42,9 @@ namespace yny_004.Web.Member.Handler
             {
                 strWhere += " and FMID='" + mkey + "' ";
             }
+            else {
+                strWhere += " and FMID!='' ";
+            }
             //if (!string.IsNullOrEmpty(mtjkey))
             //{
             //    strWhere += " and FMID='" + mtjkey + "' ";

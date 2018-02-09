@@ -4399,3 +4399,9 @@ span.customSelect.changed {
 .kfoutbox .kfbox img {
     width: 100%;
 }
+.indexLogo {
+    text-align:center;
+    color:#fff;
+    font-size:18px;
+        color: #60a4f9;
+}

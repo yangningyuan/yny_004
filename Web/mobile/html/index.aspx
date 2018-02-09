@@ -38,9 +38,9 @@
     <div class="page-group">
         <div class="page page-current" id="index">
             <header class="bar bar-nav">
-                <%--<a class="icon icon-left pull-left back" href="javascript:StackPop()"></a>--%>
+                <a class="icon icon-left pull-left back" href="javascript:StackPop()"></a>
                 <%--<a class="icon icon-home pull-right" href="javascript:window.location.reload();"></a>--%>
-                <i class="iconfont headerLeft">&#xe699;</i>
+                <%--<i class="iconfont headerLeft">&#xe699;</i>--%>
                 <i class="iconfont headerRight">&#xe680;</i>
                 <h1 class="title" >派派红包</h1>
             </header>
@@ -89,7 +89,7 @@
                     <input id="MyLink" runat="server" />
                     <ul class="indexMenuList">
                         <li>
-                            <a href="<%=GetPromoteLinkTel() %>" class="regist"><i class="iconfont">&#xe683;</i> <p>注册</p></a>
+                            <a href="javascript:pcallhtml('/mobile/html/Code.aspx','二维码');" class="regist"><i class="iconfont">&#xe683;</i> <p>注册</p></a>
                         </li>
                         <li>
                             <a href="javascript:pcallhtml('/mobile/html/TXList.aspx','提现');" class="tixian"><i class="iconfont">&#xe624;</i> <p>提现</p></a>

@@ -23,7 +23,7 @@
                                     <li><span>会员类型：<b><%=TModel.Role.RName %></b></span>&nbsp;</li>
                                     <li><i class="jiangjin"></i><%=yny_004.BLL.Reward.List["MHB"].RewardName %>：<%=TModel.MConfig.MHB %></li>
                                     <li><i class="currentm"></i><%=yny_004.BLL.Reward.List["MJB"].RewardName %>：<%=TModel.MConfig.MJB %></li>
-                                    <li><i class="currentm"></i><%=yny_004.BLL.Reward.List["MCW"].RewardName %>：<%=TModel.MConfig.MCW %></li>
+                                    <%--<li><i class="currentm"></i><%=yny_004.BLL.Reward.List["MCW"].RewardName %>：<%=TModel.MConfig.MCW %></li>--%>
                                 </ul>
                             </div>
                         </div>

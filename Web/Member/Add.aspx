@@ -83,8 +83,8 @@
                         </td>
                         <td>
                             <input id="txtTel" name="txtTel" class="normal_input" type="text" maxlength="11" />
-                            <input type="text" id="txtTelCode" name="txtTelCode" placeholder="请输入验证码" value="" style="width: 80px;" />
-                            <input type="button" value="获取验证码" onclick="sendTelCode()" class="btn btn-success" />
+                          <%--  <input type="text" id="txtTelCode" name="txtTelCode" placeholder="请输入验证码" value="" style="width: 80px;" />
+                            <input type="button" value="获取验证码" onclick="sendTelCode()" class="btn btn-success" />--%>
                         </td>
                     </tr>
                     <%--<tr>
@@ -300,8 +300,8 @@
             //    v5.error('资金密码与登录密码不能相同', '1', 'true');
             } else if (!$('#txtTel').val().TryTel()) {
                 v5.error('手机号码格式不正确', '1', 'true');
-            } else if ($('#txtTelCode').val() == "") {
-                v5.error("手机验证码不能为空", '1', 'true');
+            //} else if ($('#txtTelCode').val() == "") {
+            //    v5.error("手机验证码不能为空", '1', 'true');
             //} else if ($('#ddlCity').val() == '地市') {
             //    v5.error('请选择开户地区', '1', 'true');
             //} else if ($('#txtBranch').val() == '') {

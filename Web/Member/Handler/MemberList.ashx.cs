@@ -120,7 +120,7 @@ namespace yny_004.Web.Handler
                 sb.Append(GetMemberType(ListMember[i]) + "~");
                 sb.Append(ListMember[i].MConfig.MJJ.ToFixedDecimal() + "~");
                 sb.Append(ListMember[i].MConfig.MJB.ToFixedDecimal() + "~");
-				sb.Append(ListMember[i].MConfig.MCW.ToFixedDecimal() + "~");
+				//sb.Append(ListMember[i].MConfig.MCW.ToFixedDecimal() + "~");
 				sb.Append(ListMember[i].MTJ + "~");
                 //sb.Append(ListMember[i].Province + ListMember[i].City + ListMember[i].Zone + "~");
                 sb.Append((ListMember[i].IsClose ? "已锁定" : "未锁定") + "~");

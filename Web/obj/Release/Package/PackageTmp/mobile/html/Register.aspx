@@ -70,8 +70,8 @@
             //    v5.error('资金密码与登录密码不能相同', '1', 'true');
             } else if (!$('#txtTel').val().TryTel()) {
                 v5.error('手机号码格式不正确', '1', 'true');
-            } else if ($('#txtTelCode').val() == "") {
-                v5.error("手机验证码不能为空", '1', 'true');
+            //} else if ($('#txtTelCode').val() == "") {
+            //    v5.error("手机验证码不能为空", '1', 'true');
              
             } else {
                 $.ajax({
@@ -158,10 +158,10 @@
                                             </div>
                                         </div>
                                     </li>
-                                     <li>
+                                  <%--   <li>
                                        <a class="button button-fill button-success button-big" href="javascript:sendTelCode()">获取验证码</a>
-                                    </li>
-                                     <li>
+                                    </li>--%>
+                                 <%--    <li>
                                         <div class="item-content">
                                             <div class="item-media">
                                                 <i class="fa icon-user icon-large"></i>
@@ -172,7 +172,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li>--%>
                                      <li>
                                         <div class="item-content">
                                             <div class="item-media">

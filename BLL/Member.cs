@@ -944,7 +944,7 @@ namespace yny_004.BLL
                     //model.ValidMoney = model.RealMoney / BLL.Configuration.Model.B_InFloat;
                     if (model.HKType == 1)//如果是激活且未激活
                     {
-                        BLL.ChangeMoney.HBChangeTran(model.ValidMoney, BLL.Member.ManageMember.TModel.MID, model.MID, "HKSH", null, "MJB", "汇款审核" + model.HKCode, MyHs);
+                        BLL.ChangeMoney.HBChangeTran(model.ValidMoney, BLL.Member.ManageMember.TModel.MID, model.MID, "HKSH", null, "MHB", "汇款审核" + model.HKCode, MyHs);
                     }
                     else
                     {
