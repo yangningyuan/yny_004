@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="geren.aspx.cs" Inherits="yny_004.Web.mobile.html.geren" %>
 
-  <div class="content">
+  <div class="">
                 <img src="/mobile/img/Settingimg.jpg">
                 <div class="">
                     <div class="person_info">

@@ -546,8 +546,8 @@ a.logo {
 	color: #2e2e2e;
 	float: left;
 	text-transform: uppercase;
-	height: 65px;
-	margin-left: 30px;
+	/*height: 65px;*/
+	margin-left: 50px;
 	margin-top: 80px;
 }
 

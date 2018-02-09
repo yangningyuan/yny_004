@@ -52,7 +52,7 @@
 			</div>
 			<aside>
 				<div id="sidebar" class="nav-collapse ">
-					<a href="#" class="logo" ><img src="/Admin/images/logo.png" alt="" style="margin-bottom:10px;width: 95px;">
+					<a href="#" class="logo" ><img src="/Admin/images/logo.png" alt="" style="margin-bottom:10px;margin-top:20px;width: 75px;">
                         <p class="indexLogo">派派红包</p>
 					</a>
 					<ul class="sidebar-menu">
