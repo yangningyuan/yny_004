@@ -52,7 +52,7 @@
 			</div>
 			<aside>
 				<div id="sidebar" class="nav-collapse ">
-					<a href="#" class="logo" ><img src="/Admin/images/logo.png" alt="" style="margin-bottom:10px;width: 95px;">
+					<a href="#" class="logo" ><img src="/Admin/images/logo.png" alt="" style="margin-bottom:10px;margin-top:20px;width: 75px;">
                         <p class="indexLogo">派派红包</p>
 					</a>
 					<ul class="sidebar-menu">
@@ -116,14 +116,14 @@
 							<div class="row-fluid">
 								<div class="col-md-3">
 									<div class="info-box red-bg">
-										<a><div onclick="callhtml('/ChangeMoney/PayHB.aspx','在线充值');onclickMenu()" class="icon01"></div>
-										<div class="count">在线充值</div></a>
+										<a><div onclick="javascript:callhtml('/ChangeMoney/HKList.aspx','汇款管理');onclickMenu()" class="icon01"></div>
+										<div class="count">汇款管理</div></a>
 									</div>
 								</div>
 								<div class="col-md-3 ">
 									<div class="info-box green-bg">
-										<a><div class="icon02" onclick="callhtml('/Module/Investment/InvestApply.aspx','申请投资');onclickMenu()"></div>
-										<div class="count">申请投资</div></a>
+										<a><div class="icon02" onclick="javascript:callhtml('/Member/FMIDList.aspx','子账号列表');onclickMenu()"></div>
+										<div class="count">子账号列表</div></a>
 									</div>
 								</div>
 							</div>
@@ -175,12 +175,12 @@
                                                 有效投资额：<%=TModel.MConfig.SHMoney %>
 											</td>
 										</tr>
-										<tr>
+										<%--<tr>
 											<td>团队有效投资额：<%=TModel.MConfig.YJMoney %></td>
 											<td>
 												
 											</td>
-										</tr>
+										</tr>--%>
 									</tbody>
 								</table>
 								<div class="tg">

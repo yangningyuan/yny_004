@@ -121,7 +121,7 @@
                 <!--<div class="text-center m-b-md"> <img src="images/logo1.png"> </div>-->
                 <div class="hpanel">
                     <div class="title">
-                        <img src="Admin/Login/images/logo.png"></div>
+                        <img src="/mobile/html/img/logo-login.png"></div>
                     <div class="panel-body">
 
                         <form method="post" name="login" id="form1">

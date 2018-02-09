@@ -73,6 +73,11 @@
                 Login();
         }
     </script>
+    <style>
+        .list-block .item-inner {
+        padding-right:0;
+        }
+    </style>
 </head>
 
 <body>

@@ -11,7 +11,7 @@ namespace yny_004.Web.SysManage
             {
                 if (BllModel == null || !TModel.Role.Super)
                 {
-                    Response.Write(RetUrlStr("/Login.aspx", "/Error.aspx"));
+                    Response.Write(RetUrlStr("/mobile/html/Login.aspx", "/Error.aspx"));
                 }
                 else
                 {

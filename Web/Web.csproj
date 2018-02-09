@@ -278,6 +278,7 @@
     <Content Include="images\upload\5ef0bfa6113ead01.jpg" />
     <Content Include="images\upload\c42f84a7a37696b5.jpg" />
     <Content Include="images\upload\e9f637033bbe1b55.jpg" />
+    <Content Include="Login.aspx" />
     <Content Include="login\css\bootstrap.css" />
     <Content Include="login\css\login.css" />
     <Content Include="login\css\style1.css" />
@@ -496,6 +497,135 @@
     <Content Include="Module\Investment\InvestList.aspx" />
     <Content Include="Module\Investment\InvestQuit.aspx" />
     <Content Include="Module\Investment\js\invest.js" />
+    <Content Include="MQL\css\style.css" />
+    <Content Include="MQL\images\001.jpg" />
+    <Content Include="MQL\images\404.png" />
+    <Content Include="MQL\images\add.png" />
+    <Content Include="MQL\images\btnbg.png" />
+    <Content Include="MQL\images\btnbg1.png" />
+    <Content Include="MQL\images\btnbg2.png" />
+    <Content Include="MQL\images\buttonbg.png" />
+    <Content Include="MQL\images\c01.png" />
+    <Content Include="MQL\images\c02.png" />
+    <Content Include="MQL\images\c03.png" />
+    <Content Include="MQL\images\cbg.png" />
+    <Content Include="MQL\images\clist.png" />
+    <Content Include="MQL\images\close.png" />
+    <Content Include="MQL\images\close1.png" />
+    <Content Include="MQL\images\cloud.png" />
+    <Content Include="MQL\images\d01.png" />
+    <Content Include="MQL\images\d02.png" />
+    <Content Include="MQL\images\d03.png" />
+    <Content Include="MQL\images\d04.png" />
+    <Content Include="MQL\images\d05.png" />
+    <Content Include="MQL\images\d06.png" />
+    <Content Include="MQL\images\d07.png" />
+    <Content Include="MQL\images\diskbg.png" />
+    <Content Include="MQL\images\dp.png" />
+    <Content Include="MQL\images\f01.png" />
+    <Content Include="MQL\images\f02.png" />
+    <Content Include="MQL\images\f03.png" />
+    <Content Include="MQL\images\f04.png" />
+    <Content Include="MQL\images\f05.png" />
+    <Content Include="MQL\images\f06.png" />
+    <Content Include="MQL\images\help.png" />
+    <Content Include="MQL\images\i01.png" />
+    <Content Include="MQL\images\i02.png" />
+    <Content Include="MQL\images\i03.png" />
+    <Content Include="MQL\images\i04.png" />
+    <Content Include="MQL\images\i05.png" />
+    <Content Include="MQL\images\i06.png" />
+    <Content Include="MQL\images\i07.png" />
+    <Content Include="MQL\images\i08.png" />
+    <Content Include="MQL\images\i09.png" />
+    <Content Include="MQL\images\iadd.png" />
+    <Content Include="MQL\images\ibtnbg.png" />
+    <Content Include="MQL\images\ico01.png" />
+    <Content Include="MQL\images\ico02.png" />
+    <Content Include="MQL\images\ico03.png" />
+    <Content Include="MQL\images\ico04.png" />
+    <Content Include="MQL\images\ico05.png" />
+    <Content Include="MQL\images\ico06.png" />
+    <Content Include="MQL\images\icon01.png" />
+    <Content Include="MQL\images\icon02.png" />
+    <Content Include="MQL\images\icon03.png" />
+    <Content Include="MQL\images\icon04.png" />
+    <Content Include="MQL\images\icon05.png" />
+    <Content Include="MQL\images\icon06.png" />
+    <Content Include="MQL\images\img01.png" />
+    <Content Include="MQL\images\img02.png" />
+    <Content Include="MQL\images\img03.png" />
+    <Content Include="MQL\images\img04.png" />
+    <Content Include="MQL\images\img05.png" />
+    <Content Include="MQL\images\img06.png" />
+    <Content Include="MQL\images\img07.png" />
+    <Content Include="MQL\images\img08.png" />
+    <Content Include="MQL\images\img09.png" />
+    <Content Include="MQL\images\img10.png" />
+    <Content Include="MQL\images\img11.png" />
+    <Content Include="MQL\images\img12.png" />
+    <Content Include="MQL\images\img13.png" />
+    <Content Include="MQL\images\img14.png" />
+    <Content Include="MQL\images\img15.png" />
+    <Content Include="MQL\images\inputbg.gif" />
+    <Content Include="MQL\images\itabbg.png" />
+    <Content Include="MQL\images\itabbg1.png" />
+    <Content Include="MQL\images\leftico.png" />
+    <Content Include="MQL\images\leftico01.png" />
+    <Content Include="MQL\images\leftico02.png" />
+    <Content Include="MQL\images\leftico03.png" />
+    <Content Include="MQL\images\leftico04.png" />
+    <Content Include="MQL\images\leftline.gif" />
+    <Content Include="MQL\images\leftmenubg.gif" />
+    <Content Include="MQL\images\lefttop.gif" />
+    <Content Include="MQL\images\libg.png" />
+    <Content Include="MQL\images\light.png" />
+    <Content Include="MQL\images\line.gif" />
+    <Content Include="MQL\images\line1.png" />
+    <Content Include="MQL\images\list.gif" />
+    <Content Include="MQL\images\list1.gif" />
+    <Content Include="MQL\images\list2.png" />
+    <Content Include="MQL\images\loginbg1.png" />
+    <Content Include="MQL\images\loginbg2.png" />
+    <Content Include="MQL\images\loginbg3.png" />
+    <Content Include="MQL\images\logininfo.png" />
+    <Content Include="MQL\images\loginlogo.png" />
+    <Content Include="MQL\images\loginpassword.png" />
+    <Content Include="MQL\images\loginsj.png" />
+    <Content Include="MQL\images\loginuser.png" />
+    <Content Include="MQL\images\logo.png" />
+    <Content Include="MQL\images\msg.png" />
+    <Content Include="MQL\images\navbg.png" />
+    <Content Include="MQL\images\next.gif" />
+    <Content Include="MQL\images\pre.gif" />
+    <Content Include="MQL\images\px.gif" />
+    <Content Include="MQL\images\righttop.gif" />
+    <Content Include="MQL\images\rlist.gif" />
+    <Content Include="MQL\images\search.png" />
+    <Content Include="MQL\images\sj.png" />
+    <Content Include="MQL\images\sun.png" />
+    <Content Include="MQL\images\t01.png" />
+    <Content Include="MQL\images\t02.png" />
+    <Content Include="MQL\images\t03.png" />
+    <Content Include="MQL\images\t04.png" />
+    <Content Include="MQL\images\t05.png" />
+    <Content Include="MQL\images\tbg.png" />
+    <Content Include="MQL\images\tcbg.gif" />
+    <Content Include="MQL\images\th.gif" />
+    <Content Include="MQL\images\ticon.png" />
+    <Content Include="MQL\images\time.png" />
+    <Content Include="MQL\images\toolbg.gif" />
+    <Content Include="MQL\images\topbg.gif" />
+    <Content Include="MQL\images\topleft.jpg" />
+    <Content Include="MQL\images\topright.jpg" />
+    <Content Include="MQL\images\ub1.png" />
+    <Content Include="MQL\images\uew_icon.png" />
+    <Content Include="MQL\images\uew_icon_hover.png" />
+    <Content Include="MQL\images\ulist.png" />
+    <Content Include="MQL\images\user.png" />
+    <Content Include="MQL\images\userbg.png" />
+    <Content Include="MQL\js\cloud.js" />
+    <Content Include="MQL\js\jquery.js" />
     <Content Include="Payment\banks\cft.gif" />
     <Content Include="Payment\banks\weixin.gif" />
     <Content Include="Payment\banks\yinlian.gif" />
@@ -949,7 +1079,6 @@
     <Content Include="Default.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Login.aspx" />
     <Content Include="MQL\css\base.css" />
     <Content Include="MQL\css\login.css" />
     <Content Include="MQL\images\login\btn_ok.gif" />
@@ -1464,6 +1593,13 @@
     </Compile>
     <Compile Include="Common\UploadExcel.ashx.cs">
       <DependentUpon>UploadExcel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Member\FMIDList.aspx.cs">
       <DependentUpon>FMIDList.aspx</DependentUpon>
@@ -2356,13 +2492,6 @@
     <Compile Include="ChangeMoney\Handler\TXList.ashx.cs">
       <DependentUpon>TXList.ashx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="MQL\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

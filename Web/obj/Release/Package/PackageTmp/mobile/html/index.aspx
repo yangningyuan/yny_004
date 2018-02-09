@@ -41,7 +41,7 @@
                 <a class="icon icon-left pull-left back" href="javascript:StackPop()"></a>
                 <%--<a class="icon icon-home pull-right" href="javascript:window.location.reload();"></a>--%>
                 <%--<i class="iconfont headerLeft">&#xe699;</i>--%>
-                <i class="iconfont headerRight">&#xe680;</i>
+                <i class="iconfont headerRight"  onclick="pcallhtmlNoV('/mobile/html/geren.aspx','个人中心');">&#xe680;</i>
                 <h1 class="title" >派派红包</h1>
             </header>
             <nav class="bar bar-tab">

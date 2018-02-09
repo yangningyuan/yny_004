@@ -97,13 +97,13 @@
                         <b>提现信息</b>
                     </td>
                 </tr>
-                <tr>
+              <%--  <tr>
                     <td align="right">开户地区:
                     </td>
                     <td>
                         <%=TModel.Province %><%=TModel.City %>
                     </td>
-                </tr>
+                </tr>--%>
                 <tr>
                     <td align="right">开户银行:
                     </td>

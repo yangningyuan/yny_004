@@ -49,12 +49,12 @@
                      <p>红包中心记录</p>
                  </a>
              </li>
-            <li>
+           <%-- <li>
                  <a href="systemEnvelope.html">
                      <i class="iconfont">&#xe66c;</i>
                       <p>系统红包</p>
                  </a>
-             </li>
+             </li>--%>
         </ul>
     </div>
     </form>

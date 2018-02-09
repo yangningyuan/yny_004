@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Security;
 
-namespace yny_004.Web.Manage
+namespace yny_004.Web.MQL
 {
     public partial class Login : BasePage
     {

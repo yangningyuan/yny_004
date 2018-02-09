@@ -39,18 +39,40 @@
             return 'placeholder' in document.createElement('input');
         }
     </script>
+    <style>
+        .findPwdByAnswerLogo {
+            float:left;
+            height: 72px;
+            line-height: 72px;
+        }
+        .findPwdByAnswerLogo img{
+                float:left;
+                height: 44px;
+                vertical-align: inherit;
+                display: inline-block;
+                margin-top: 14px;
+        }
+            .findPwdByAnswerLogo p {
+                margin:0;
+                margin-left:10px;
+                float:left;
+                font-size:24px;
+                height:72px;
+                line-height:72px;
+            }
+    </style>
 </head>
 <body>
   <div class="web-header">
 			<div class="container clearfix">
 				<div class="pull-left logo">
-					<a href="#"><img src="/Admin/find_password/images/rlogo.png">
+					<a href="#" class="findPwdByAnswerLogo"><img src="/Admin/find_password/images/rlogo.png" class=""><p>派派红包</p>
 				</div>
 				<nav class="blog-nav pull-left">
 					<%--<span class="blog-nav-item active" href="#">找回密码</span>--%>
 				</nav>
 				<nav class="pull-right">
-					<a href="../Login.aspx" class="pull-right text-white" style="margin-left:15px;">返回登陆</a>
+					<a href="/mobile/html/Login.aspx" class="pull-right text-white" style="margin-left:15px;">返回登陆</a>
 				</nav>
 			</div>
 		</div>

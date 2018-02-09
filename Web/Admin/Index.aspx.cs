@@ -23,7 +23,7 @@ namespace yny_004.Web.Admin
         protected decimal fhtotal =0;
         protected override void SetPowerZone()
         {
-            List<Model.Notice> listnotice = BLL.Notice.GetNoticeList(" IsFixed = 1 ");
+            List<Model.Notice> listnotice = BLL.Notice.GetNoticeList("  ");
             if (listnotice.Count >0)
             {
                 notice = listnotice[0];
@@ -51,7 +51,7 @@ namespace yny_004.Web.Admin
             if (obj != null)
                 notcie = obj.NContent;
 
-            repNoticeList.DataSource = BLL.Notice.GetNoticeList(" IsFixed = 0 ");
+            repNoticeList.DataSource = BLL.Notice.GetNoticeList("  ");
             repNoticeList.DataBind();
             //mTJ = BllModel.GetModel(TModel.MTJ);
             //if (mTJ == null || mTJ.MID == TModel.MID)

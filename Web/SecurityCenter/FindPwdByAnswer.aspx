@@ -72,7 +72,7 @@
 					<%--<span class="blog-nav-item active" href="#">找回密码</span>--%>
 				</nav>
 				<nav class="pull-right">
-					<a href="../Login.aspx" class="pull-right text-white" style="margin-left:15px;">返回登陆</a>
+					<a href="/mobile/html/Login.aspx" class="pull-right text-white" style="margin-left:15px;">返回登陆</a>
 				</nav>
 			</div>
 		</div>

@@ -388,7 +388,7 @@ namespace yny_004.Web
             {
                 if (NoPower())
                 {
-                    Response.Write("<script>window.top.location.href='Login.aspx'</script>");
+                    Response.Write("<script>window.top.location.href='/mobile/html/Login.aspx'</script>");
                     Response.End();
                 }
             }

@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace yny_004.Web.Manage {
+namespace yny_004.Web.MQL {
     
     
     public partial class Login {
