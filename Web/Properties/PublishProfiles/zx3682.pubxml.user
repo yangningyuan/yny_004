@@ -466,7 +466,7 @@
     </File>
     <File Include="bin/WFTSwiftpass.dll">
       <publishTime>02/08/2018 14:26:30</publishTime>
-      <publishTime>02/09/2018 21:36:04</publishTime>
+      <publishTime>02/09/2018 22:17:46</publishTime>
     </File>
     <File Include="bin/yg_dll.dll">
       <publishTime>02/06/2018 21:42:25</publishTime>
@@ -482,7 +482,7 @@
     </File>
     <File Include="bin/yny_004.Web.dll">
       <publishTime>02/09/2018 17:44:22</publishTime>
-      <publishTime>02/09/2018 22:00:31</publishTime>
+      <publishTime>02/09/2018 22:38:28</publishTime>
     </File>
     <File Include="bin/yny_004.DAL.dll">
       <publishTime>02/09/2018 22:00:28</publishTime>
@@ -491,7 +491,7 @@
       <publishTime>02/09/2018 21:18:04</publishTime>
     </File>
     <File Include="bin/yny_004.Web.dll">
-      <publishTime>02/09/2018 22:00:31</publishTime>
+      <publishTime>02/09/2018 22:38:28</publishTime>
     </File>
     <File Include="ChangeMoney/Finance.aspx">
       <publishTime>02/06/2018 21:42:21</publishTime>
@@ -948,10 +948,10 @@
     </File>
     <File Include="mobile/html/caiwu2.aspx">
       <publishTime>02/09/2018 15:05:31</publishTime>
-      <publishTime>02/09/2018 21:23:25</publishTime>
+      <publishTime>02/09/2018 22:10:41</publishTime>
     </File>
     <File Include="mobile/html/caiwu2.aspx">
-      <publishTime>02/09/2018 21:23:25</publishTime>
+      <publishTime>02/09/2018 22:10:41</publishTime>
     </File>
     <File Include="mobile/html/Cars.aspx">
       <publishTime>02/06/2018 21:42:22</publishTime>
@@ -1002,10 +1002,10 @@
     </File>
     <File Include="mobile/html/index.aspx">
       <publishTime>02/09/2018 14:30:48</publishTime>
-      <publishTime>02/09/2018 21:24:37</publishTime>
+      <publishTime>02/09/2018 22:16:12</publishTime>
     </File>
     <File Include="mobile/html/index.aspx">
-      <publishTime>02/09/2018 21:24:37</publishTime>
+      <publishTime>02/09/2018 22:16:12</publishTime>
     </File>
     <File Include="mobile/html/InvestApply.aspx">
       <publishTime>02/06/2018 21:42:22</publishTime>
@@ -1128,6 +1128,12 @@
     </File>
     <File Include="mobile/img/banner.png">
       <publishTime>02/06/2018 21:42:22</publishTime>
+    </File>
+    <File Include="mobile/img/banner1.png">
+      <publishTime>02/09/2018 22:14:44</publishTime>
+    </File>
+    <File Include="mobile/img/banner2.png">
+      <publishTime>02/09/2018 22:14:44</publishTime>
     </File>
     <File Include="mobile/img/basici.png">
       <publishTime>02/06/2018 21:42:22</publishTime>
