@@ -41,4 +41,8 @@ D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\bin\Debug\MySql.Data.dll
 D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\bin\Debug\ThoughtWorks.QRCode.dll
 D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\obj\Debug\DBUtility.dll
 D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\obj\Debug\DBUtility.pdb
+<<<<<<< HEAD
 D:\工作目录\yny_004\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+=======
+D:\yang\资料\项目\yny\yny_004\yny_004\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+>>>>>>> b0325df903e854384aadda2bc78b7f3ac5a18f2b
