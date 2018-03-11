@@ -20,3 +20,4 @@ D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeDay\bin\Debug\MMMChangeDay.pd
 D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeDay\obj\x86\Debug\MMMChangeDay.exe
 D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeDay\obj\x86\Debug\MMMChangeDay.pdb
 D:\yang\资料\项目\yny\yny_004\yny_004\MMMChangeDay\obj\x86\Debug\MMMChangeDay.csprojResolveAssemblyReference.cache
+D:\工作目录\yny_004\MMMChangeDay\obj\x86\Debug\MMMChangeDay.csprojResolveAssemblyReference.cache

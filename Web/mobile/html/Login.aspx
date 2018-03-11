@@ -72,6 +72,10 @@
             if (event.keyCode == 13)   //回车键的键值为13   
                 Login();
         }
+
+        setTimeout(function () {
+            $("#imgcode").click();
+        }, 100);
     </script>
     <style>
         .list-block .item-inner {
