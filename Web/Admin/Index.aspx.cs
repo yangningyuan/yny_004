@@ -32,8 +32,9 @@ namespace yny_004.Web.Admin
             fhtotal = Convert.ToDecimal(BLL.CommonBase.GetSingle("select ISNULL(SUM(Money),0) from ChangeMoney where ToMID='" + TModel.MID + "' and ChangeType in('R_RFH') and CState=1;"));
 
             listPowers = TModel.Role.PowersList.Where(emp => emp.Content.VState).ToList();
-            txtTuiGuang.Value = HttpContext.Current.Request.Url.AbsoluteUri.Replace(HttpContext.Current.Request.Url.PathAndQuery, "/Regedit/Index.aspx");
-            txtTuiGuang.Value += "?mid=" + TModel.MID;
+			//txtTuiGuang.Value = HttpContext.Current.Request.Url.AbsoluteUri.Replace(HttpContext.Current.Request.Url.PathAndQuery, "/Regedit/Index.aspx");
+			//txtTuiGuang.Value += "?mid=" + TModel.MID;
+			txtTuiGuang.Value = GetPromoteLinkTel();
             tuiguang = txtTuiGuang.Value;
 
             roleName = TModel.Role.RName;

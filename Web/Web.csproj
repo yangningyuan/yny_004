@@ -387,6 +387,8 @@
     <Content Include="mobile\img\aboutus.png" />
     <Content Include="mobile\img\back.png" />
     <Content Include="mobile\img\banner.png" />
+    <Content Include="mobile\img\banner1.png" />
+    <Content Include="mobile\img\banner2.png" />
     <Content Include="mobile\img\basici.png" />
     <Content Include="mobile\img\caiwu01.png" />
     <Content Include="mobile\img\caiwu02.png" />

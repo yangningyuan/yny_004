@@ -44,9 +44,9 @@
                 </a>
             </li>
              <li>
-                 <a href="javascript:pcallhtml('/mobile/html/LuckList.aspx','红包中心记录');">
+                 <a href="javascript:pcallhtml('/mobile/html/LuckList.aspx','系统红包');">
                      <i class="iconfont">&#xe620;</i>
-                     <p>红包中心记录</p>
+                     <p>系统红包</p>
                  </a>
              </li>
            <%-- <li>

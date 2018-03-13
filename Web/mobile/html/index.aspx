@@ -72,7 +72,7 @@
             <div class="content native-scroll" id="pageHome">
                 <div class="row row1">
                     <div>
-                        <img src="/mobile/img/banner.png" />
+                        <img src="/mobile/img/banner1.png" />
                     </div>
                 </div>
                 <div class="notice_content">
