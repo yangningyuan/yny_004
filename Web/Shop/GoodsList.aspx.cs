@@ -17,5 +17,26 @@ namespace yny_004.Web.Shop
             txtKey.DataBind();
             txtKey.Items.Insert(0, new ListItem("--请选择--", ""));
         }
-    }
+
+		protected override string btnModify_Click()
+		{
+			try
+			{
+				string req = Request.Form["gid"];
+				Model.Goods cc = BLL.Goods.GetModel(int.Parse(req));
+				cc.IsDeleted = true;
+				if (BLL.Goods.Update(cc))
+				{
+					return "删除成功";
+				}
+				else {
+					return "删除失败";
+				}
+			}
+			catch (Exception e)
+			{
+				return "-1";
+			}
+		}
+	}
 }

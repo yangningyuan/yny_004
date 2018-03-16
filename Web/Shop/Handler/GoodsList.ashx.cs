@@ -16,7 +16,7 @@ namespace yny_004.Web.Shop.Handler
         public override void ProcessRequest(HttpContext context)
         {
             base.ProcessRequest(context);
-            string strWhere = " '1'='1' ";
+            string strWhere = " '1'='1' and isdeleted=0 ";
             string state = string.Empty;
             if (!string.IsNullOrEmpty(context.Request["txtKey"]))
             {
@@ -63,8 +63,9 @@ namespace yny_004.Web.Shop.Handler
                 }
                 else
                 {
-                    sb.Append(List[i].SelledCount);
-                    sb.Append("≌");
+                    sb.Append(List[i].SelledCount+"~");
+					sb.Append("<input type='button' value='删除' class='btn btn-danger btn-small' onclick='DeleteGood(" + List[i].GID + ")'/>");
+					sb.Append("≌");
                 }
 
             }
