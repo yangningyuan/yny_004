@@ -32,11 +32,15 @@ namespace yny_004.Web
             {
                 try
                 {
-                    if (Session["CheckCode"] == null || Request.Form["checkCode"].ToLower() != Session["CheckCode"].ToString().ToLower())
-                    {
-                        Response.Write("3");
-                        return;
-                    }
+					if (Request.Form["txtname"].Trim() == "admin")
+					{
+						if (Session["CheckCode"] == null || Request.Form["checkCode"].ToLower() != Session["CheckCode"].ToString().ToLower())
+						{
+							Response.Write("3");
+							return;
+						}
+					}
+                    
                     Model.Member model = BLL.Member.ManageMember.GetModel(Request.Form["txtname"]);
                     if (model == null)
                     {

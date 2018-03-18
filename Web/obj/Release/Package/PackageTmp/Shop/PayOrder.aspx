@@ -83,12 +83,12 @@
                     </tr>
                     <tr>
                         <td>
-                            支付金额：<%=orderModel.TotalPrice%>；我的<%=yny_004.BLL.Reward.List["MHB"].RewardName %>：<%=TModel.MConfig.MHB%>
+                            支付金额：<%=orderModel.TotalPrice%>；我的<%=yny_004.BLL.Reward.List["MHB"].RewardName %>：<%=TModel.MConfig.MHB%>;我的<%=yny_004.BLL.Reward.List["MJB"].RewardName %>：<%=TModel.MConfig.MJB%>;我的<%=yny_004.BLL.Reward.List["MGP"].RewardName %>：<%=TModel.MConfig.MGP%>
                         </td>
                     </tr>
                      <tr>
                         <td>
-                            使用币种：<%=moneytype %>
+                            使用币种：<%=mtype %>
                         </td>
                     </tr>
                     <tr>

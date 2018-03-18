@@ -30,6 +30,74 @@ namespace yny_004.BLL
             }
             return count;
         }
+
+		public static bool MymemberAdd(Model.Member item)
+		{
+			string strmid = BLL.Member.GetTestMID();
+			Model.Member model = new Model.Member
+			{
+				MID = strmid,
+				MSH = "",
+				MTJ = item.MID,
+				MCreateDate = DateTime.Now,
+				MDate = DateTime.MaxValue,
+				AgencyCode = "001",
+				Address = "子账号注册",
+				Bank = item.Bank,
+				Branch = item.Branch,
+				BankNumber = item.BankNumber,
+				BankCardName = item.BankCardName,
+				IsClock = false,
+				IsClose = false,
+				MState = false,
+				FHState = false,
+				FMID = item.MID.Trim(),
+				MName = item.MName,
+				NumID = item.NumID,
+				Password = item.Password,
+				QQ = item.QQ,
+				RoleCode = "Notactive",
+				Salt = item.Salt,
+				SecPsd = item.SecPsd,
+				SHMoney = 0,
+				Tel = item.Tel,
+				MBDIndex = 0,
+				MBD = BLL.Member.ManageMember.TModel.MID,
+				ValidTime = DateTime.Now,
+				Zone = item.Zone,
+				MConfig = new Model.MemberConfig
+				{
+					MID = strmid,
+					JJTypeList = BLL.Reward.RewardStr,
+					DTFHState = true,
+					JTFHState = true,
+					TXStatus = true,
+					ZZStatus = true,
+					GQCount = 0,
+					HLGQCount = 0,
+					EPXingCount = 5
+				}
+			};
+
+			string error = "";
+			Model.Member strmodel = yny_004.BLL.Member.InsertAndReturnEntityft(model, 0, true, ref error);
+			try
+			{
+				Model.SHMoney shmoney = BLL.Configuration.Model.SHMoneyList["002"];
+				string result= BLL.Member.ManageMember.ShopUpMAgencyType(shmoney, model.MID, "MJB", item, shmoney.Money);
+				if (result.Contains("成功"))
+				{
+					return true;
+				}else {
+					return false;
+				}
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
         /// <summary>
         /// 批量生产子账号
         /// </summary>

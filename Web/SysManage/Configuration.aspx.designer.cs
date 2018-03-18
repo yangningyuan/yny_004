@@ -166,15 +166,6 @@ namespace yny_004.Web.SysManage {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_BbinMaxCount;
         
         /// <summary>
-        /// txtB_TBTJDate 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtB_TBTJDate;
-        
-        /// <summary>
         /// txtB_TBTJMoney 控件。
         /// </summary>
         /// <remarks>
@@ -227,6 +218,15 @@ namespace yny_004.Web.SysManage {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtE_TZMax;
+        
+        /// <summary>
+        /// txtB_TBTJDate 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtB_TBTJDate;
         
         /// <summary>
         /// GridView1 控件。

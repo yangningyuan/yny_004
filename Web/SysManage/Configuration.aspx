@@ -140,11 +140,7 @@
                         </td>
                     </tr>
                      <tr style="display:none;">
-                        <td style="text-align: right; width: 20%;">退本推荐人烧伤期:</td>
-                        <td>
-                            <input id="txtB_TBTJDate" runat="server" class="normal_input" type="text" require-type="int"
-                                require-msg="退本推荐人烧伤期" /><font color="red">*正整数</font>
-                        </td>
+                        
                          <td style="text-align: right; width: 20%;">烧伤金额:
                         </td>
                         <td>
@@ -176,6 +172,15 @@
                                 require-msg="最大额度" /><font color="red"></font>
                        
                         </td>
+                    </tr>
+                    <tr>  <td></td>
+                        <td></td>
+                        <td style="text-align: right; width: 20%;">拆小包最大金额:</td>
+                        <td>
+                            <input id="txtB_TBTJDate" runat="server" class="normal_input" type="text" require-type="int"
+                                require-msg="拆小包最大金额" /><font color="red">*正整数</font>
+                        </td>
+                      
                     </tr>
                 </table>
                 <div style="overflow-x: auto; width: 100%;">

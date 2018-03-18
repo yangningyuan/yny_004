@@ -37,8 +37,8 @@
     }
 
     .produce {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         background: #fff;
     }
 
@@ -129,7 +129,7 @@
                 </div>--%>
 
                 <div class="buy_handle edit_goods">
-                    <p>
+                    <p style="margin:10px;">
                         <img src="/mobile/img/circle.png" alt="" class="yes">
                         <img src="/mobile/img/p_logo.png" alt="" class="pro_logo">
                         <span class="left">全选</span>
@@ -159,13 +159,13 @@
                         <div class="media-body goods-num">
                             <span class="reduce glyphicon-minus">
                                 <input type="hidden" value="<%=item.Id %>" />-</span>
-                            <input type="text" style="width: 100px;" value="<%=item.GCount %>">
+                            <input type="text" style="width: 50px;" value="<%=item.GCount %>">
                             <span class="add glyphicon-plus">
                                 <input type="hidden" value="<%=item.Id %>" />+</span>
                         </div>
                         <%--<div class="delete" onclick="deletecar(<%=item.Id %>)">
                             删除
-                        </div>--%><a class="del_xiangqing" href="javascript:deletecar('<%=item.Id %>')">删除</a>
+                        </div>--%><a class="del_xiangqing" style="float:right; margin-right:20px;" href="javascript:deletecar('<%=item.Id %>')">删除</a>
                     </div>
                     <%
                         }
@@ -188,7 +188,12 @@
     </div>
     <script type="text/javascript">
         function updateGoodCarCount(carId, count) {
-            var result = GetAjaxString('UpdateShopCar', carId + "&count=" + count, '/ajax/ajax.aspx');
+            var result = GetAjaxString('UpdateShopCar', carId + "&count=" + count, '/AjaxM/ajax.aspx');
+            if (result != "0" && result != "1")
+            {
+                $("#" + carId).html("1");
+                layer.msg(result);
+            }
         }
         function deletecar(obj) {
             $("#del_id").val(obj);

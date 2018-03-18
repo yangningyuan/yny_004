@@ -350,6 +350,7 @@
     <Content Include="mobile\html\HKChangeWY.aspx" />
     <Content Include="mobile\html\HKList.aspx" />
     <Content Include="mobile\html\index.aspx" />
+    <Content Include="mobile\html\index2.aspx" />
     <Content Include="mobile\html\InvestApply.aspx" />
     <Content Include="mobile\html\InvestList.aspx" />
     <Content Include="mobile\html\InvestQuitList.aspx" />
@@ -370,6 +371,7 @@
     <Content Include="mobile\html\Pwd.aspx" />
     <Content Include="mobile\html\ReceiveInfo.aspx" />
     <Content Include="mobile\html\Register.aspx" />
+    <Content Include="mobile\html\shopindex.aspx" />
     <Content Include="mobile\html\ShopMenu.aspx" />
     <Content Include="mobile\html\TaskAdd.aspx" />
     <Content Include="mobile\html\TaskList.aspx" />
@@ -383,6 +385,7 @@
     <Content Include="mobile\html\View.aspx" />
     <Content Include="mobile\html\Code.aspx" />
     <Content Include="mobile\html\WXChange.aspx" />
+    <Content Include="mobile\images\yes.png" />
     <Content Include="mobile\img\a1.jpg" />
     <Content Include="mobile\img\aboutus.png" />
     <Content Include="mobile\img\back.png" />
@@ -398,6 +401,7 @@
     <Content Include="mobile\img\caiwu06.png" />
     <Content Include="mobile\img\caiwu07.png" />
     <Content Include="mobile\img\caiwu08.png" />
+    <Content Include="mobile\img\circle.png" />
     <Content Include="mobile\img\cz.png" />
     <Content Include="mobile\img\envelope.png" />
     <Content Include="mobile\img\ewm.jpg" />
@@ -416,6 +420,8 @@
     <Content Include="mobile\img\money.png" />
     <Content Include="mobile\img\mynewsn.png" />
     <Content Include="mobile\img\newsicon.png" />
+    <Content Include="mobile\img\price_bg.png" />
+    <Content Include="mobile\img\p_logo.png" />
     <Content Include="mobile\img\quickenter.png" />
     <Content Include="mobile\img\rechrge.png" />
     <Content Include="mobile\img\Register.png" />
@@ -432,6 +438,7 @@
     <Content Include="mobile\img\women.png" />
     <Content Include="mobile\img\xjb.png" />
     <Content Include="mobile\img\xpu.png" />
+    <Content Include="mobile\img\yes.png" />
     <Content Include="mobile\img\zc.png" />
     <Content Include="mobile\img\zs.png" />
     <Content Include="mobile\img\zz.png" />
@@ -1821,6 +1828,13 @@
     <Compile Include="mobile\html\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="mobile\html\index2.aspx.cs">
+      <DependentUpon>index2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobile\html\index2.aspx.designer.cs">
+      <DependentUpon>index2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="mobile\html\InvestApply.aspx.cs">
       <DependentUpon>InvestApply.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1960,6 +1974,13 @@
     </Compile>
     <Compile Include="mobile\html\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mobile\html\shopindex.aspx.cs">
+      <DependentUpon>shopindex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobile\html\shopindex.aspx.designer.cs">
+      <DependentUpon>shopindex.aspx</DependentUpon>
     </Compile>
     <Compile Include="mobile\html\ShopMenu.aspx.cs">
       <DependentUpon>ShopMenu.aspx</DependentUpon>

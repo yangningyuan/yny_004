@@ -36,6 +36,10 @@
 
         function updateGoodCarCount(carId, count) {
             var result = GetAjaxString('UpdateShopCar', carId + "&count=" + count);
+            if (result != "0" && result != "1") {
+                $("#" + carId).html("1");
+                v5.alert(result, '3', 'true');
+            }
         }
 
         function numDesc(obj) {

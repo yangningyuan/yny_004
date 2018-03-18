@@ -40,6 +40,16 @@
                         </div>
                     </div>
                 </li>--%>
+                 <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">支付宝</div>
+                            <div class="item-input">
+                                <input id="txtAlipay" name="txtAlipay" runat="server" maxlength="50" type="text"  />
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 <li>
                     <div class="item-content">
                         <div class="item-inner">
@@ -108,7 +118,7 @@
                         <div class="item-inner">
                             <div class="item-title label">密保答案</div>
                             <div class="item-input">
-                                <input id="txtAnswer" name="txtAnswer" runat="server" type="text" />
+                                <input id="txtAnswer" name="txtAnswer" runat="server"  maxlength="6" type="text" />
                             </div>
                         </div>
                     </div>
@@ -150,8 +160,10 @@
                 layer.msg('银行卡号只能是16-19位数字');
             } else if ($('#txtSePwd').val() == "") {
                 layer.msg('交易密码不能为空');
-            } else if ($('#txtAnswer').val()=="") {
+            } else if ($('#txtAnswer').val() == "") {
                 layer.msg('密保答案不能为空');
+            } else if ($('#txtAnswer').val().length > 6 || $('#txtAnswer').val().length < 6) {
+                layer.msg('密保答案为6位幸运数字');
             } else {
                 //ActionModel("Member/Modify.aspx?Action=modify", $('#form1').serialize());
                 $.ajax({

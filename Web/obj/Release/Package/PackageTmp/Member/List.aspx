@@ -101,6 +101,9 @@
                     <th>
                         <%=yny_004.BLL.Reward.List["MJB"].RewardName%>
                     </th>
+                    <th>
+                        <%=yny_004.BLL.Reward.List["MGP"].RewardName%>
+                    </th>
                   <%--   <th>
                         <%=yny_004.BLL.Reward.List["MCW"].RewardName%>
                     </th>--%>

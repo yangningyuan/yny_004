@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BuyGoods.aspx.cs" Inherits="yny_004.Web.mobile.html.BuyGoods" %>
 
-<link rel="stylesheet" href="/mobile/css/btn.css">
-<link rel="stylesheet" href="/mobile/css/style.css">
+<%--<link rel="stylesheet" href="/mobile/css/btn.css">
+<link rel="stylesheet" href="/mobile/css/style.css">--%>
 <style>
     body {
         background-color: #FFFFFF;
@@ -48,13 +48,14 @@
             <div class="carousel slide" data-ride="carousel" id="carousel3">
                 <div class="carousel-inner">
                     <div class="Z">
-                        <div class="zh_head">
-                            <i class="iconfont">&#xe620;</i><span>购买商品</span>
-                        </div>
+                        
                         <%
                             foreach (yny_004.Model.GoodCategory item in listcate)
                             {
                         %>
+                        <div class="zh_head">
+                            <i class="iconfont">&#xe620;</i><span><%=item.Name %></span>
+                        </div>
                         <ul class="zhanjaiBOx">
                             <%
                                 foreach (yny_004.Model.Goods item2 in yny_004.BLL.Goods.GetList(" GParentCode='" + item.Code + "' and IsDeleted=0;"))

@@ -153,7 +153,7 @@ namespace yny_004.DAL
         /// <returns>返回DataTable</returns>
         private static DataTable GetTable(string strWhere, int pageIndex, int pageSize, out int count)
         {
-            return CommonBase.GetTable("Member", "MID", "MDate asc,MCreateDate asc,MID asc", strWhere, pageIndex, pageSize, out count);
+            return CommonBase.GetTable("Member", "MID", "MCreateDate desc,MID asc", strWhere, pageIndex, pageSize, out count);
         }
         #endregion
     }

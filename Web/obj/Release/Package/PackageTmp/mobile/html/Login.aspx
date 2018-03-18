@@ -23,9 +23,10 @@
     <link rel="stylesheet" href="../css/main.css">
 
     <script type="text/javascript">
-        
+       
         $(function () {
             $("#txtpwd").val($("#inpwd").val());
+            
         });
         function Login() {
             if ($("#txtname").val() == "") {
@@ -48,10 +49,10 @@
                             case "2":
                                 v5.error('密码不正确', '1', 'true');
                                 break;
-                            case "3":
-                                v5.error('验证码错误', '1', 'true');
-                                $("#imgcode").click();
-                                break;
+                            //case "3":
+                            //    v5.error('验证码错误', '1', 'true');
+                            //    $("#imgcode").click();
+                            //    break;
                             case "-1":
                                 v5.error('限制登录', '1', 'true');
                                 break;
@@ -72,10 +73,6 @@
             if (event.keyCode == 13)   //回车键的键值为13   
                 Login();
         }
-
-        setTimeout(function () {
-            $("#imgcode").click();
-        }, 100);
     </script>
     <style>
         .list-block .item-inner {
@@ -90,7 +87,7 @@
             <div class="content Register" style="top: 0;">
             <img src="../img/login.jpg" />
                 <img src="../img/logo-login.png" class="logo-login" />
-                <p class="logoTitle">派派红包</p>
+                <p class="logoTitle">贝贝美商城</p>
                 <input type="hidden" id="inpwd" runat="server" />
                 <div class="Register_Info row" style="top: 8rem;">
                     <div class="Register_List">
@@ -120,7 +117,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+                                <li style="display:none;">
                                     <div class="item-content">
                                         <div class="item-media"><i class="fa icon-lock icon-large"></i></div>
                                         <div class="item-inner">

@@ -32,14 +32,14 @@
         var orderId = 0;
         function sendOrder(id) {
             orderId = id;
-            pageii = $.layer({
+            pageii = layer.open({
                 type: 1,
                 shade: [0.5],
                 area: ['285px', 'auto'],
                 title: '填写快递单号',
-                offset: ['', '70%'],
-                border: [5, 0.3, '#000'],
-                page: { dom: '#receiveDiv' }
+                offset: ['', '50%'],
+                border: [5, 0.5, '#000'],
+                content: $('#receiveDiv')
             });
         }
         function choiceReceive() {
@@ -97,13 +97,13 @@
                 $("#txtExpressCompany").val(result.split('≌')[1]).attr("readonly", "readonly");
                 $("#txtExpressCode").val(result.split('≌')[0]).attr("readonly", "readonly");
                 $("#btnSendExperee").hide();
-                pageii = $.layer({
+                pageii = layer.open({
                     type: 1,
                     shade: [0.5],
                     area: ['285px', 'auto'],
                     title: '快递信息',
                     border: [5, 0.3, '#000'],
-                    page: { dom: '#receiveDiv' }
+                    content: $('#receiveDiv')
                 });
             }
         }

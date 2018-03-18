@@ -66,7 +66,7 @@
   <div class="web-header">
 			<div class="container clearfix">
 				<div class="pull-left logo">
-					<a href="#" class="findPwdByAnswerLogo"><img src="/Admin/find_password/images/rlogo.png" class=""><p>派派红包</p>
+					<a href="#" class="findPwdByAnswerLogo"><img src="/Admin/find_password/images/rlogo.png" class=""><p>贝贝美商城</p>
 				</div>
 				<nav class="blog-nav pull-left">
 					<%--<span class="blog-nav-item active" href="#">找回密码</span>--%>

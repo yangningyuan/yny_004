@@ -17,6 +17,13 @@
                     </div>
                 </a>
             </li>
+               <li>
+                <a href="javascript:void(0)" onclick="pcallhtmlNoV('/mobile/html/View.aspx','修改资料');" class="item-link item-content">
+                    <div class="item-inner">
+                        <div class="item-title">修改会员资料</div>
+                    </div>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

@@ -24,6 +24,8 @@ namespace yny_004.Web.ChangeMoney
                     string MType = "MHB";
                     if (Request.Form["rdo"] == "MJB")
                         MType = "MJB";
+					if (Request.Form["rdo"] == "MGP")
+						MType = "MGP";
 					//if (Request.Form["rdo"] == "MCW")
 					//	MType = "MCW";
 					if (BLL.ChangeMoney.EnoughChange(TModel.MID, int.Parse(Request.Form["txtMHB"]), MType))

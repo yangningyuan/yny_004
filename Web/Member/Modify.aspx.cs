@@ -52,10 +52,11 @@ namespace yny_004.Web.Member
                 {
                     model.MName = Request.Form["txtMName"].Trim();
 
-                    model.Alipay = Request.Form["txtAlipay"];
+                    
                     model.QRCode = Request.Form["txtQRCode"];
                 }
-                if (string.IsNullOrEmpty(model.BankCardName))
+				model.Alipay = Request.Form["txtAlipay"];
+				if (string.IsNullOrEmpty(model.BankCardName))
                 {
                     model.BankCardName = Request.Form["txtBankCardName"];
                 }
@@ -92,10 +93,11 @@ namespace yny_004.Web.Member
                     if (TModel.Role.IsAdmin)
                     {
 
-                        txtAlipay.Value = value.Alipay;
+                        
                         txtQRCode.Value = value.QRCode;
                     }
-                    txtBankCardName.Value = value.BankCardName;
+					txtAlipay.Value = value.Alipay;
+					txtBankCardName.Value = value.BankCardName;
                     txtBank.Value = value.Bank;
                     txtBranch.Value = value.Branch;
                     txtBankNumber.Value = value.BankNumber;
@@ -236,6 +238,16 @@ namespace yny_004.Web.Member
                     Random r = new Random();
                     int i = r.Next(BLL.Configuration.Model.E_TZMin, BLL.Configuration.Model.E_TZMax);                    
                     decimal x = (decimal)i;
+
+					if (x >= BLL.Configuration.Model.E_TZMin && x < BLL.Configuration.Model.B_TBTJDate)
+					{
+						i = r.Next(BLL.Configuration.Model.B_TBTJDate, BLL.Configuration.Model.E_TZMax);
+						x = (decimal)i;
+					}
+					else {
+						i = r.Next(BLL.Configuration.Model.E_TZMin, BLL.Configuration.Model.B_TBTJDate);
+						x = (decimal)i;
+					}
 
 					int t = r.Next(0, 9);
 					decimal xt = (decimal)t/10;

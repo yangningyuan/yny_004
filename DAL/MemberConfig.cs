@@ -291,11 +291,11 @@ namespace yny_004.DAL
                 //model.MCW = decimal.Parse(DAl.MGP_BuyRecord.CountTotalMCW(model.MID));
                 model.MCW = decimal.Parse(dr["MCW"].ToString());
             }
-            //if (!string.IsNullOrEmpty(dr["MGP"].ToString()))
+           if (!string.IsNullOrEmpty(dr["MGP"].ToString()))
             {
-                model.MGP = DAL.StockRight.GetSellCount(string.Format(" and MID = '{0}' and IsValid = 1 ", model.MID));
-                //model.MGP = decimal.Parse(dr["MGP"].ToString());
-            }
+				//model.MGP = DAL.StockRight.GetSellCount(string.Format(" and MID = '{0}' and IsValid = 1 ", model.MID));
+				model.MGP = decimal.Parse(dr["MGP"].ToString());
+			}
             if (!string.IsNullOrEmpty(dr["DTFHState"].ToString()))
             {
                 model.DTFHState = bool.Parse(dr["DTFHState"].ToString());

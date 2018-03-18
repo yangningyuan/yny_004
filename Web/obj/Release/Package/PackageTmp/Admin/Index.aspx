@@ -53,7 +53,7 @@
 			<aside>
 				<div id="sidebar" class="nav-collapse ">
 					<a href="#" class="logo" ><img src="/Admin/images/logo.png" alt="" style="margin-bottom:10px;margin-top:20px;width: 75px;">
-                        <p class="indexLogo">派派红包</p>
+                        <p class="indexLogo">贝贝美商城</p>
 					</a>
 					<ul class="sidebar-menu">
 						<li class="sub-menu">

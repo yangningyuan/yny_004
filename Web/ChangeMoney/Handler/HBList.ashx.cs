@@ -44,7 +44,7 @@ namespace yny_004.Web.Handler
             List<Model.ChangeMoney> ListChangeMoney;
             if (type == "zc")
             {
-                ListChangeMoney = BllModel.GetChangeMoneyEntityList(mkey, "", "", "true", new List<string> { "ZZ" }, new List<string> { "MHB", "MJB" }, pageIndex, pageSize, strWhere, out count);
+                ListChangeMoney = BllModel.GetChangeMoneyEntityList(mkey, "", "", "true", new List<string> { "ZZ" }, new List<string> { "MHB", "MJB","MGP" }, pageIndex, pageSize, strWhere, out count);
 
                 for (int i = 0; i < ListChangeMoney.Count; i++)
                 {
@@ -65,7 +65,7 @@ namespace yny_004.Web.Handler
             }
             else if (type == "zr")
             {
-                ListChangeMoney = BllModel.GetChangeMoneyEntityList("", mkey, "", "true", new List<string> { "ZZ" }, new List<string> { "MHB", "MJB" }, pageIndex, pageSize, strWhere, out count);
+                ListChangeMoney = BllModel.GetChangeMoneyEntityList("", mkey, "", "true", new List<string> { "ZZ" }, new List<string> { "MHB", "MJB","MGP" }, pageIndex, pageSize, strWhere, out count);
 
                 for (int i = 0; i < ListChangeMoney.Count; i++)
                 {

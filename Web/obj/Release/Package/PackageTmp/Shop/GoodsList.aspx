@@ -17,6 +17,21 @@
         tState = "";
         SearchByCondition();
         
+
+        function DeleteGood(id)
+        {
+            $.ajax({
+                type: 'post',
+                url: 'shop/goodslist.aspx?Action=modify',
+                data: { "gid": id },
+                success: function (info) {
+                    layer.alert(info, function () {
+                        layer.closeAll();
+                        javascript: callhtml('../Shop/GoodsList.aspx', '商品列表'); onclickMenu();
+                    });
+                }
+            });
+        }
     </script>
 </head>
 <body>
@@ -56,6 +71,9 @@
                     </th>
                     <th>
                         售出数量
+                    </th>
+                    <th>
+                        操作
                     </th>
                 </tr>
             </table>

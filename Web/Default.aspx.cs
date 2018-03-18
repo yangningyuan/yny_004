@@ -25,7 +25,7 @@ namespace yny_004.Web
             //}
             if (IsMobile()&&!TModel.Role.IsAdmin)
             {
-                Server.Transfer("/mobile/html/index.aspx");
+                Server.Transfer("/mobile/html/shopindex.aspx");
             }
             else {
                 Server.Transfer("/Admin/Index.aspx");

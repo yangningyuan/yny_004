@@ -105,7 +105,12 @@
                                 type="text" value="11" require-msg="支付宝开户名" /><span>*</span>
                         </td>
                     </tr>
-                    <tr>
+                  
+                    
+                    <%
+                        }
+                    %>
+                      <tr>
                         <td width="15%" align="right">
                             <span>支付宝：</span>
                         </td>
@@ -114,10 +119,6 @@
                                 type="text" value="11" require-msg="支付宝" /><span>*</span>
                         </td>
                     </tr>
-                    
-                    <%
-                        }
-                    %>
                     <tr>
                         <td align="right">开户地区:
                         </td>

@@ -22,9 +22,17 @@ namespace yny_004.Web.mobile.html
                 noticecontent = GetKeyName(notice.NContent);
             }
             MyLink.Value = GetPromoteLinkTel();
-            
 
-        }
+
+			if (string.IsNullOrEmpty(TModel.SecPsd))//当天第一次登陆
+			{
+				isnotice2.Value = "1";
+			}
+			else {
+				isnotice2.Value = "0";
+			}
+
+		}
 
         
     }

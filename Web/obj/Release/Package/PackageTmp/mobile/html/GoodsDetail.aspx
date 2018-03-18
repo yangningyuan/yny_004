@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GoodsDetail.aspx.cs" Inherits="yny_004.Web.mobile.html.GoodsDetail" %>
 
-<link rel="stylesheet" href="/mobile/css/btn.css">
-<link rel="stylesheet" href="/mobile/css/style.css">
+<%--<link rel="stylesheet" href="/mobile/css/btn.css">
+<link rel="stylesheet" href="/mobile/css/style.css">--%>
 <%--<script>
 
     $(function () {

@@ -311,6 +311,20 @@ namespace yny_004.Web.AjaxM
                     //先查看购物车中有没有该用户的该产品
                     Hashtable hs = new Hashtable();
                     Model.ShopCar car = BLL.ShopCar.GetModel(cid);
+					if (int.Parse(count) > 1)
+					{
+						Model.Goods g= BLL.Goods.GetModel(car.GId);
+						if (g.GParentCode == "001")
+						{
+							result= "公排区产品一次只能买一个";
+
+							car.GCount = 1;
+							BLL.ShopCar.Update(car, hs);
+							BLL.CommonBase.RunHashtable(hs);
+							Response.Write(result);
+							return;
+						}
+					}
                     if (car != null)
                     {
                         car.GCount = int.Parse(count);
@@ -404,6 +418,8 @@ namespace yny_004.Web.AjaxM
                     //order.GoodCount
                     int count = 0; decimal totalMoney = 0;
                     string error = string.Empty;
+
+					string isgongpai = "";
                     foreach (string str in array)
                     {
                         Model.ShopCar car = BLL.ShopCar.GetModel(str);
@@ -421,8 +437,16 @@ namespace yny_004.Web.AjaxM
                             Model.Goods go = BLL.Goods.GetModel(car.GId);
                             if (go.SellingCount < car.GCount)
                             {
-                                error += "商品：" + go.GName + "库存不足，请联系管理员";
+                                error = "商品：" + go.GName + "库存不足，请联系管理员";
                             }
+							if (go.GParentCode == "001")
+							{
+								isgongpai += "公排";
+								if (car.GCount > 1)
+								{
+									error = "公排区商品一次只能买入一个";
+								}
+							}
 
                             od.IsDeleted = false;
                             od.OrderCode = order.Code;
@@ -434,8 +458,17 @@ namespace yny_004.Web.AjaxM
                             BLL.ShopCar.Update(car, hs);
                         }
                     }
+					
                     order.GoodCount = count;
-                    order.IsDeleted = false;
+					order.Remarks = isgongpai;
+					if (!string.IsNullOrEmpty(order.Remarks))
+					{
+						if (order.GoodCount > 1)
+						{
+							error = "公排区商品一次只能买入一个，且与普通区商品不能同时提交订单";
+						}
+					}
+					order.IsDeleted = false;
                     order.MID = TModel.MID;
                     order.OrderTime = DateTime.Now;
                     order.Status = 1;

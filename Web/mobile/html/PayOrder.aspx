@@ -15,6 +15,7 @@
             </div>
           <input id="hdBankCode" type="hidden" runat="server" />
             <input type="hidden" id="hidId" runat="server" />
+            <div style="padding:3%;">
             <div class="zc_in">
                 <span>商品详细信息：</span>
                 <p>总件数：<%=orderModel.GoodCount%>件</p>
@@ -42,14 +43,19 @@
             <div class="zc_in">
                 <span>支付方式：</span>
 
-                <input id="rdoXFB" value="MHB" type="radio" name="rdo"/><label for="wx"><%=yny_004.BLL.Reward.List["MHB"].RewardName%></label>
+                <%=mtype %>
             </div>
+            <br />
             <div class="zc_in">
                 <span>币种余额：</span>
-              我的<%=yny_004.BLL.Reward.List["MHB"].RewardName %>：<%=TModel.MConfig.MHB%>
+                <div>
+              我的<%=yny_004.BLL.Reward.List["MHB"].RewardName %>：<%=TModel.MConfig.MHB%><br />
+                我的<%=yny_004.BLL.Reward.List["MGP"].RewardName %>：<%=TModel.MConfig.MGP%><br />
+                我的<%=yny_004.BLL.Reward.List["MJB"].RewardName %>：<%=TModel.MConfig.MJB%>
+                    </div>
             </div>
-            <a href="javascript:void(0)" title="" id="Button1" runat="server" class="btn_qd" style="display: block;" onclick="checkBuyNow();">支付</a>
-
+            <a href="javascript:void(0)" title="" id="Button1" runat="server" class="btn_qd" style="display: block; width:99%;" onclick="checkBuyNow();">支付</a>
+                </div>
         </div>
     </form>
 <%--</div>--%>

@@ -1593,7 +1593,7 @@ header.bar.User-header:after {
 }
 
 .decribe_product .dectibe_sales {
-    width: 72%;
+    width: 62%;
     padding: 15px 0px;
     float: left;
 }
@@ -1614,6 +1614,7 @@ header.bar.User-header:after {
         background: url(../img/price_bg.png) left center no-repeat;
         color: white;
         font-size: 26px;
+		margin-left:-30px;
         text-align: center;
     }
 
@@ -1682,7 +1683,7 @@ h2 {
 }
 
 .btn_qd {
-    width: 100%;
+    width: 94%;
     margin-top: 10px;
     line-height: 48px;
     font-size: 0.65rem;

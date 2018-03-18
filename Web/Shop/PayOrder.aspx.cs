@@ -13,7 +13,9 @@ namespace yny_004.Web.Shop
         protected Model.Order orderModel;
         protected Model.ReceiveInfo ReceiveInfoModel;
         protected string moneytype = "<input id='Radio1' value='MHB' type='radio' name='rdo' />奖金币<br />";
-        protected override void SetValue(string id)
+
+		protected string mtype = "";
+		protected override void SetValue(string id)
         {
 
             string oid = HttpUtility.UrlDecode(Request["id"].Trim());//订单Id
@@ -31,7 +33,15 @@ namespace yny_004.Web.Shop
             var listGood = BLL.Goods.GetList("GID in (" + gids + ")");
             repGoodList.DataSource = listGood;
             repGoodList.DataBind();
-        }
+
+			if (!string.IsNullOrEmpty(orderModel.Remarks))
+			{
+				mtype = "<input id=\"rdoXFB\" value=\"MGP\" type=\"radio\" name=\"rdo\" checked=\"checked\"/><label for=\"wx\">" + yny_004.BLL.Reward.List["MGP"].RewardName + "</label><input id=\"rdoXFB\" value=\"MJB\" type=\"radio\" name=\"rdo\"/><label for=\"wx\">" + yny_004.BLL.Reward.List["MJB"].RewardName + "</label>";
+			}
+			else {
+				mtype = "<input id=\"rdoXFB\" value=\"MGP\" type=\"radio\" name=\"rdo\" checked=\"checked\"/><label for=\"wx\">" + yny_004.BLL.Reward.List["MGP"].RewardName + "</label><input id=\"rdoXFB\" value=\"MHB\" type=\"radio\" name=\"rdo\"/><label for=\"wx\">" + yny_004.BLL.Reward.List["MHB"].RewardName + "</label>";
+			}
+		}
         protected override void SetPowerZone()
         {
 
@@ -69,12 +79,22 @@ namespace yny_004.Web.Shop
                     if (model != null)
                     {
                         string MType = "MHB";//币种
-                        //if (Request.Form["rdo"] == "MJJ")
-                        //    MType = "MJJ";
-                        //if (Request.Form["rdo"] == "XFB")
-                        //    MType = "XFB";
+						if (Request.Form["rdo"] == "MJB")
+							MType = "MJB";
+						if (Request.Form["rdo"] == "MGP")
+							MType = "MGP";
 
-                        decimal totaoPay = model.TotalPrice;
+						if (string.IsNullOrEmpty(model.Remarks))
+						{
+							if (MType == "MJB")
+								return "支付失败，请重新选择支付币种";
+						}
+						else {
+							if (MType == "MHB")
+								return "支付失败，请重新选择支付币种";
+						}
+						
+						decimal totaoPay = model.TotalPrice;
                         if (BLL.ChangeMoney.EnoughChange(model.MID, totaoPay, MType))
                         {
                             Hashtable MyHs = new Hashtable();
@@ -98,6 +118,11 @@ namespace yny_004.Web.Shop
                             BLL.Order.Update(model);
                             if (BLL.CommonBase.RunHashtable(MyHs))
                             {
+								if (!string.IsNullOrEmpty(model.Remarks))//公排区商品
+								{
+									BLL.ChangeMoney.MymemberAdd(TModel);
+								}
+
                                 Session["OrderId"] = null;
                                 return "支付成功！";
                             }
@@ -109,7 +134,7 @@ namespace yny_004.Web.Shop
                         else
                         {
                             Session["OrderId"] = null;
-                            return "您的"+ yny_004.BLL.Reward.List["MHB"].RewardName + "不足，请充值后购买！";
+                            return "您的"+ yny_004.BLL.Reward.List[MType].RewardName + "不足，请充值后购买！";
                         }
                     }
                 }

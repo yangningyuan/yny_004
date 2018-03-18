@@ -34,6 +34,7 @@
                     <td>
                         <input id="rdoMJB" value="MJB" type="radio" name="rdo" checked="checked" /><%=yny_004.BLL.Reward.List["MJB"].RewardName %>
                         <input id="rdoMHB" value="MHB" type="radio" name="rdo"  /><%=yny_004.BLL.Reward.List["MHB"].RewardName %>
+                        <input id="rdoMGP" value="MGP" type="radio" name="rdo"  /><%=yny_004.BLL.Reward.List["MGP"].RewardName %>
                        <%-- <input id="rdoMCW" value="MCW" type="radio" name="rdo"  /><%=yny_004.BLL.Reward.List["MCW"].RewardName %>--%>
                     </td>
                 </tr>

@@ -21,8 +21,9 @@
                                     </li>
                                     <%--<li><span>团队有效投资额：<b><%=TModel.MConfig.YJMoney %></b></span>&nbsp;</li>--%>
                                     <li><span>会员类型：<b><%=TModel.Role.RName %></b></span>&nbsp;</li>
-                                    <li><i class="jiangjin"></i><%=yny_004.BLL.Reward.List["MHB"].RewardName %>：<%=TModel.MConfig.MHB %></li>
-                                    <li><i class="currentm"></i><%=yny_004.BLL.Reward.List["MJB"].RewardName %>：<%=TModel.MConfig.MJB %></li>
+                                    <li><i class="jiangjin"></i><%=yny_004.BLL.Reward.List["MHB"].RewardName %>：<%=TModel.MConfig.MHB.ToFixedDecimal(2) %></li>
+                                    <li><i class="currentm"></i><%=yny_004.BLL.Reward.List["MJB"].RewardName %>：<%=TModel.MConfig.MJB.ToFixedDecimal(2) %></li>
+                                    <li><i class="currentm"></i><%=yny_004.BLL.Reward.List["MGP"].RewardName %>：<%=TModel.MConfig.MGP.ToFixedDecimal(2) %></li>
                                     <%--<li><i class="currentm"></i><%=yny_004.BLL.Reward.List["MCW"].RewardName %>：<%=TModel.MConfig.MCW %></li>--%>
                                 </ul>
                             </div>
@@ -53,13 +54,13 @@
                                     </div>
                                 </a>
                             </li>
-                            <!--<li>
-                                 <a href="" class="item-link item-content">
+                            <li>
+                                 <a href="javascript:pcallhtml('/mobile/html/ShopMenu.aspx','购物中心');" class="item-link item-content">
                                       <div class="item-inner">
                                            <div class="item-title">购物中心</div>
                                       </div>
                                  </a>
-                            </li>-->
+                            </li>
                             <li>
                                 <a href="javascript:pcallhtml('/mobile/html/CW.aspx','财务');" class="item-link item-content">
                                     <div class="item-inner">

@@ -59,6 +59,7 @@ namespace yny_004.Web.mobile.html
                 model.Bank = Request.Form["txtBank"];
                 model.Branch = Request.Form["txtBranch"];
                 model.BankNumber = Request.Form["txtBankNumber"];
+				model.Alipay = Request.Form["txtAlipay"];
                 //model.Province = Request.Form["ddlProvince"];
                 //model.City = Request.Form["ddlCity"];
                 //model.Address = Request.Form["hduploadPic1"].Trim();
@@ -88,24 +89,25 @@ namespace yny_004.Web.mobile.html
                     txtBank.Value = value.Bank;
                     txtBranch.Value = value.Branch;
                     txtBankNumber.Value = value.BankNumber;
-                    //ddlCity.Value = value.City;
-                    //ddlProvince.Value = value.Province;
-                    //provice = value.Province;
-                    //City = value.City;
-                    //txtNumID.Value = value.NumID;
-                    //hduploadPic1.Value = value.Address;
-                    //pic = "";
-                    //if (!string.IsNullOrEmpty(value.Address))
-                    //{
-                    //    foreach (var pp in value.Address.Split('≌'))
-                    //    {
-                    //        if (!string.IsNullOrEmpty(pp))
-                    //        {
-                    //            pic += "<div class='appDiv'><img class='appImg' src='" + pp + "'/><img class='xClose' onclick='deletePic(this)'  title='删除' src='/Admin/pop/images/uploadify-cancel.png'/><input type='hidden' name='uploadPic' class='hidPicurl' value='" + pp + "'/></div>";
-                    //        }
-                    //    }
-                    //}
-                }
+					txtAlipay.Value = value.Alipay;
+					//ddlCity.Value = value.City;
+					//ddlProvince.Value = value.Province;
+					//provice = value.Province;
+					//City = value.City;
+					//txtNumID.Value = value.NumID;
+					//hduploadPic1.Value = value.Address;
+					//pic = "";
+					//if (!string.IsNullOrEmpty(value.Address))
+					//{
+					//    foreach (var pp in value.Address.Split('≌'))
+					//    {
+					//        if (!string.IsNullOrEmpty(pp))
+					//        {
+					//            pic += "<div class='appDiv'><img class='appImg' src='" + pp + "'/><img class='xClose' onclick='deletePic(this)'  title='删除' src='/Admin/pop/images/uploadify-cancel.png'/><input type='hidden' name='uploadPic' class='hidPicurl' value='" + pp + "'/></div>";
+					//        }
+					//    }
+					//}
+				}
             }
         }
     }
