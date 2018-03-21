@@ -30,41 +30,41 @@ namespace yny_004.Web.ChangeMoney
             //txtBank.DataBind();
         }
 
-        /// <summary>
-        /// 获取银行
-        /// </summary>
-        /// <param name="member"></param>
-        /// <returns></returns>
-        public string GetBank(Model.Member member)
-        {
-            string error = "";
-            member.Bank = Request.Form["txtBank"];
-            member.BankCardName = Request.Form["txtBankCardName"];
-            member.BankNumber = Request.Form["txtBankNumber"];
-            member.Branch = Request.Form["txtBranch"];
-            if (string.IsNullOrEmpty(member.Bank))
-            {
-                error = "开户银行不能为空";
-            }
-            else if (string.IsNullOrEmpty(member.BankCardName))
-            {
-                error = "开户姓名不能为空";
-            }
-            else if (string.IsNullOrEmpty(member.BankNumber))
-            {
-                error = "银行卡号不能为空";
-            }
-            else if (string.IsNullOrEmpty(member.Branch))
-            {
-                error = "开户支行不能为空";
-            }
-            else if (member.BankCardName != member.MName)
-            {
-                error = "开户姓名必须和会员姓名一直";
-            }
+        ///// <summary>
+        ///// 获取银行
+        ///// </summary>
+        ///// <param name="member"></param>
+        ///// <returns></returns>
+        //public string GetBank(Model.Member member)
+        //{
+        //    string error = "";
+        //    member.Bank = Request.Form["txtBank"];
+        //    member.BankCardName = Request.Form["txtBankCardName"];
+        //    member.BankNumber = Request.Form["txtBankNumber"];
+        //    member.Branch = Request.Form["txtBranch"];
+        //    if (string.IsNullOrEmpty(member.Bank))
+        //    {
+        //        error = "开户银行不能为空";
+        //    }
+        //    else if (string.IsNullOrEmpty(member.BankCardName))
+        //    {
+        //        error = "开户姓名不能为空";
+        //    }
+        //    else if (string.IsNullOrEmpty(member.BankNumber))
+        //    {
+        //        error = "银行卡号不能为空";
+        //    }
+        //    else if (string.IsNullOrEmpty(member.Branch))
+        //    {
+        //        error = "开户支行不能为空";
+        //    }
+        //    else if (member.BankCardName != member.MName)
+        //    {
+        //        error = "开户姓名必须和会员姓名一直";
+        //    }
 
-            return error;
-        }
+        //    return error;
+        //}
 
         /// <summary>
         /// 申请提现
@@ -74,11 +74,11 @@ namespace yny_004.Web.ChangeMoney
         protected override string btnAdd_Click()
         {
             Model.Member model = TModel;
-            //string error = GetBank(model);
-            //if (!string.IsNullOrEmpty(error))
-            //{
-            //    return error;
-            //}
+            string error = GetBank(model);
+            if (!string.IsNullOrEmpty(error))
+            {
+                return error;
+            }
             string moneyType = "MHB";
             //if (Request.Form["ddlFrom"] == "MHB")
             //{

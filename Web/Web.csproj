@@ -343,6 +343,7 @@
     <Content Include="mobile\html\GGTZ.aspx" />
     <Content Include="mobile\html\GMList.aspx" />
     <Content Include="mobile\html\GoodsDetail.aspx" />
+    <Content Include="mobile\html\GoodsDetailGP.aspx" />
     <Content Include="mobile\html\HBChange.aspx" />
     <Content Include="mobile\html\HBList.aspx" />
     <Content Include="mobile\html\HBToJBChange.aspx" />
@@ -1778,6 +1779,13 @@
     </Compile>
     <Compile Include="mobile\html\GoodsDetail.aspx.designer.cs">
       <DependentUpon>GoodsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mobile\html\GoodsDetailGP.aspx.cs">
+      <DependentUpon>GoodsDetailGP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobile\html\GoodsDetailGP.aspx.designer.cs">
+      <DependentUpon>GoodsDetailGP.aspx</DependentUpon>
     </Compile>
     <Compile Include="mobile\html\HBChange.aspx.cs">
       <DependentUpon>HBChange.aspx</DependentUpon>

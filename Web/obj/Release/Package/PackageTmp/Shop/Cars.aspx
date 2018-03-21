@@ -142,7 +142,7 @@
     <script type="text/javascript">
         var pageii;
         function showReceiveInfo() {
-            pageii = layer.open({
+            pageii = top.layer.open({
                 type: 1,
                 shade: [0.5],
                 area: ['500px', 'auto'],

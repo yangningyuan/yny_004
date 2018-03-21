@@ -81,6 +81,59 @@ namespace yny_004.DAL
             return MyHs;
         }
 
+
+        /// <summary>
+        /// 增加一条数据
+        /// </summary>
+        public static int InsertByID(Model.ReceiveInfo model)
+        {
+            string guid = Guid.NewGuid().ToString();
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("insert into ReceiveInfo(");
+            strSql.Append("IsDeleted,Status,IsMain,ZipCode,MID,Province,City,Zone,Tel,Receiver,Phone,Address");
+            strSql.Append(") values (");
+            strSql.Append("@IsDeleted,@Status,@IsMain,@ZipCode,@MID,@Province,@City,@Zone,@Tel,@Receiver,@Phone,@Address");
+            strSql.Append(") ");
+            strSql.Append(";select @@IDENTITY");
+            SqlParameter[] parameters = {
+                        new SqlParameter("@IsDeleted", SqlDbType.Bit,1) ,
+                        new SqlParameter("@Status", SqlDbType.Int,4) ,
+                        new SqlParameter("@IsMain", SqlDbType.Bit,1) ,
+                        new SqlParameter("@ZipCode", SqlDbType.NChar,10) ,
+                        new SqlParameter("@MID", SqlDbType.VarChar,50) ,
+                        new SqlParameter("@Province", SqlDbType.NVarChar,50) ,
+                        new SqlParameter("@City", SqlDbType.NVarChar,50) ,
+                        new SqlParameter("@Zone", SqlDbType.NVarChar,50) ,
+                        new SqlParameter("@Tel", SqlDbType.VarChar,20) ,
+                        new SqlParameter("@Receiver", SqlDbType.VarChar,20) ,
+                        new SqlParameter("@Phone", SqlDbType.VarChar,20) ,
+                        new SqlParameter("@Address", SqlDbType.NVarChar,500)
+
+            };
+
+            parameters[0].Value = model.IsDeleted;
+            parameters[1].Value = model.Status;
+            parameters[2].Value = model.IsMain;
+            parameters[3].Value = model.ZipCode;
+            parameters[4].Value = model.MID;
+            parameters[5].Value = model.Province;
+            parameters[6].Value = model.City;
+            parameters[7].Value = model.Zone;
+            parameters[8].Value = model.Tel;
+            parameters[9].Value = model.Receiver;
+            parameters[10].Value = model.Phone;
+            parameters[11].Value = model.Address;
+            object obj = DbHelperSQL.GetSingle(strSql.ToString(), parameters);
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+            }
+        }
+
         /// <summary>
         /// 增加一条数据
         /// </summary>

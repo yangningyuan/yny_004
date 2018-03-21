@@ -24,6 +24,10 @@ namespace yny_004.BLL
         {
             return yny_004.DAL.ReceiveInfo.Insert(model);
         }
+        public static int InsertByID(Model.ReceiveInfo model)
+        {
+            return yny_004.DAL.ReceiveInfo.InsertByID(model);
+        }
 
         public static Hashtable Update(Model.ReceiveInfo model, Hashtable MyHs)
         {

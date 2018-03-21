@@ -144,7 +144,9 @@
         $("#ddlCity").val('<%=City%>');
     });--%>
 
-        function checkChange() {
+    function checkChange() {
+        var reg = /^[0-9]+$/
+
             if ($('#txtMName').val() == '') {
                 layer.msg('会员姓名不能为空');
                 
@@ -164,6 +166,8 @@
                 layer.msg('密保答案不能为空');
             } else if ($('#txtAnswer').val().length > 6 || $('#txtAnswer').val().length < 6) {
                 layer.msg('密保答案为6位幸运数字');
+            } else if (!reg.test($("#txtAnswer").val())) {
+                layer.msg('密保答案必须为数字');
             } else {
                 //ActionModel("Member/Modify.aspx?Action=modify", $('#form1').serialize());
                 $.ajax({

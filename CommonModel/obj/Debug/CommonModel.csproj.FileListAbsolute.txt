@@ -7,13 +7,12 @@ E:\newProject\yny_004\CommonModel\bin\Debug\CommonModel.dll
 E:\newProject\yny_004\CommonModel\bin\Debug\CommonModel.pdb
 E:\newProject\yny_004\CommonModel\obj\Debug\CommonModel.dll
 E:\newProject\yny_004\CommonModel\obj\Debug\CommonModel.pdb
-D:\工作目录\yny_004\CommonModel\bin\Debug\CommonModel.dll
-D:\工作目录\yny_004\CommonModel\bin\Debug\CommonModel.pdb
-D:\工作目录\yny_004\CommonModel\obj\Debug\CommonModel.dll
-D:\工作目录\yny_004\CommonModel\obj\Debug\CommonModel.pdb
 D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\bin\Debug\CommonModel.dll
 D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\bin\Debug\CommonModel.pdb
 D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\obj\Debug\CommonModel.dll
 D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\obj\Debug\CommonModel.pdb
 D:\yang\资料\项目\yny\yny_004\yny_004\CommonModel\obj\Debug\CommonModel.csprojResolveAssemblyReference.cache
-D:\工作目录\yny_004\CommonModel\obj\Debug\CommonModel.csprojResolveAssemblyReference.cache
+D:\工作目录\yny_004\CommonModel\bin\Debug\CommonModel.dll
+D:\工作目录\yny_004\CommonModel\bin\Debug\CommonModel.pdb
+D:\工作目录\yny_004\CommonModel\obj\Debug\CommonModel.dll
+D:\工作目录\yny_004\CommonModel\obj\Debug\CommonModel.pdb

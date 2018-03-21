@@ -82,11 +82,20 @@
 </div>
 <script type="text/javascript">
     function checkChange() {
-        if ($('#txtMHB').val().trim() == "") {
+        if ($('#bankauto').val().Trim() == "0") {
+            layer.alert('您的提现信息尚未绑定，需先绑定后才可继续操作', {
+                skin: 'layui-layer-lan',
+                closeBtn: 0
+            }, function () {
+                pcallhtml('/mobile/html/View.aspx', '基本资料');
+                layer.closeAll();
+            });
+        }
+        else if ($('#txtMHB').val().trim() == "") {
             layer.msg("提现金额不能为空");
             return;
         } else {
-            ActionModel("ChangeMoney/TXChange.aspx?Action=Add", $('#form1').serialize());
+            ActionModelVey("ChangeMoney/TXChange.aspx?Action=Add", $('#form1').serialize());
         }
     }
 </script>

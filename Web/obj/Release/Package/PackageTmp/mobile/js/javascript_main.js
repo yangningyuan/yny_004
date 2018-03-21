@@ -77,9 +77,9 @@ function pcallhtml(url, title, isback) {
     }
     if (RunAjaxGetKey('VerifyBase', urlpage) == 'TRUE') {
         if (RunAjaxGetKey('VerifyUrl', url) == 'TRUE') {
-            appverifypsd(function () {
+            //appverifypsd(function () {
                 setTimeout(function () { $("#pageHome").load(url, function () { changetabcolor(title); }); }, 10);
-            });
+            //});
         }
         else {
             setTimeout(function () { $("#pageHome").load(url, function () { changetabcolor(title); }); }, 10);

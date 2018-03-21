@@ -123,7 +123,7 @@
                 layer.msg("不能自己给自己转账");
             }
             else {
-                ActionModel("/ChangeMoney/HBChange.aspx?Action=add", $('#form1').serialize(), "/mobile/html/HBChange.aspx", "", "会员转账");
+                ActionModelVey("/ChangeMoney/HBChange.aspx?Action=add", $('#form1').serialize(), "/mobile/html/HBChange.aspx", "", "会员转账");
             }
         }
         //转账只能转给有推荐关系的会员之间转账,该函数校验转出会员与转入会员之间是否有推荐或被推荐关系

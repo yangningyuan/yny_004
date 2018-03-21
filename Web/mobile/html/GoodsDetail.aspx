@@ -1,44 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GoodsDetail.aspx.cs" Inherits="yny_004.Web.mobile.html.GoodsDetail" %>
 
-<%--<link rel="stylesheet" href="/mobile/css/btn.css">
-<link rel="stylesheet" href="/mobile/css/style.css">--%>
-<%--<script>
-
-    $(function () {
-        var n = 0;
-        $(".bannerBox2 img").hide();
-        $(".bannerBox2 img").eq(0).show();
-        function changeImage() {
-            if (n > 1) {
-                n = 0;
-            } else {
-                n = n + 1;
-            }
-            $(".bannerBox2 img").hide();
-            $(".bannerBox2 img").eq(n).show();
-            $(".dotted_box2 span").removeClass("active_dotted");
-            $(".dotted_box2 span").eq(n).addClass("active_dotted");
-        }
-        var timer = setInterval(changeImage, 2000);
-        $(".bannerBox2").hover(function () {
-            clearInterval(timer);
-        }, function () {
-            timer = setInterval(changeImage, 2000);
-        })
-        $(".dotted_box2 span").click(function () {
-            if (n > 1) {
-                n = 0;
-            } else {
-                n = n + 1;
-            }
-            $(".dotted_box2 span").removeClass("active_dotted");
-            $(this).addClass("active_dotted");
-            n = $(".dotted_box2 span").index(this);
-            $(".bannerBox2 img").hide();
-            $(".bannerBox2 img").eq(n).show();
-        })
-    })
-</script>--%>
 <style>
     body {
         background-color: #FFFFFF;
@@ -94,28 +55,6 @@
                                 </asp:repeater>
 
 
-<%--            <div class="dotted_box2">
-                <%
-                    if (listpic != null)
-                    {
-                        for (int i = 0; i < listpic.Count; i++)
-                        {
-                            if (i == 0)
-                            {
-                %>
-                <span class="active_dotted"></span>
-                <%
-                    }
-                    else
-                    {
-                %>
-                <span></span>
-                <%
-                            }
-                        }
-                    }
-                %>
-            </div>--%>
         </div>
         <div class="decribe_product">
             <div class="product_header">
@@ -145,16 +84,7 @@
                         <div class="product_02">
                             <%--<img src="/mobile/images/product_02.png" />--%>
                         </div>
-                        <%-- <ul class="introduction">
-                            <li>
-                                <label>商品名：</label><span>兰州烧饼</span></li>
-                            <li>
-                                <label>净&nbsp;&nbsp;&nbsp;重：</label><span>兰州烧饼</span></li>
-                            <li>
-                                <label>保质期：</label><span>兰州烧饼</span></li>
-                            <li>
-                                <label>用&nbsp;&nbsp;&nbsp;途：</label><span>兰州烧饼、兰州烧饼兰州烧饼兰州烧饼兰州烧饼兰.</span></li>
-                        </ul>--%>
+                      
                     </div>
                 </div>
 

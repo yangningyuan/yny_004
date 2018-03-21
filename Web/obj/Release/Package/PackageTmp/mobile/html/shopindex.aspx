@@ -89,10 +89,11 @@
                             <%
                                 foreach (yny_004.Model.Goods item2 in yny_004.BLL.Goods.GetList(" GParentCode='" + item.Code + "' and IsDeleted=0;"))
                                 {
+                                    if (item.Code == "001")
+                                    {
                             %>
                             <li>
-                                <a href="javascript:pcallhtml('/mobile/html/GoodsDetail.aspx?id=<%=item2.GID %>', '商品详细');">
-
+                                <a href="javascript:pcallhtml('/mobile/html/GoodsDetailGP.aspx?id=<%=item2.GID %>', '商品详细');">
                                     <%if (yny_004.BLL.GoodsPic.GetList("IsDeleted=0 and GId='" + item2.GoodsCode + "'").FirstOrDefault() == null)
                                         {%>
 
@@ -109,6 +110,28 @@
                                 </a>
                             </li>
                             <%
+                                }
+                                else {
+                            %>
+                            <li>
+                                <a href="javascript:pcallhtml('/mobile/html/GoodsDetail.aspx?id=<%=item2.GID %>', '商品详细');">
+                                    <%if (yny_004.BLL.GoodsPic.GetList("IsDeleted=0 and GId='" + item2.GoodsCode + "'").FirstOrDefault() == null)
+                                        {%>
+
+                                    <img src="../img/a1.jpg" />
+                                    <% }
+                                        else
+                                        {%>
+                                    <img src="<%= yny_004.BLL.GoodsPic.GetList("IsDeleted=0 and GId='" + item2.GoodsCode + "'").FirstOrDefault().PicURL %>">
+
+                                    <% } %>
+
+                                    <h4><%=item2.GName %></h4>
+                                    <b>￥<%=item2.CostPrice %></b>
+                                </a>
+                            </li>
+                            <%
+                                    }
                                 }
                             %>
                         </ul>

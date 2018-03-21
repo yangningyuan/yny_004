@@ -679,15 +679,16 @@ namespace yny_004.Web
             //member.BankCardName = Request.Form["txtBankCardName"];
             //member.BankNumber = Request.Form["txtBankNumber"];
             //member.Branch = Request.Form["txtBranch"];
-            if (string.IsNullOrWhiteSpace(member.Province))
-            {
-                error= "省不能为空";
-            }
-            else if (string.IsNullOrWhiteSpace(member.City))
-            {
-                error= "市不能为空";
-            }
-            else if (string.IsNullOrEmpty(member.Bank))
+            //if (string.IsNullOrWhiteSpace(member.Province))
+            //{
+            //    error= "省不能为空";
+            //}
+            //else if (string.IsNullOrWhiteSpace(member.City))
+            //{
+            //    error= "市不能为空";
+            //}
+            //else 
+            if (string.IsNullOrEmpty(member.Bank))
             {
                 error = "开户银行不能为空";
             }
