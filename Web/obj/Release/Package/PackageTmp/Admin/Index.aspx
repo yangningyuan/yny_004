@@ -52,8 +52,8 @@
 			</div>
 			<aside>
 				<div id="sidebar" class="nav-collapse ">
-					<a href="#" class="logo" ><img src="/Admin/images/logo.png" alt="" style="margin-bottom:10px;margin-top:20px;width: 75px;">
-                        <p class="indexLogo">贝贝美商城</p>
+					<a href="#" class="logo" ><img src="/Admin/images/logo2.png" alt="" style="margin-top: 40px;margin-left: -20px;width: 200px;">
+                        <%--<p class="indexLogo">贝贝美商城</p>--%>
 					</a>
 					<ul class="sidebar-menu">
 						<li class="sub-menu">

@@ -118,10 +118,10 @@ namespace yny_004.Web.Shop
                             BLL.Order.Update(model);
                             if (BLL.CommonBase.RunHashtable(MyHs))
                             {
-                                if (!string.IsNullOrEmpty(model.Remarks))//公排区商品
-                                {
-                                    BLL.ChangeMoney.MymemberAdd(TModel);
-                                }
+                                //if (!string.IsNullOrEmpty(model.Remarks))//公排区商品
+                                //{
+                                    //BLL.ChangeMoney.MymemberAdd(TModel);
+                                //}
 
                                 Session["OrderId"] = null;
                                 return "支付成功！";
@@ -268,7 +268,14 @@ namespace yny_004.Web.Shop
                             {
                                 if (!string.IsNullOrEmpty(order.Remarks))//公排区商品
                                 {
-                                    BLL.ChangeMoney.MymemberAdd(TModel);
+                                    if (TModel.MState)
+                                    {
+                                        BLL.ChangeMoney.MymemberAdd(TModel);
+                                    }
+                                    else {
+                                        Model.SHMoney shmodel= BLL.Configuration.Model.SHMoneyList["002"];
+                                        return BllModel.ShopUpMAgencyType(shmodel, Request.Form["hdmid"], "MHB", TModel, shmodel.Money);
+                                    }
                                 }
                                 return "支付成功！";
                             }

@@ -175,6 +175,8 @@
     <Content Include="Admin\images\k2.jpg" />
     <Content Include="Admin\images\left-arrow.png" />
     <Content Include="Admin\images\logo.png" />
+    <Content Include="Admin\images\logo1.png" />
+    <Content Include="Admin\images\logo2.png" />
     <Content Include="Admin\images\man.jpg" />
     <Content Include="Admin\images\man.png" />
     <Content Include="Admin\images\newsicon.png" />
@@ -184,6 +186,8 @@
     <Content Include="Admin\images\right-arrow.png" />
     <Content Include="Admin\images\search-icon.jpg" />
     <Content Include="Admin\images\share.png" />
+    <Content Include="Admin\images\wlogo-1.png" />
+    <Content Include="Admin\images\wlogo-2.png" />
     <Content Include="Admin\images\yanzhengma.jpg" />
     <Content Include="Admin\Index.aspx" />
     <Content Include="Admin\js\ajaxForm.js" />
@@ -418,6 +422,8 @@
     <Content Include="mobile\img\login.jpg" />
     <Content Include="mobile\img\logo-login.png" />
     <Content Include="mobile\img\logo.png" />
+    <Content Include="mobile\img\logo1.png" />
+    <Content Include="mobile\img\logo2.png" />
     <Content Include="mobile\img\money.png" />
     <Content Include="mobile\img\mynewsn.png" />
     <Content Include="mobile\img\newsicon.png" />
@@ -436,6 +442,7 @@
     <Content Include="mobile\img\updatepwd.png" />
     <Content Include="mobile\img\userbtn.png" />
     <Content Include="mobile\img\Withdrawals.png" />
+    <Content Include="mobile\img\wlogo-2.png" />
     <Content Include="mobile\img\women.png" />
     <Content Include="mobile\img\xjb.png" />
     <Content Include="mobile\img\xpu.png" />
@@ -443,6 +450,7 @@
     <Content Include="mobile\img\zc.png" />
     <Content Include="mobile\img\zs.png" />
     <Content Include="mobile\img\zz.png" />
+    <Content Include="mobile\img\轮播.png" />
     <Content Include="mobile\js\ai.js" />
     <Content Include="mobile\js\ajax.js" />
     <Content Include="mobile\js\bootstrap.min.js" />

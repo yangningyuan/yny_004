@@ -2,7 +2,7 @@
 
 <div class="row row1">
                     <div>
-                        <img src="/mobile/img/banner1.png" />
+                        <img src="/mobile/img/轮播.png" />
                     </div>
                 </div>
                 <div class="notice_content">

@@ -86,8 +86,8 @@
         <div class="page page-current" id="login">
             <div class="content Register" style="top: 0;">
             <img src="../img/login.jpg" />
-                <img src="../img/logo-login.png" class="logo-login" />
-                <p class="logoTitle">贝贝美商城</p>
+                <img src="../img/wlogo-2.png" class="logo-login" />
+               <%-- <p class="logoTitle"></p>--%>
                 <input type="hidden" id="inpwd" runat="server" />
                 <div class="Register_Info row" style="top: 8rem;">
                     <div class="Register_List">
