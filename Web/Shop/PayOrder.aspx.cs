@@ -274,7 +274,8 @@ namespace yny_004.Web.Shop
                                     }
                                     else {
                                         Model.SHMoney shmodel= BLL.Configuration.Model.SHMoneyList["002"];
-                                        return BllModel.ShopUpMAgencyType(shmodel, Request.Form["hdmid"], "MHB", TModel, shmodel.Money);
+                                        BllModel.ShopUpMAgencyType(shmodel, TModel.MID, "MHB", TModel, shmodel.Money);
+                                        return "升级成功";
                                     }
                                 }
                                 return "支付成功！";
