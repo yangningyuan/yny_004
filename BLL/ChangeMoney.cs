@@ -38,7 +38,7 @@ namespace yny_004.BLL
 			{
 				MID = strmid,
 				MSH = "",
-				MTJ = item.MID,
+				MTJ = item.MTJ,
 				MCreateDate = DateTime.Now,
 				MDate = DateTime.MaxValue,
 				AgencyCode = "001",

@@ -31,7 +31,7 @@
                     </tr>
                     <tr>
                         <td align="right">
-                            <span>提现金额：</span>
+                            <span>扣费金额：</span>
                         </td>
                         <td>
                             <input name="txtMHB" id="txtMHB" maxlength="6" class="normal_input" type="text" />
@@ -68,6 +68,9 @@
                 v5.error('扣费金额应该为整数', '1', 'true');
             } else {
                 ActionModel("ChangeMoney/KFChange.aspx?Action=Add", $('#form1').serialize());
+                setTimeout(function () {
+                    v5.show('ChangeMoney/KFChange.aspx', '会员扣费', 'url', 620, 400);
+                }, 1000);
             }
         }
     </script>

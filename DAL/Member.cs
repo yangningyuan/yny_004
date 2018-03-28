@@ -836,10 +836,10 @@ namespace yny_004.DAL
                 strSql.Append("delete from [GoodCategory];");
                 strSql.Append("delete from [Goods];");
                 strSql.Append("delete from [GoodsPic];");
-                strSql.Append("delete from [Order];");
-                strSql.Append("delete from [OrderDetail];");
-                strSql.Append("delete from [ReceiveInfo];");
-                strSql.Append("delete from [ShopCar];");
+                //strSql.Append("delete from [Order];");
+                //strSql.Append("delete from [OrderDetail];");
+                //strSql.Append("delete from [ReceiveInfo];");
+                //strSql.Append("delete from [ShopCar];");
                 strSql.Append("delete from [EPList];");
                 strSql.Append("delete from [Member_OperationRecord];");
                 strSql.Append("delete from [StockRight];");

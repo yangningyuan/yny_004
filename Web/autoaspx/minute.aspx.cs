@@ -20,11 +20,11 @@ namespace yny_004.Web.autoaspx
                     string error = "";
                     try
                     {
-                        if (BLL.ChangeMoney.ListMyAdd())
-                        {
-                            error += "操作成功！";
-                        }
-                        else
+                        //if (BLL.ChangeMoney.ListMyAdd())
+                        //{
+                        //    error += "操作成功！";
+                        //}
+                        //else
                         {
                             error += "操作失败！";
                         }

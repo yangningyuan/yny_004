@@ -9,7 +9,7 @@
                             <div class="col-70">
                                 <ul class="personlist">
                                     <li><strong><%=TModel.MID %>，您好</strong></li>
-                                    <li><label></label><i class="zs"></i><span class="po1"><%=TModel.MAgencyType.MAgencyName %></span>
+                                    <li><%--<label></label><i class="zs"></i><span class="po1"><%=TModel.MAgencyType.MAgencyName %></span>--%>
                                         <%
                                             if (!TModel.MState)
                                             {
@@ -22,8 +22,8 @@
                                     <%--<li><span>团队有效投资额：<b><%=TModel.MConfig.YJMoney %></b></span>&nbsp;</li>--%>
                                     <li><span>会员类型：<b><%=TModel.Role.RName %></b></span>&nbsp;</li>
                                     <li><i class="jiangjin"></i><%=yny_004.BLL.Reward.List["MHB"].RewardName %>：<%=TModel.MConfig.MHB.ToFixedDecimal(2) %></li>
-                                    <li><i class="currentm"></i><%=yny_004.BLL.Reward.List["MJB"].RewardName %>：<%=TModel.MConfig.MJB.ToFixedDecimal(2) %></li>
-                                    <li><i class="currentm"></i><%=yny_004.BLL.Reward.List["MGP"].RewardName %>：<%=TModel.MConfig.MGP.ToFixedDecimal(2) %></li>
+                                    <li><i class="jiangjin"></i><%=yny_004.BLL.Reward.List["MJB"].RewardName %>：<%=TModel.MConfig.MJB.ToFixedDecimal(2) %></li>
+                                    <li><i class="jiangjin"></i><%=yny_004.BLL.Reward.List["MGP"].RewardName %>：<%=TModel.MConfig.MGP.ToFixedDecimal(2) %></li>
                                     <%--<li><i class="currentm"></i><%=yny_004.BLL.Reward.List["MCW"].RewardName %>：<%=TModel.MConfig.MCW %></li>--%>
                                 </ul>
                             </div>
