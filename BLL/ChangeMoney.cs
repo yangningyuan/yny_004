@@ -38,7 +38,7 @@ namespace yny_004.BLL
 			{
 				MID = strmid,
 				MSH = "",
-				MTJ = item.MTJ,
+				MTJ = item.MID,
 				MCreateDate = DateTime.Now,
 				MDate = DateTime.MaxValue,
 				AgencyCode = "001",
@@ -1166,7 +1166,16 @@ namespace yny_004.BLL
         public static Hashtable TJCountTran(Model.Member shmodel, Hashtable MyHs)
         {
             //获取推荐人的model
-            Model.Member tjmodel = GetMember_R(shmodel.MTJ);
+            string mtj = "";
+            if (!string.IsNullOrEmpty(shmodel.FMID))
+            {
+                mtj = BLL.Member.GetModelByMID(shmodel.MTJ).MTJ;
+            }
+            else {
+                mtj = shmodel.MTJ;
+            }
+
+            Model.Member tjmodel = GetMember_R(mtj);
             if (tjmodel != null)
             {
                 decimal tjmoney = shmodel.SHMoney - shmodel.MConfig.SHMoney;
